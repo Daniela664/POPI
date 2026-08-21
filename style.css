@@ -68,7 +68,7 @@ p {
   line-height: 1.6;
 }
 .container {
-  background-image: url("bracelete.jpg"); /* logo popi */
+  background-image: url("logo.popi"); /* logo popi */
   background-size: cover;       /* cobre toda a caixa */
   background-position: center;  /* centraliza a imagem */
   border-radius: 10px;
