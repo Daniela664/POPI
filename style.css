@@ -35,9 +35,15 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: Serif Blood Italic, sans-serif;
   background-color: #e6f2ff; /* azul bem clarinho */
   color: #333;
   margin: 0;
   padding: 0;
+  text-align: center; /* centraliza o texto */
+}
+
+/* Espaço para não ficar escondido atrás do menu fixo */
+h1, p {
+  margin-top: 80px; /* dá espaço abaixo do menu */
 }
