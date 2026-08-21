@@ -34,7 +34,8 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-body {
+/* Centralizar o conteúdo principal */
+body { 
   font-family: Serif Blood Italic, sans-serif;
   background-color: #e6f2ff; /* azul bem clarinho */
   color: #333;
