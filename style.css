@@ -1,7 +1,11 @@
-/* Menu */
+/* Menu no canto superior esquerdo */
 nav {
   background-color: #0066cc;
   padding: 10px;
+  position: fixed;   /* Fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;       /* ocupa toda a largura */
 }
 
 nav ul {
@@ -9,15 +13,20 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* alinha à esquerda */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin-right: 20px;
 }
 
+/* Personalização de cada item */
+nav ul li:nth-child(1) a { color: #021ebd; } /* Início azul escuro*/
+nav ul li:nth-child(2) a { color: #021ebd; } /* Sobre azul escuro */
+nav ul li:nth-child(3) a { color: #021ebd; } /* Alertas azul escuro */
+nav ul li:nth-child(4) a { color: #021ebd; } /* Contato azul escuro */
+
 nav ul li a {
-  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -25,13 +34,10 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-
-/* Rodapé */
-footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 15px;
-  margin-top: 50px;
-  font-size: 14px;
-  color: #555;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f2ff; /* azul bem clarinho */
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
