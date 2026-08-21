@@ -23,8 +23,8 @@ nav ul li {
 /* Personalização de cada item */
 nav ul li:nth-child(1) a { color: #fffffff; } /* Início azul escuro*/
 nav ul li:nth-child(2) a { color: #fffffff; } /* Sobre azul escuro */
-nav ul li:nth-child(3) a { color: #ffffff; } /* Alertas azul escuro */
-nav ul li:nth-child(4) a { color: #ffffff; } /* Contato azul escuro */
+nav ul li:nth-child(3) a { color: #fffffff; } /* Alertas azul escuro */
+nav ul li:nth-child(4) a { color: #fffffff; } /* Contato azul escuro */
 
 nav ul li a {
   text-decoration: none;
@@ -66,4 +66,16 @@ h1 {
 p {
   font-size: 18px;
   line-height: 1.6;
+}
+.container {
+  background-image: url("bracelete.jpg"); /* logo popi */
+  background-size: cover;       /* cobre toda a caixa */
+  background-position: center;  /* centraliza a imagem */
+  border-radius: 10px;
+  padding: 40px;
+  margin: 120px auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: white; /* texto branco para contraste */
 }
