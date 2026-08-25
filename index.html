@@ -1,128 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
+
   <title>POPI</title>
-  <!-- Fonte elegante Playfair Display -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
       background-color: #e6f2ff;
+      font-family: 'Montserrat', sans-serif;
     }
 
     nav {
       background-color: #439ffa;
-      padding: 10px;
+      padding: 14px 20px;
+
       position: fixed;
       top: 0;
       left: 0;
+
       width: 100%;
+      z-index: 1000;
+
+      box-sizing: border-box;
     }
+
     nav ul {
       list-style: none;
+
       margin: 0;
       padding: 0;
+
       display: flex;
       justify-content: flex-start;
     }
+
     nav ul li {
-      margin-right: 20px;
+      margin-right: 25px;
     }
+
     nav ul li a {
       text-decoration: none;
-      font-weight: 700;
-      color: #ffffff;
-      font-family: 'Playfair Display', serif;
+
+      color: white;
+
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+
+      font-size: 15px;
     }
+
     nav ul li a:hover {
       text-decoration: underline;
     }
 
     .hero {
-      background-image: url("iStock_79246287_IdososCaminhandoCostas.jpg");
+
+      background-image: url("fundo.jpg");
+
       background-size: cover;
       background-position: center;
+
       height: 100vh;
+
       display: flex;
+
       justify-content: center;
       align-items: center;
+
       text-align: center;
+
       color: white;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+
+      position: relative;
     }
+
     .hero-content {
-      background-color: rgba(0,0,0,0.4);
+
+      /* NÃO possui mais fundo transparente */
+
+      max-width: 800px;
+
       padding: 20px;
-      border-radius: 10px;
+
+      position: relative;
+      z-index: 2;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #0066cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
+
+
+    .hero h1 {
+
+      margin: 0;
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 64px;
+
       font-weight: 700;
-      font-family: 'Playfair Display', serif;
+
+      line-height: 1.05;
+
+      text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.75);
     }
+
+    .hero .subtitle {
+
+      margin-top: 15px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: 22px;
+
+      font-weight: 500;
+
+      letter-spacing: 1px;
+
+      text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+
+    .hero .description {
+
+      margin-top: 20px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: 18px;
+
+      font-weight: 400;
+
+      line-height: 1.6;
+
+      text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 13px 28px;
+
+      background-color: #008ee8;
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 6px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-weight: 600;
+
+      font-size: 15px;
+
+      transition: 0.3s;
+
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
     .btn:hover {
-      background-color: #004c99;
+
+      background-color: #006fba;
+
+      transform: translateY(-2px);
     }
+
 
     section {
-      padding: 60px 20px;
+
+      padding: 70px 20px;
+
       text-align: center;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
-    p {
-      font-family: 'Playfair Display', serif;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 1.6;
     }
 
-    footer {
-      background-color: #439ffa;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-family: 'Playfair Display', serif;
+
+    h2 {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 42px;
+
+      font-weight: 700;
     }
+
+
+    section p {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+
+    footer {
+
+      background-color: #439ffa;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 20px;
+
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    footer p {
+
+      font-size: 13px;
+    }
+
+
+    @media (max-width: 600px) {
+
+      nav ul li {
+        margin-right: 12px;
+      }
+
+      nav ul li a {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero .subtitle {
+        font-size: 17px;
+      }
+
+      .hero .description {
+        font-size: 15px;
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
 
   <nav>
+
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="dispositivos.html">Dispositivos</a></li>
-      <li><a href="contato.html">Contato</a></li>
+
+      <li>
+        <a href="index.html">Início</a>
+      </li>
+
+      <li>
+        <a href="sobre.html">Sobre Nós</a>
+      </li>
+
+      <li>
+        <a href="dispositivos.html">Dispositivos</a>
+      </li>
+
+      <li>
+        <a href="contato.html">Contato</a>
+      </li>
+
     </ul>
+
   </nav>
 
   <section class="hero">
+
     <div class="hero-content">
-      <h1>Bem-vindo ao POPI</h1>
-      <p>Monitor de quedas para mais segurança.</p>
-      <a href="sobre.html" class="btn">Saiba mais</a>
+
+      <h1>
+        Bem-vindo ao POPI
+      </h1>
+
+
+      <div class="subtitle">
+        POPI — Protótipo Observador Para Idosos
+      </div>
+
+
+      <div class="description">
+        Monitor de quedas para mais segurança.
+      </div>
+
+
+      <a href="sobre.html" class="btn">
+        Saiba mais
+      </a>
+
     </div>
+
   </section>
 
   <section>
-    <h2>Sobre o POPI</h2>
-    <p>O POPI é um dispositivo inteligente que ajuda a detectar quedas e enviar alertas, trazendo mais segurança e tranquilidade.</p>
+
+    <h2>
+      Sobre o POPI
+    </h2>
+
+    <p>
+      O POPI é um dispositivo inteligente que ajuda a detectar quedas
+      e enviar alertas, trazendo mais segurança e tranquilidade.
+    </p>
+
   </section>
 
   <footer>
-    <p>&copy; 2026 POPI - Todos os direitos reservados</p>
+
+    <p>
+      &copy; 2026 POPI - Todos os direitos reservados
+    </p>
+
   </footer>
 
 </body>
+
 </html>
