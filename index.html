@@ -1,25 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>POPI - Monitor de Quedas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>POPI</title>
+  <style>
+    /* ===== MENU ===== */
+    nav {
+      background-color: #439ffa;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background-image: url("logo.png"); /* coloque aqui o nome do arquivo ou link da imagem */
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* ocupa toda a tela */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      background-color: rgba(0,0,0,0.4); /* camada transparente para contraste */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #004c99;
+    }
+
+    /* ===== CONTEÚDO EXTRA ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #439ffa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- MENU -->
   <nav>
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="alertas.html">Dispositivos</a></li>
+      <li><a href="dispositivos.html">Dispositivos</a></li>
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Bem-vindo ao POPI</h1>
-    <p>Monitor de quedas para mais segurança.</p>
-    <a href="sobre.html" class="btn">Saiba mais</a>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bem-vindo ao POPI</h1>
+      <p>Monitor de quedas para mais segurança.</p>
+      <a href="sobre.html" class="btn">Saiba mais</a>
+    </div>
+  </section>
 
+  <!-- SEÇÃO EXTRA -->
+  <section>
+    <h2>Sobre o POPI</h2>
+    <p>O POPI é um dispositivo inteligente que ajuda a detectar quedas e enviar alertas, trazendo mais segurança e tranquilidade.</p>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 POPI - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
