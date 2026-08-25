@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>POPI</title>
+  <!-- Fonte elegante Playfair Display -->
+  <link href="https://www.cartacapital.com.br/wp-content/uploads/2012/06/saude-1.jpg" rel="stylesheet">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif; /* fonte elegante */
+      background-color: #e6f2ff;
+    }
+
     /* ===== MENU ===== */
     nav {
       background-color: #439ffa;
@@ -25,8 +33,9 @@
     }
     nav ul li a {
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       color: #ffffff;
+      font-family: 'Playfair Display', serif;
     }
     nav ul li a:hover {
       text-decoration: underline;
@@ -34,7 +43,7 @@
 
     /* ===== HERO SECTION ===== */
     .hero {
-      background-image: url("logo.png"); /* https://www.cartacapital.com.br/wp-content/uploads/2012/06/saude-1.jpg */
+      background-image: url("https://images.unsplash.com/photo-1526256262350-7da7584cf5eb"); /* imagem da web */
       background-size: cover;
       background-position: center;
       height: 100vh; /* ocupa toda a tela */
@@ -46,7 +55,7 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
     .hero-content {
-      background-color: rgba(0,0,0,0.4); /* camada transparente para contraste */
+      background-color: rgba(0,0,0,0.4); /* camada transparente */
       padding: 20px;
       border-radius: 10px;
     }
@@ -58,27 +67,36 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
     }
     .btn:hover {
       background-color: #004c99;
     }
 
-    /* ===== CONTEÚDO EXTRA ===== */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e6f2ff;
-    }
+    /* ===== SEÇÕES ===== */
     section {
       padding: 60px 20px;
       text-align: center;
     }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    p {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ===== RODAPÉ ===== */
     footer {
       background-color: #439ffa;
       color: white;
       text-align: center;
       padding: 20px;
+      font-family: 'Playfair Display', serif;
     }
   </style>
 </head>
