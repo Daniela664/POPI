@@ -21,6 +21,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 
+  <!-- =========================
+       ÍCONES
+       ========================= -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+
   <style>
 
     /* =========================
@@ -49,36 +59,55 @@
 
     nav {
       background-color: #2477B8;
+
       padding: 15px 25px;
+
       position: fixed;
+
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
+
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
+
     nav ul {
       list-style: none;
+
       margin: 0;
       padding: 0;
+
       display: flex;
+
       justify-content: flex-start;
+
       align-items: center;
     }
+
 
     nav ul li {
       margin-right: 28px;
     }
 
+
     nav ul li a {
       text-decoration: none;
+
       color: white;
+
       font-family: 'Montserrat', sans-serif;
+
       font-size: 15px;
+
       font-weight: 600;
+
       transition: 0.3s;
     }
+
 
     nav ul li a:hover {
       opacity: 0.75;
@@ -90,28 +119,41 @@
        ========================= */
 
     .hero {
+
       background-image: url("iStock_79246287_IdososCaminhandoCostas.jpg");
+
       background-size: cover;
+
       background-position: center;
+
       background-repeat: no-repeat;
 
       height: 500px;
+
       width: 100%;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       text-align: center;
+
       position: relative;
 
       margin-top: 52px;
     }
 
+
     .hero-content {
+
       max-width: 900px;
+
       padding: 30px;
+
       position: relative;
+
       z-index: 2;
     }
 
@@ -121,6 +163,7 @@
        ========================= */
 
     .hero h1 {
+
       margin: 0;
 
       font-family: 'Pacifico', cursive;
@@ -140,6 +183,7 @@
        ========================= */
 
     .hero .subtitle {
+
       margin-top: 18px;
 
       font-family: 'Montserrat', sans-serif;
@@ -159,6 +203,7 @@
        ========================= */
 
     .hero .description {
+
       margin-top: 18px;
 
       font-family: 'Montserrat', sans-serif;
@@ -178,6 +223,7 @@
        ========================= */
 
     .btn {
+
       display: inline-block;
 
       margin-top: 25px;
@@ -203,7 +249,9 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
+
     .btn:hover {
+
       background-color: #185B8E;
 
       transform: translateY(-2px);
@@ -215,14 +263,17 @@
        ========================= */
 
     .destaques {
+
       background-color: #F8F5EE;
 
-      padding: 65px 40px 80px;
+      padding: 65px 40px 40px;
 
       text-align: center;
     }
 
+
     .destaques-frase {
+
       max-width: 900px;
 
       margin: 0 auto 50px;
@@ -244,6 +295,7 @@
        ========================= */
 
     .imagens-container {
+
       max-width: 1200px;
 
       margin: 0 auto;
@@ -255,11 +307,15 @@
       gap: 25px;
     }
 
+
     .imagem-item {
+
       text-align: center;
     }
 
+
     .imagem-item img {
+
       width: 100%;
 
       height: 220px;
@@ -275,13 +331,17 @@
       transition: 0.3s;
     }
 
+
     .imagem-item img:hover {
+
       transform: translateY(-4px);
 
       box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
     }
 
+
     .imagem-item p {
+
       margin-top: 15px;
 
       margin-bottom: 0;
@@ -303,14 +363,17 @@
        ========================= */
 
     .avaliacoes {
+
       background-color: #F8F5EE;
 
-      padding: 30px 20px 80px;
+      padding: 50px 20px 70px;
 
       text-align: center;
     }
 
+
     .avaliacoes-titulo {
+
       font-family: 'Montserrat', sans-serif;
 
       font-size: 30px;
@@ -322,7 +385,9 @@
       margin-bottom: 35px;
     }
 
+
     .carrossel {
+
       max-width: 850px;
 
       margin: 0 auto;
@@ -342,11 +407,15 @@
       cursor: grab;
     }
 
+
     .carrossel::-webkit-scrollbar {
+
       display: none;
     }
 
+
     .avaliacao {
+
       min-width: 100%;
 
       scroll-snap-align: center;
@@ -370,7 +439,9 @@
       min-height: 220px;
     }
 
+
     .estrelas {
+
       font-size: 25px;
 
       letter-spacing: 4px;
@@ -380,7 +451,9 @@
       color: #E5A900;
     }
 
+
     .avaliacao p {
+
       max-width: 700px;
 
       margin: 0;
@@ -396,7 +469,9 @@
       color: #000000;
     }
 
+
     .avaliacao strong {
+
       display: block;
 
       margin-top: 20px;
@@ -412,36 +487,13 @@
       color: #000000;
     }
 
-    .indicadores {
-      display: flex;
-
-      justify-content: center;
-
-      gap: 10px;
-
-      margin-top: 25px;
-    }
-
-    .indicador {
-      width: 10px;
-
-      height: 10px;
-
-      border-radius: 50%;
-
-      background-color: #AFCFE8;
-    }
-
-    .indicador.ativo {
-      background-color: #2477B8;
-    }
-
 
     /* =========================
        POR QUE DO POPI
        ========================= */
 
     .porque-popi {
+
       background-color: #F8F5EE;
 
       padding: 60px 40px 80px;
@@ -449,7 +501,9 @@
       text-align: center;
     }
 
+
     .porque-popi h2 {
+
       margin: 0 auto 45px;
 
       font-family: 'Montserrat', sans-serif;
@@ -463,7 +517,9 @@
       text-transform: uppercase;
     }
 
+
     .porque-container {
+
       max-width: 1150px;
 
       margin: 0 auto;
@@ -475,7 +531,9 @@
       gap: 25px;
     }
 
+
     .porque-item {
+
       background-color: #EAF4FC;
 
       padding: 30px;
@@ -487,7 +545,9 @@
       text-align: left;
     }
 
+
     .porque-item p {
+
       margin: 0;
 
       font-family: 'Montserrat', sans-serif;
@@ -505,6 +565,7 @@
        ========================= */
 
     .dispositivo {
+
       background-color: #F8F5EE;
 
       padding: 60px 40px 80px;
@@ -512,7 +573,9 @@
       text-align: center;
     }
 
+
     .dispositivo h2 {
+
       margin: 0 auto 50px;
 
       font-family: 'Montserrat', sans-serif;
@@ -526,7 +589,9 @@
       text-transform: uppercase;
     }
 
+
     .dispositivo-container {
+
       max-width: 1150px;
 
       margin: 0 auto;
@@ -542,7 +607,9 @@
       text-align: left;
     }
 
+
     .dispositivo-imagem img {
+
       width: 100%;
 
       max-height: 500px;
@@ -556,7 +623,9 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
     }
 
+
     .dispositivo-texto {
+
       font-family: 'Montserrat', sans-serif;
 
       font-size: 17px;
@@ -566,13 +635,17 @@
       color: #000000;
     }
 
+
     .dispositivo-texto p {
+
       margin-top: 0;
 
       margin-bottom: 20px;
     }
 
+
     .dispositivo-texto strong {
+
       color: #2477B8;
 
       font-weight: 700;
@@ -584,14 +657,17 @@
        ========================= */
 
     .sobre-nos {
+
       background-color: #F8F5EE;
 
-      padding: 60px 40px 80px;
+      padding: 60px 40px 70px;
 
       text-align: center;
     }
 
+
     .sobre-nos h2 {
+
       margin: 0 auto 35px;
 
       font-family: 'Montserrat', sans-serif;
@@ -605,10 +681,12 @@
       text-transform: uppercase;
     }
 
+
     .sobre-nos-texto {
+
       max-width: 1000px;
 
-      margin: 0 auto 50px;
+      margin: 0 auto 45px;
 
       font-family: 'Montserrat', sans-serif;
 
@@ -621,7 +699,9 @@
       text-align: justify;
     }
 
+
     .sobre-nos-texto p {
+
       margin-top: 0;
 
       margin-bottom: 20px;
@@ -633,6 +713,7 @@
        ========================= */
 
     .feiras-carrossel {
+
       max-width: 1000px;
 
       margin: 0 auto;
@@ -652,18 +733,17 @@
       -webkit-overflow-scrolling: touch;
 
       padding: 10px 5px 20px;
-
-      cursor: grab;
     }
 
+
     .feiras-carrossel::-webkit-scrollbar {
+
       display: none;
     }
 
 
-    /* CADA FOTO */
-
     .feira-item {
+
       flex: 0 0 280px;
 
       scroll-snap-align: center;
@@ -678,9 +758,8 @@
     }
 
 
-    /* FOTO */
-
     .feira-item img {
+
       width: 100%;
 
       height: 190px;
@@ -693,9 +772,8 @@
     }
 
 
-    /* NOME DA FEIRA */
-
     .feira-item p {
+
       margin: 12px 5px 8px;
 
       font-family: 'Montserrat', sans-serif;
@@ -711,10 +789,105 @@
 
 
     /* =========================
+       CONTATO
+       ========================= */
+
+    .contato {
+
+      background-color: #F8F5EE;
+
+      padding: 50px 30px 70px;
+
+      text-align: center;
+    }
+
+
+    .contato h2 {
+
+      margin: 0 0 40px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: 32px;
+
+      font-weight: 700;
+
+      color: #000000;
+
+      text-transform: uppercase;
+    }
+
+
+    .contatos-container {
+
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 60px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .contato-item {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: 15px;
+
+      color: #000000;
+    }
+
+
+    .contato-item i {
+
+      font-size: 18px;
+
+      color: #2477B8;
+
+      width: 20px;
+
+      text-align: center;
+    }
+
+
+    .contato-item a {
+
+      color: #000000;
+
+      text-decoration: none;
+
+      transition: 0.3s;
+    }
+
+
+    .contato-item a:hover {
+
+      color: #2477B8;
+    }
+
+
+    /* =========================
        RODAPÉ
        ========================= */
 
     footer {
+
       background-color: #2477B8;
 
       color: white;
@@ -726,7 +899,9 @@
       font-family: 'Montserrat', sans-serif;
     }
 
+
     footer p {
+
       margin: 0;
 
       font-size: 13px;
@@ -740,23 +915,29 @@
     @media (max-width: 900px) {
 
       .imagens-container {
+
         grid-template-columns: repeat(2, 1fr);
       }
 
+
       .hero h1 {
+
         font-size: 52px;
       }
 
+
       .porque-container {
+
         grid-template-columns: 1fr;
 
         max-width: 750px;
       }
 
 
-      /* DISPOSITIVO CONTINUA LADO A LADO */
+      /* DISPOSITIVO */
 
       .dispositivo-container {
+
         grid-template-columns: 0.9fr 1.1fr;
 
         gap: 20px;
@@ -764,7 +945,9 @@
         align-items: center;
       }
 
+
       .dispositivo-imagem img {
+
         width: 100%;
 
         max-height: 300px;
@@ -772,7 +955,9 @@
         object-fit: contain;
       }
 
+
       .dispositivo-texto {
+
         text-align: left;
 
         font-size: 14px;
@@ -784,10 +969,13 @@
       /* FEIRAS */
 
       .feira-item {
+
         flex: 0 0 260px;
       }
 
+
       .feira-item img {
+
         height: 180px;
       }
 
@@ -801,10 +989,13 @@
     @media (max-width: 600px) {
 
       nav {
+
         padding: 13px 12px;
       }
 
+
       nav ul {
+
         justify-content: center;
 
         flex-wrap: wrap;
@@ -812,11 +1003,15 @@
         gap: 10px;
       }
 
+
       nav ul li {
+
         margin-right: 5px;
       }
 
+
       nav ul li a {
+
         font-size: 12px;
       }
 
@@ -824,24 +1019,33 @@
       /* HERO */
 
       .hero {
+
         height: 450px;
 
         margin-top: 48px;
       }
 
+
       .hero-content {
+
         padding: 20px;
       }
 
+
       .hero h1 {
+
         font-size: 42px;
       }
 
+
       .hero .subtitle {
+
         font-size: 17px;
       }
 
+
       .hero .description {
+
         font-size: 15px;
       }
 
@@ -849,22 +1053,29 @@
       /* DESTAQUES */
 
       .destaques {
-        padding: 50px 20px 60px;
+
+        padding: 50px 20px 40px;
       }
 
+
       .destaques-frase {
+
         font-size: 21px;
 
         margin-bottom: 35px;
       }
 
+
       .imagens-container {
+
         grid-template-columns: 1fr;
 
         gap: 35px;
       }
 
+
       .imagem-item img {
+
         height: 230px;
       }
 
@@ -872,20 +1083,27 @@
       /* AVALIAÇÕES */
 
       .avaliacoes {
-        padding: 20px 15px 60px;
+
+        padding: 30px 15px 60px;
       }
 
+
       .avaliacoes-titulo {
+
         font-size: 25px;
       }
 
+
       .avaliacao {
+
         padding: 30px 20px;
 
         min-height: 280px;
       }
 
+
       .avaliacao p {
+
         font-size: 15px;
       }
 
@@ -893,39 +1111,49 @@
       /* POR QUE DO POPI */
 
       .porque-popi {
+
         padding: 50px 20px 60px;
       }
 
+
       .porque-popi h2 {
+
         font-size: 26px;
 
         margin-bottom: 30px;
       }
 
+
       .porque-item {
+
         padding: 25px;
       }
 
+
       .porque-item p {
+
         font-size: 14px;
       }
 
 
-      /* =========================
-         DISPOSITIVO NO CELULAR
-         ========================= */
+      /* DISPOSITIVO */
 
       .dispositivo {
+
         padding: 45px 12px 60px;
       }
 
+
       .dispositivo h2 {
+
         font-size: 25px;
 
         margin-bottom: 30px;
       }
 
+
       .dispositivo-container {
+
         grid-template-columns: 0.85fr 1.15fr;
 
         gap: 12px;
@@ -933,7 +1161,9 @@
         align-items: center;
       }
 
+
       .dispositivo-imagem img {
+
         width: 100%;
 
         max-height: 220px;
@@ -941,7 +1171,9 @@
         object-fit: contain;
       }
 
+
       .dispositivo-texto {
+
         font-size: 11px;
 
         line-height: 1.5;
@@ -949,26 +1181,31 @@
         text-align: left;
       }
 
+
       .dispositivo-texto p {
+
         margin-bottom: 12px;
       }
 
 
-      /* =========================
-         SOBRE NÓS
-         ========================= */
+      /* SOBRE NÓS */
 
       .sobre-nos {
+
         padding: 50px 20px 60px;
       }
 
+
       .sobre-nos h2 {
+
         font-size: 26px;
 
         margin-bottom: 30px;
       }
 
+
       .sobre-nos-texto {
+
         font-size: 14px;
 
         line-height: 1.7;
@@ -979,24 +1216,23 @@
       }
 
 
-      /* =========================
-         CARROSSEL DAS FEIRAS
-         ========================= */
+      /* FEIRAS */
 
       .feiras-carrossel {
+
         gap: 15px;
 
         padding: 5px 0 15px;
       }
 
-      .feira-item {
 
-        /* Tamanho menor no celular */
+      .feira-item {
 
         flex: 0 0 230px;
 
         padding: 7px;
       }
+
 
       .feira-item img {
 
@@ -1005,6 +1241,7 @@
         object-fit: cover;
       }
 
+
       .feira-item p {
 
         font-size: 12px;
@@ -1012,6 +1249,42 @@
         margin-top: 10px;
 
         margin-bottom: 6px;
+      }
+
+
+      /* CONTATO */
+
+      .contato {
+
+        padding: 50px 20px 60px;
+      }
+
+
+      .contato h2 {
+
+        font-size: 26px;
+
+        margin-bottom: 30px;
+      }
+
+
+      .contatos-container {
+
+        flex-direction: column;
+
+        gap: 18px;
+      }
+
+
+      .contato-item {
+
+        font-size: 13px;
+      }
+
+
+      .contato-item i {
+
+        font-size: 17px;
       }
 
     }
@@ -1065,13 +1338,16 @@
         Bem-vindos
       </h1>
 
+
       <div class="subtitle">
         POPI — Protótipo Observador Para Idosos
       </div>
 
+
       <div class="description">
         Monitor de quedas para mais segurança.
       </div>
+
 
       <a href="sobre.html" class="btn">
         Saiba mais
@@ -1087,6 +1363,7 @@
        ========================= -->
 
   <section class="destaques">
+
 
     <div class="destaques-frase">
 
@@ -1230,17 +1507,6 @@
 
       </div>
 
-
-      <div class="indicadores">
-
-        <span class="indicador ativo"></span>
-
-        <span class="indicador"></span>
-
-        <span class="indicador"></span>
-
-      </div>
-
     </div>
 
   </section>
@@ -1321,8 +1587,8 @@
       <div class="dispositivo-imagem">
 
         <img
-          src="prototipo.jpg"
-          alt="Protótipo do dispositivo POPI"
+          src="POPI - Protótipo Observador para Idosos .jpg"
+          alt="Protótipo do POPI"
         >
 
       </div>
@@ -1470,13 +1736,75 @@
       <div class="feira-item">
 
         <img
-          src="pre-incubacao-liberato-2026.jpg"
+          src="pre-incubacao-liberato.jpg"
           alt="Pré-Incubação Liberato 2026"
         >
 
         <p>
           Pré-Incubação Liberato 2026
         </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTATO
+       ========================= -->
+
+  <section class="contato">
+
+    <h2>
+      CONTATO
+    </h2>
+
+
+    <div class="contatos-container">
+
+
+      <!-- TELEFONE -->
+
+      <div class="contato-item">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <a href="tel:+5551981157599">
+          (51) 98115-7599
+        </a>
+
+      </div>
+
+
+      <!-- E-MAIL -->
+
+      <div class="contato-item">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <a href="mailto:projetopopi2026@gmail.com">
+          projetopopi2026@gmail.com
+        </a>
+
+      </div>
+
+
+      <!-- INSTAGRAM -->
+
+      <div class="contato-item">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <a
+          href="https://www.instagram.com/projeto_popi/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @projeto_popi
+        </a>
 
       </div>
 
