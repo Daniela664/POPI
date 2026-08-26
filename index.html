@@ -10,9 +10,7 @@
   <title>POPI - Protótipo Observador Para Idosos</title>
 
 
-  <!-- =========================
-       FONTES
-       ========================= -->
+  <!-- FONTES -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -21,9 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
 
-  <!-- =========================
-       ÍCONES
-       ========================= -->
+  <!-- ÍCONES -->
 
   <link
     rel="stylesheet"
@@ -32,10 +28,6 @@
 
 
   <style>
-
-    /* =========================
-       CONFIGURAÇÕES GERAIS
-       ========================= */
 
     * {
       box-sizing: border-box;
@@ -72,7 +64,7 @@
 
       z-index: 1000;
 
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
 
@@ -87,11 +79,13 @@
       justify-content: flex-start;
 
       align-items: center;
+
+      gap: 28px;
     }
 
 
     nav ul li {
-      margin-right: 28px;
+      margin: 0;
     }
 
 
@@ -99,8 +93,6 @@
       text-decoration: none;
 
       color: white;
-
-      font-family: 'Montserrat', sans-serif;
 
       font-size: 15px;
 
@@ -152,16 +144,8 @@
       max-width: 900px;
 
       padding: 30px;
-
-      position: relative;
-
-      z-index: 2;
     }
 
-
-    /* =========================
-       BEM-VINDOS
-       ========================= */
 
     .hero h1 {
 
@@ -173,45 +157,27 @@
 
       font-weight: 400;
 
-      line-height: 1.2;
-
       color: #000000;
     }
 
-
-    /* =========================
-       NOME DO PROJETO
-       ========================= */
 
     .hero .subtitle {
 
       margin-top: 18px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 22px;
 
       font-weight: 600;
-
-      letter-spacing: 1px;
 
       color: #000000;
     }
 
 
-    /* =========================
-       DESCRIÇÃO
-       ========================= */
-
     .hero .description {
 
       margin-top: 18px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 18px;
-
-      font-weight: 400;
 
       line-height: 1.6;
 
@@ -239,15 +205,11 @@
 
       border-radius: 6px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 15px;
 
       font-weight: 600;
 
       transition: 0.3s;
-
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
 
@@ -260,7 +222,7 @@
 
 
     /* =========================
-       DESTAQUES
+       DESTAQUES / POPI
        ========================= */
 
     .destaques {
@@ -279,15 +241,11 @@
 
       margin: 0 auto 50px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 27px;
 
       font-weight: 600;
 
       line-height: 1.5;
-
-      color: #000000;
     }
 
 
@@ -327,7 +285,7 @@
 
       border-radius: 10px;
 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
       transition: 0.3s;
     }
@@ -336,8 +294,6 @@
     .imagem-item img:hover {
 
       transform: translateY(-4px);
-
-      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
     }
 
 
@@ -345,17 +301,11 @@
 
       margin-top: 15px;
 
-      margin-bottom: 0;
-
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 15px;
 
       font-weight: 600;
 
       line-height: 1.5;
-
-      color: #000000;
     }
 
 
@@ -375,13 +325,9 @@
 
     .avaliacoes-titulo {
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 30px;
 
       font-weight: 700;
-
-      color: #000000;
 
       margin-bottom: 35px;
     }
@@ -395,24 +341,17 @@
 
       display: flex;
 
-      gap: 20px;
-
       overflow-x: auto;
 
       scroll-snap-type: x mandatory;
 
-      scroll-behavior: smooth;
-
       scrollbar-width: none;
 
       -webkit-overflow-scrolling: touch;
-
-      cursor: grab;
     }
 
 
     .carrossel::-webkit-scrollbar {
-
       display: none;
     }
 
@@ -429,7 +368,7 @@
 
       border-radius: 15px;
 
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
 
       display: flex;
 
@@ -461,15 +400,11 @@
 
       margin: 0;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 17px;
 
       line-height: 1.7;
 
       font-style: italic;
-
-      color: #000000;
     }
 
 
@@ -479,15 +414,7 @@
 
       margin-top: 20px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 15px;
-
-      font-style: normal;
-
-      font-weight: 700;
-
-      color: #000000;
     }
 
 
@@ -497,8 +424,6 @@
 
     .porque-popi {
 
-      background-color: #F8F5EE;
-
       padding: 60px 40px 80px;
 
       text-align: center;
@@ -507,15 +432,11 @@
 
     .porque-popi h2 {
 
-      margin: 0 auto 45px;
-
-      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 45px;
 
       font-size: 32px;
 
       font-weight: 700;
-
-      color: #000000;
 
       text-transform: uppercase;
     }
@@ -543,7 +464,7 @@
 
       border-radius: 12px;
 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
       text-align: left;
     }
@@ -553,13 +474,9 @@
 
       margin: 0;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 15px;
 
       line-height: 1.7;
-
-      color: #000000;
     }
 
 
@@ -569,8 +486,6 @@
 
     .dispositivo {
 
-      background-color: #F8F5EE;
-
       padding: 60px 40px 80px;
 
       text-align: center;
@@ -579,15 +494,11 @@
 
     .dispositivo h2 {
 
-      margin: 0 auto 50px;
-
-      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 50px;
 
       font-size: 32px;
 
       font-weight: 700;
-
-      color: #000000;
 
       text-transform: uppercase;
     }
@@ -619,39 +530,17 @@
 
       object-fit: contain;
 
-      display: block;
-
       border-radius: 12px;
 
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
     }
 
 
     .dispositivo-texto {
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 17px;
 
       line-height: 1.8;
-
-      color: #000000;
-    }
-
-
-    .dispositivo-texto p {
-
-      margin-top: 0;
-
-      margin-bottom: 20px;
-    }
-
-
-    .dispositivo-texto strong {
-
-      color: #2477B8;
-
-      font-weight: 700;
     }
 
 
@@ -661,8 +550,6 @@
 
     .sobre-nos {
 
-      background-color: #F8F5EE;
-
       padding: 60px 40px 70px;
 
       text-align: center;
@@ -671,15 +558,11 @@
 
     .sobre-nos h2 {
 
-      margin: 0 auto 35px;
-
-      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 35px;
 
       font-size: 32px;
 
       font-weight: 700;
-
-      color: #000000;
 
       text-transform: uppercase;
     }
@@ -691,28 +574,16 @@
 
       margin: 0 auto 45px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 17px;
 
       line-height: 1.8;
-
-      color: #000000;
 
       text-align: justify;
     }
 
 
-    .sobre-nos-texto p {
-
-      margin-top: 0;
-
-      margin-bottom: 20px;
-    }
-
-
     /* =========================
-       CARROSSEL DAS FEIRAS
+       FEIRAS
        ========================= */
 
     .feiras-carrossel {
@@ -729,18 +600,13 @@
 
       scroll-snap-type: x mandatory;
 
-      scroll-behavior: smooth;
-
       scrollbar-width: none;
-
-      -webkit-overflow-scrolling: touch;
 
       padding: 10px 5px 20px;
     }
 
 
     .feiras-carrossel::-webkit-scrollbar {
-
       display: none;
     }
 
@@ -757,7 +623,7 @@
 
       padding: 8px;
 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 
 
@@ -769,8 +635,6 @@
 
       object-fit: cover;
 
-      display: block;
-
       border-radius: 8px;
     }
 
@@ -779,15 +643,138 @@
 
       margin: 12px 5px 8px;
 
+      font-size: 14px;
+
+      font-weight: 600;
+
+      line-height: 1.4;
+    }
+
+
+    /* =========================
+       QUEDAS
+       ÁREA PREPARADA PARA
+       FUTURA CONEXÃO
+       ========================= */
+
+    .quedas {
+
+      padding: 70px 30px 80px;
+
+      text-align: center;
+
+      background-color: #EEF7FD;
+    }
+
+
+    .quedas h2 {
+
+      margin: 0 0 15px;
+
+      font-size: 32px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+    }
+
+
+    .quedas-subtitulo {
+
+      max-width: 700px;
+
+      margin: 0 auto 35px;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+    }
+
+
+    /* PAINEL DO MONITOR */
+
+    .monitor {
+
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      background-color: white;
+
+      border-radius: 15px;
+
+      padding: 35px;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    }
+
+
+    .status-indicador {
+
+      width: 18px;
+
+      height: 18px;
+
+      background-color: #999;
+
+      border-radius: 50%;
+
+      display: inline-block;
+
+      margin-right: 8px;
+    }
+
+
+    .status {
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      margin-bottom: 25px;
+    }
+
+
+    .status-texto {
+
+      font-size: 15px;
+
+      line-height: 1.6;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* BOTÃO QUE FUTURAMENTE
+       PODERÁ TESTAR O ALERTA */
+
+    .botao-teste {
+
+      border: none;
+
+      background-color: #2477B8;
+
+      color: white;
+
+      padding: 13px 25px;
+
+      border-radius: 7px;
+
       font-family: 'Montserrat', sans-serif;
 
       font-size: 14px;
 
       font-weight: 600;
 
-      line-height: 1.4;
+      cursor: pointer;
 
-      color: #000000;
+      transition: 0.3s;
+    }
+
+
+    .botao-teste:hover {
+
+      background-color: #185B8E;
     }
 
 
@@ -797,9 +784,7 @@
 
     .contato {
 
-      background-color: #F8F5EE;
-
-      padding: 50px 30px 70px;
+      padding: 60px 20px 70px;
 
       text-align: center;
     }
@@ -807,37 +792,27 @@
 
     .contato h2 {
 
-      margin: 0 0 40px;
-
-      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 40px;
 
       font-size: 32px;
 
       font-weight: 700;
 
-      color: #000000;
-
       text-transform: uppercase;
     }
 
 
-    /* CONTATOS UM ABAIXO DO OUTRO */
-
     .contatos-container {
-
-      max-width: 500px;
-
-      margin: 0 auto;
 
       display: flex;
 
       flex-direction: column;
 
-      justify-content: center;
-
       align-items: center;
 
-      gap: 20px;
+      justify-content: center;
+
+      gap: 18px;
     }
 
 
@@ -851,21 +826,17 @@
 
       gap: 10px;
 
-      font-family: 'Montserrat', sans-serif;
-
       font-size: 15px;
-
-      color: #000000;
     }
 
 
     .contato-item i {
 
+      width: 22px;
+
       font-size: 18px;
 
       color: #2477B8;
-
-      width: 22px;
 
       text-align: center;
     }
@@ -876,8 +847,6 @@
       color: #000000;
 
       text-decoration: none;
-
-      transition: 0.3s;
     }
 
 
@@ -900,8 +869,6 @@
       text-align: center;
 
       padding: 22px;
-
-      font-family: 'Montserrat', sans-serif;
     }
 
 
@@ -925,12 +892,6 @@
       }
 
 
-      .hero h1 {
-
-        font-size: 52px;
-      }
-
-
       .porque-container {
 
         grid-template-columns: 1fr;
@@ -939,49 +900,17 @@
       }
 
 
-      /* DISPOSITIVO */
-
       .dispositivo-container {
 
         grid-template-columns: 0.9fr 1.1fr;
 
         gap: 20px;
-
-        align-items: center;
       }
 
 
       .dispositivo-imagem img {
 
-        width: 100%;
-
         max-height: 300px;
-
-        object-fit: contain;
-      }
-
-
-      .dispositivo-texto {
-
-        text-align: left;
-
-        font-size: 14px;
-
-        line-height: 1.6;
-      }
-
-
-      /* FEIRAS */
-
-      .feira-item {
-
-        flex: 0 0 260px;
-      }
-
-
-      .feira-item img {
-
-        height: 180px;
       }
 
     }
@@ -995,7 +924,7 @@
 
       nav {
 
-        padding: 13px 8px;
+        padding: 12px 8px;
       }
 
 
@@ -1005,13 +934,7 @@
 
         flex-wrap: wrap;
 
-        gap: 8px;
-      }
-
-
-      nav ul li {
-
-        margin-right: 3px;
+        gap: 8px 13px;
       }
 
 
@@ -1021,19 +944,11 @@
       }
 
 
-      /* HERO */
-
       .hero {
 
         height: 450px;
 
-        margin-top: 48px;
-      }
-
-
-      .hero-content {
-
-        padding: 20px;
+        margin-top: 70px;
       }
 
 
@@ -1054,8 +969,6 @@
         font-size: 15px;
       }
 
-
-      /* DESTAQUES */
 
       .destaques {
 
@@ -1085,17 +998,9 @@
       }
 
 
-      /* AVALIAÇÕES */
-
       .avaliacoes {
 
         padding: 30px 15px 60px;
-      }
-
-
-      .avaliacoes-titulo {
-
-        font-size: 25px;
       }
 
 
@@ -1113,8 +1018,6 @@
       }
 
 
-      /* POR QUE DO POPI */
-
       .porque-popi {
 
         padding: 50px 20px 60px;
@@ -1124,43 +1027,22 @@
       .porque-popi h2 {
 
         font-size: 26px;
-
-        margin-bottom: 30px;
       }
 
-
-      .porque-item {
-
-        padding: 25px;
-      }
-
-
-      .porque-item p {
-
-        font-size: 14px;
-      }
-
-
-      /* DISPOSITIVO */
 
       .dispositivo {
 
-        padding: 45px 12px 60px;
+        padding: 45px 15px 60px;
       }
 
 
       .dispositivo h2 {
 
-        font-size: 25px;
+        font-size: 26px;
 
         margin-bottom: 30px;
       }
 
-
-      /*
-       A IMAGEM E O TEXTO CONTINUAM
-       LADO A LADO NO CELULAR
-      */
 
       .dispositivo-container {
 
@@ -1174,11 +1056,7 @@
 
       .dispositivo-imagem img {
 
-        width: 100%;
-
         max-height: 220px;
-
-        object-fit: contain;
       }
 
 
@@ -1187,18 +1065,8 @@
         font-size: 11px;
 
         line-height: 1.5;
-
-        text-align: left;
       }
 
-
-      .dispositivo-texto p {
-
-        margin-bottom: 12px;
-      }
-
-
-      /* SOBRE NÓS */
 
       .sobre-nos {
 
@@ -1209,8 +1077,6 @@
       .sobre-nos h2 {
 
         font-size: 26px;
-
-        margin-bottom: 30px;
       }
 
 
@@ -1218,83 +1084,47 @@
 
         font-size: 14px;
 
-        line-height: 1.7;
-
         text-align: left;
-
-        margin-bottom: 30px;
-      }
-
-
-      /* FEIRAS */
-
-      .feiras-carrossel {
-
-        gap: 15px;
-
-        padding: 5px 0 15px;
       }
 
 
       .feira-item {
 
         flex: 0 0 230px;
-
-        padding: 7px;
       }
 
 
       .feira-item img {
 
         height: 155px;
-
-        object-fit: cover;
       }
 
 
-      .feira-item p {
+      /* QUEDAS */
 
-        font-size: 12px;
+      .quedas {
 
-        margin-top: 10px;
+        padding: 50px 15px 60px;
+      }
 
-        margin-bottom: 6px;
+
+      .quedas h2 {
+
+        font-size: 26px;
+      }
+
+
+      .monitor {
+
+        padding: 25px 18px;
       }
 
 
       /* CONTATO */
 
-      .contato {
-
-        padding: 50px 20px 60px;
-      }
-
-
       .contato h2 {
 
         font-size: 26px;
-
-        margin-bottom: 30px;
-      }
-
-
-      .contatos-container {
-
-        flex-direction: column;
-
-        gap: 18px;
-      }
-
-
-      .contato-item {
-
-        font-size: 13px;
-      }
-
-
-      .contato-item i {
-
-        font-size: 17px;
       }
 
     }
@@ -1307,543 +1137,616 @@
 <body>
 
 
-<!-- =========================
-     CABEÇALHO
-     ========================= -->
+  <!-- =========================
+       CABEÇALHO
+       ========================= -->
 
-<nav>
+  <nav>
 
-  <ul>
+    <ul>
 
-    <li>
-      <a href="#inicio">Início</a>
-    </li>
+      <li>
+        <a href="#inicio">Início</a>
+      </li>
 
-    <li>
-      <a href="#popi">POPI</a>
-    </li>
+      <li>
+        <a href="#popi">POPI</a>
+      </li>
 
-    <li>
-      <a href="#dispositivo">Dispositivo</a>
-    </li>
+      <li>
+        <a href="#dispositivo">Dispositivo</a>
+      </li>
 
-    <!-- NOVA ABA -->
-    <li>
-      <a href="quedas.html">Quedas</a>
-    </li>
+      <li>
+        <a href="#sobre">Sobre nós</a>
+      </li>
 
-    <li>
-      <a href="#sobre">Sobre nós</a>
-    </li>
+      <li>
+        <a href="#quedas">Quedas</a>
+      </li>
 
-    <li>
-      <a href="#contato">Contato</a>
-    </li>
+      <li>
+        <a href="#contato">Contato</a>
+      </li>
 
-  </ul>
+    </ul>
 
-</nav>
+  </nav>
 
-
-<!-- =========================
-     HERO
-     ========================= -->
-
-<section class="hero" id="inicio">
-
-  <div class="hero-content">
-
-    <h1>
-      Bem-vindos
-    </h1>
-
-    <div class="subtitle">
-      POPI — Protótipo Observador Para Idosos
-    </div>
-
-    <div class="description">
-      Monitor de quedas para mais segurança.
-    </div>
-
-    <a href="#popi" class="btn">
-      Saiba mais
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     POPI / DESTAQUES
-     ========================= -->
-
-<section class="destaques" id="popi">
-
-  <div class="destaques-frase">
-
-    Tecnologia que protege, cuidado que transforma,
-    segurança em tranquilidade.
-
-  </div>
-
-
-  <div class="imagens-container">
-
-
-    <!-- IMAGEM 1 -->
-
-    <div class="imagem-item">
-
-      <img
-        src="autonomia-idoso.jpg"
-        alt="Autonomia para o idoso"
-      >
-
-      <p>
-        Autonomia para o idoso.
-      </p>
-
-    </div>
-
-
-    <!-- IMAGEM 2 -->
-
-    <div class="imagem-item">
-
-      <img
-        src="seguranca-familiar.jpg"
-        alt="Segurança para o familiar"
-      >
-
-      <p>
-        Segurança para o familiar.
-      </p>
-
-    </div>
-
-
-    <!-- IMAGEM 3 -->
-
-    <div class="imagem-item">
-
-      <img
-        src="tecnologia-qualidade.jpg"
-        alt="Tecnologia de qualidade"
-      >
-
-      <p>
-        Tecnologia de qualidade.
-      </p>
-
-    </div>
-
-
-    <!-- IMAGEM 4 -->
-
-    <div class="imagem-item">
-
-      <img
-        src="seguranca-conforto.jpg"
-        alt="Segurança e conforto"
-      >
-
-      <p>
-        Segurança e conforto.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     AVALIAÇÕES
-     ========================= -->
-
-<section class="avaliacoes">
-
-  <h2 class="avaliacoes-titulo">
-    O que dizem sobre o POPI
-  </h2>
-
-
-  <div class="carrossel">
-
-
-    <!-- AVALIAÇÃO 1 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “O POPI demonstra uma aplicação prática brilhante
-        da tecnologia, transformando conceitos em uma solução
-        real que alia inovação e cuidado.”
-      </p>
-
-      <strong>
-        — Adriano Santos
-      </strong>
-
-    </div>
-
-
-    <!-- AVALIAÇÃO 2 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “Com o POPI, o acompanhamento da saúde ganha um
-        aliado confiável, trazendo mais segurança tanto para
-        o paciente quanto para quem cuida.”
-      </p>
-
-      <strong>
-        — Adriana
-      </strong>
-
-    </div>
-
-
-    <!-- AVALIAÇÃO 3 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “O POPI me dá tranquilidade no dia a dia, sabendo
-        que existe uma tecnologia cuidando de quem eu amo.”
-      </p>
-
-      <strong>
-        — José
-      </strong>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     POR QUE DO POPI
-     ========================= -->
-
-<section class="porque-popi">
-
-  <h2>
-    Por que do POPI?
-  </h2>
-
-
-  <div class="porque-container">
-
-
-    <div class="porque-item">
-
-      <p>
-        As quedas são uma das principais causas de acidentes
-        domésticos. Elas podem resultar em fraturas, perda de
-        mobilidade e complicações sérias, afetando diretamente
-        a qualidade de vida. Reconhecer esse risco é o primeiro
-        passo para preveni-lo.
-      </p>
-
-    </div>
-
-
-    <div class="porque-item">
-
-      <p>
-        Cada minuto conta quando ocorre uma queda. A demora
-        no atendimento aumenta as chances de sequelas graves
-        e pode colocar a vida em risco. Além disso, gera
-        preocupação e ansiedade para familiares que não
-        conseguem agir rapidamente.
-      </p>
-
-    </div>
-
-
-    <div class="porque-item">
-
-      <p>
-        O POPI é um dispositivo inteligente que detecta
-        automaticamente quedas e envia alertas imediatos.
-        Assim, garante resposta rápida, reduz riscos e oferece
-        mais segurança e tranquilidade tanto para quem usa
-        quanto para quem acompanha.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     DISPOSITIVO
-     ========================= -->
-
-<section class="dispositivo" id="dispositivo">
-
-  <h2>
-    Dispositivo
-  </h2>
-
-
-  <div class="dispositivo-container">
-
-
-    <!-- IMAGEM DO PROTÓTIPO -->
-
-    <div class="dispositivo-imagem">
-
-      <img
-        src="POPI - Protótipo Observador para Idosos .jpg"
-        alt="Protótipo POPI"
-      >
-
-    </div>
-
-
-    <!-- TEXTO -->
-
-    <div class="dispositivo-texto">
-
-      <p>
-        O POPI é um bracelete que fica na região da axila.
-        Quando acontece uma queda, imediatamente um alerta
-        visual e sonoro é enviado para o celular do familiar,
-        que poderá tomar as providências necessárias.
-      </p>
-
-      <p>
-        O dispositivo é totalmente confortável, antialérgico
-        e à prova d'água.
-      </p>
-
-      <p>
-        O dispositivo também conta com um botão de emergência.
-        Caso o idoso não caia, mas passe mal ou precise de ajuda,
-        ele pode acionar o botão para pedir auxílio.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     SOBRE NÓS
-     ========================= -->
-
-<section class="sobre-nos" id="sobre">
-
-  <h2>
-    Sobre nós
-  </h2>
-
-
-  <div class="sobre-nos-texto">
-
-    <p>
-      O POPI é um projeto criado para dar mais segurança aos
-      idosos e seus familiares. O principal problema das quedas
-      nem sempre é o acidente em si, mas a demora no atendimento.
-      Foi pensando nisso que os alunos Daniela Soares Dias,
-      Diego Antunes dos Anjos e Nicole Dias da Silva, da Escola
-      Técnica Estadual Frederico Guilherme Schmidt, desenvolveram
-      o protótipo.
-    </p>
-
-    <p>
-      Ele detecta a queda instantaneamente através do bracelete
-      e envia o sinal para o celular do familiar.
-    </p>
-
-  </div>
 
 
   <!-- =========================
-       FEIRAS
+       INÍCIO
        ========================= -->
 
-  <div class="feiras-carrossel">
+  <section class="hero" id="inicio">
 
+    <div class="hero-content">
 
-    <!-- MOTIC -->
+      <h1>
+        Bem-vindos
+      </h1>
 
-    <div class="feira-item">
+      <div class="subtitle">
+        POPI — Protótipo Observador Para Idosos
+      </div>
 
-      <img
-        src="motic-2025.jpg"
-        alt="MOTIC 2025 - São Leopoldo"
-      >
+      <div class="description">
+        Monitor de quedas para mais segurança.
+      </div>
 
-      <p>
-        MOTIC 2025 — São Leopoldo
-      </p>
-
-    </div>
-
-
-    <!-- EXPOSCHMIDT -->
-
-    <div class="feira-item">
-
-      <img
-        src="exposchimidt-2025.jpg"
-        alt="Exposchmidt 2025"
-      >
-
-      <p>
-        Exposchmidt 2025
-      </p>
-
-    </div>
-
-
-    <!-- EXPOMILSET -->
-
-    <div class="feira-item">
-
-      <img
-        src="expomilset-fortaleza-2026.jpg"
-        alt="Expomilset Fortaleza 2026"
-      >
-
-      <p>
-        Expomilset — Fortaleza 2026
-      </p>
-
-    </div>
-
-
-    <!-- IBTEC -->
-
-    <div class="feira-item">
-
-      <img
-        src="ibtec.jpg"
-        alt="IBTEC"
-      >
-
-      <p>
-        IBTEC
-      </p>
-
-    </div>
-
-
-    <!-- PRÉ-INCUBAÇÃO -->
-
-    <div class="feira-item">
-
-      <img
-        src="pre-incubacao-liberato.jpg"
-        alt="Pré-incubação Liberato 2026"
-      >
-
-      <p>
-        Pré-incubação Liberato 2026
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CONTATO
-     ========================= -->
-
-<section class="contato" id="contato">
-
-  <h2>
-    Contato
-  </h2>
-
-
-  <div class="contatos-container">
-
-
-    <!-- TELEFONE -->
-
-    <div class="contato-item">
-
-      <i class="fa-solid fa-phone"></i>
-
-      <a href="tel:+5551981157599">
-        (51) 98115-7599
+      <a href="#popi" class="btn">
+        Saiba mais
       </a>
 
     </div>
 
+  </section>
 
-    <!-- E-MAIL -->
 
-    <div class="contato-item">
 
-      <i class="fa-solid fa-envelope"></i>
+  <!-- =========================
+       POPI
+       ========================= -->
 
-      <a href="mailto:projetopopi2026@gmail.com">
-        projetopopi2026@gmail.com
-      </a>
+  <section class="destaques" id="popi">
+
+    <div class="destaques-frase">
+
+      Tecnologia que protege, cuidado que transforma,
+      segurança em tranquilidade.
 
     </div>
 
 
-    <!-- INSTAGRAM -->
+    <div class="imagens-container">
 
-    <div class="contato-item">
 
-      <i class="fa-brands fa-instagram"></i>
+      <div class="imagem-item">
 
-      <a
-        href="https://www.instagram.com/projeto_popi"
-        target="_blank"
+        <img
+          src="autonomia-idoso.jpg"
+          alt="Autonomia para o idoso"
+        >
+
+        <p>
+          Autonomia para o idoso.
+        </p>
+
+      </div>
+
+
+      <div class="imagem-item">
+
+        <img
+          src="seguranca-familiar.jpg"
+          alt="Segurança para o familiar"
+        >
+
+        <p>
+          Segurança para o familiar.
+        </p>
+
+      </div>
+
+
+      <div class="imagem-item">
+
+        <img
+          src="tecnologia-qualidade.jpg"
+          alt="Tecnologia de qualidade"
+        >
+
+        <p>
+          Tecnologia de qualidade.
+        </p>
+
+      </div>
+
+
+      <div class="imagem-item">
+
+        <img
+          src="seguranca-conforto.jpg"
+          alt="Segurança e conforto"
+        >
+
+        <p>
+          Segurança e conforto.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       AVALIAÇÕES
+       ========================= -->
+
+  <section class="avaliacoes">
+
+    <h2 class="avaliacoes-titulo">
+      O QUE DIZEM SOBRE O POPI
+    </h2>
+
+
+    <div class="carrossel">
+
+
+      <div class="avaliacao">
+
+        <div class="estrelas">
+          ★★★★★
+        </div>
+
+        <p>
+          “O POPI demonstra uma aplicação prática brilhante
+          da tecnologia, transformando conceitos em uma solução
+          real que alia inovação e cuidado.”
+        </p>
+
+        <strong>
+          — Adriano Santos
+        </strong>
+
+      </div>
+
+
+      <div class="avaliacao">
+
+        <div class="estrelas">
+          ★★★★★
+        </div>
+
+        <p>
+          “Com o POPI, o acompanhamento da saúde ganha um
+          aliado confiável, trazendo mais segurança tanto para
+          o paciente quanto para quem cuida.”
+        </p>
+
+        <strong>
+          — Adriana
+        </strong>
+
+      </div>
+
+
+      <div class="avaliacao">
+
+        <div class="estrelas">
+          ★★★★★
+        </div>
+
+        <p>
+          “O POPI me dá tranquilidade no dia a dia, sabendo
+          que existe uma tecnologia cuidando de quem eu amo.”
+        </p>
+
+        <strong>
+          — José
+        </strong>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       POR QUE DO POPI?
+       ========================= -->
+
+  <section class="porque-popi">
+
+    <h2>
+      POR QUE DO POPI?
+    </h2>
+
+
+    <div class="porque-container">
+
+
+      <div class="porque-item">
+
+        <p>
+          As quedas são uma das principais causas de acidentes
+          domésticos. Elas podem resultar em fraturas, perda de
+          mobilidade e complicações sérias, afetando diretamente
+          a qualidade de vida. Reconhecer esse risco é o primeiro
+          passo para preveni-lo.
+        </p>
+
+      </div>
+
+
+      <div class="porque-item">
+
+        <p>
+          Cada minuto conta quando ocorre uma queda. A demora
+          no atendimento aumenta as chances de sequelas graves
+          e pode colocar a vida em risco. Além disso, gera
+          preocupação e ansiedade para familiares que não
+          conseguem agir rapidamente.
+        </p>
+
+      </div>
+
+
+      <div class="porque-item">
+
+        <p>
+          O POPI é um dispositivo inteligente que detecta
+          automaticamente quedas e envia alertas imediatos.
+          Assim, garante resposta rápida, reduz riscos e oferece
+          mais segurança e tranquilidade tanto para quem usa
+          quanto para quem acompanha.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DISPOSITIVO
+       ========================= -->
+
+  <section class="dispositivo" id="dispositivo">
+
+    <h2>
+      DISPOSITIVO
+    </h2>
+
+
+    <div class="dispositivo-container">
+
+
+      <div class="dispositivo-imagem">
+
+        <img
+          src="POPI - Protótipo Observador para Idosos .jpg"
+          alt="Protótipo POPI"
+        >
+
+      </div>
+
+
+      <div class="dispositivo-texto">
+
+        <p>
+          O POPI é um bracelete que fica na região da axila.
+          Quando acontece uma queda, imediatamente um alerta
+          visual e sonoro é enviado para o celular do familiar,
+          que poderá tomar as providências necessárias.
+        </p>
+
+        <p>
+          O dispositivo é totalmente confortável, antialérgico
+          e à prova d'água.
+        </p>
+
+        <p>
+          O dispositivo também conta com um botão de emergência.
+          Caso o idoso não caia, mas passe mal ou precise de ajuda,
+          poderá acionar o botão para solicitar assistência.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SOBRE NÓS
+       ========================= -->
+
+  <section class="sobre-nos" id="sobre">
+
+    <h2>
+      SOBRE NÓS
+    </h2>
+
+
+    <div class="sobre-nos-texto">
+
+      <p>
+        O POPI é um projeto criado para dar mais segurança aos
+        idosos e seus familiares. O principal problema das quedas
+        nem sempre é o acidente em si, mas a demora no atendimento.
+        Foi pensando nisso que os alunos Daniela Soares Dias,
+        Diego Antunes dos Anjos e Nicole Dias da Silva, da Escola
+        Técnica Estadual Frederico Guilherme Schmidt, desenvolveram
+        o protótipo.
+      </p>
+
+
+      <p>
+        Ele detecta a queda instantaneamente através do bracelete
+        e envia o sinal para o celular do familiar.
+      </p>
+
+    </div>
+
+
+
+    <!-- CARROSSEL DAS FEIRAS -->
+
+    <div class="feiras-carrossel">
+
+
+      <div class="feira-item">
+
+        <img
+          src="motic-2025.jpg"
+          alt="MOTIC 2025 São Leopoldo"
+        >
+
+        <p>
+          MOTIC 2025 — São Leopoldo
+        </p>
+
+      </div>
+
+
+      <div class="feira-item">
+
+        <img
+          src="exposchimidt-2025.jpg"
+          alt="Exposchmidt 2025"
+        >
+
+        <p>
+          Exposchmidt 2025
+        </p>
+
+      </div>
+
+
+      <div class="feira-item">
+
+        <img
+          src="expomilset-fortaleza-2026.jpg"
+          alt="Expomilset Fortaleza 2026"
+        >
+
+        <p>
+          Expomilset — Fortaleza 2026
+        </p>
+
+      </div>
+
+
+      <div class="feira-item">
+
+        <img
+          src="ibtec.jpg"
+          alt="IBTEC"
+        >
+
+        <p>
+          IBTEC
+        </p>
+
+      </div>
+
+
+      <div class="feira-item">
+
+        <img
+          src="pre-incubacao-liberato.jpg"
+          alt="Pré-incubação Liberato 2026"
+        >
+
+        <p>
+          Pré-incubação Liberato 2026
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       QUEDAS
+       ========================= -->
+
+  <section class="quedas" id="quedas">
+
+    <h2>
+      QUEDAS
+    </h2>
+
+
+    <p class="quedas-subtitulo">
+
+      Área destinada ao monitoramento do dispositivo POPI.
+      Quando o sistema estiver conectado ao protótipo,
+      esta área poderá apresentar os alertas enviados
+      pelo dispositivo em tempo real.
+
+    </p>
+
+
+    <div class="monitor">
+
+
+      <div class="status">
+
+        <span class="status-indicador"></span>
+
+        Sistema aguardando conexão
+
+      </div>
+
+
+      <p class="status-texto">
+
+        O detector de quedas ainda não está conectado.
+        Quando a comunicação com o dispositivo estiver
+        implementada, este painel poderá informar se uma
+        queda foi detectada e apresentar o alerta ao familiar.
+
+      </p>
+
+
+      <button
+        class="botao-teste"
+        onclick="testarAlerta()"
       >
-        @projeto_popi
-      </a>
+
+        TESTAR ALERTA
+
+      </button>
+
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================
-     RODAPÉ
-     ========================= -->
 
-<footer>
+  <!-- =========================
+       CONTATO
+       ========================= -->
 
-  <p>
-    &copy; 2026 POPI - Todos os direitos reservados
-  </p>
+  <section class="contato" id="contato">
 
-</footer>
+    <h2>
+      CONTATO
+    </h2>
+
+
+    <div class="contatos-container">
+
+
+      <div class="contato-item">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <a href="tel:+5551981157599">
+          (51) 98115-7599
+        </a>
+
+      </div>
+
+
+      <div class="contato-item">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <a href="mailto:projetopopi2026@gmail.com">
+          projetopopi2026@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="contato-item">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <a
+          href="https://www.instagram.com/projeto_popi/"
+          target="_blank"
+        >
+          @projeto_popi
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       RODAPÉ
+       ========================= -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 POPI - Todos os direitos reservados
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script>
+
+    function testarAlerta() {
+
+      const status =
+        document.querySelector(".status");
+
+      const indicador =
+        document.querySelector(".status-indicador");
+
+      status.innerHTML =
+        '<span class="status-indicador"></span> ALERTA DE TESTE';
+
+      indicador.style.backgroundColor = "#D9534F";
+
+      setTimeout(function() {
+
+        status.innerHTML =
+          '<span class="status-indicador"></span> Sistema aguardando conexão';
+
+        const novoIndicador =
+          document.querySelector(".status-indicador");
+
+        novoIndicador.style.backgroundColor = "#999";
+
+      }, 3000);
+
+    }
+
+  </script>
 
 
 </body>
