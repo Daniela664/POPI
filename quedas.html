@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>POPI - Monitoramento de Quedas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #F8F5EE;
+      color: #000000;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+      background-color: #2477B8;
+      padding: 15px 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.75;
+    }
+
+    .quedas {
+      min-height: calc(100vh - 60px);
+      padding: 100px 30px 80px;
+      text-align: center;
+      background-color: #EEF7FD;
+    }
+
+    .quedas h1 {
+      margin: 0 0 15px;
+      font-size: 38px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .quedas-subtitulo {
+      max-width: 700px;
+      margin: 0 auto 35px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .monitor {
+      max-width: 650px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 15px;
+      padding: 35px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    }
+
+    .status-indicador {
+      width: 18px;
+      height: 18px;
+      background-color: #999;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .status {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .status-texto {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .botao-teste {
+      border: none;
+      background-color: #2477B8;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .botao-teste:hover {
+      background-color: #185B8E;
+    }
+
+    footer {
+      background-color: #2477B8;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+    <ul>
+
+      <li>
+        <a href="index.html">Início</a>
+      </li>
+
+      <li>
+        <a href="index.html#popi">POPI</a>
+      </li>
+
+      <li>
+        <a href="index.html#dispositivo">Dispositivo</a>
+      </li>
+
+      <li>
+        <a href="quedas.html">Quedas</a>
+      </li>
+
+      <li>
+        <a href="index.html#sobre">Sobre nós</a>
+      </li>
+
+      <li>
+        <a href="index.html#contato">Contato</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <section class="quedas">
+
+    <h1>
+      QUEDAS
+    </h1>
+
+    <p class="quedas-subtitulo">
+      Área destinada ao monitoramento do dispositivo POPI.
+      Quando o sistema estiver conectado ao protótipo,
+      esta área poderá apresentar os alertas enviados
+      pelo dispositivo em tempo real.
+    </p>
+
+
+    <div class="monitor">
+
+      <div class="status">
+
+        <span class="status-indicador"></span>
+
+        Sistema aguardando conexão
+
+      </div>
+
+
+      <p class="status-texto">
+
+        O detector de quedas ainda não está conectado.
+        Quando a comunicação com o dispositivo estiver
+        implementada, este painel poderá informar se uma
+        queda foi detectada e apresentar o alerta ao familiar.
+
+      </p>
+
+
+      <button
+        class="botao-teste"
+        onclick="testarAlerta()"
+      >
+
+        TESTAR ALERTA
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <p>
+      &copy; 2026 POPI - Todos os direitos reservados
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    function testarAlerta() {
+
+      const status =
+        document.querySelector(".status");
+
+      const indicador =
+        document.querySelector(".status-indicador");
+
+      status.innerHTML =
+        '<span class="status-indicador"></span> ALERTA DE TESTE';
+
+      indicador.style.backgroundColor = "#D9534F";
+
+
+      setTimeout(function() {
+
+        status.innerHTML =
+          '<span class="status-indicador"></span> Sistema aguardando conexão';
+
+        const novoIndicador =
+          document.querySelector(".status-indicador");
+
+        novoIndicador.style.backgroundColor = "#999";
+
+      }, 3000);
+
+    }
+
+  </script>
+
+</body>
+
+</html>
