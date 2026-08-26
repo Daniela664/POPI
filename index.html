@@ -358,7 +358,180 @@
 
       color: #000000;
     }
+/* =========================
+   AVALIAÇÕES
+   ========================= */
 
+.avaliacoes {
+  background-color: #F8F5EE;
+  padding: 30px 20px 80px;
+  text-align: center;
+}
+
+.avaliacoes-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+
+/* Área que permite deslizar */
+
+.carrossel {
+  max-width: 850px;
+  margin: 0 auto;
+
+  display: flex;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Cada avaliação */
+
+.avaliacao {
+  min-width: 100%;
+
+  scroll-snap-align: center;
+
+  padding: 40px;
+
+  background-color: #DCEEFF;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.10);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 220px;
+
+  margin: 0;
+}
+
+
+/* Estrelas */
+
+.estrelas {
+  font-size: 25px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+
+  color: #E5A900;
+}
+
+
+/* Texto */
+
+.avaliacao p {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  font-style: italic;
+
+  color: #000000;
+}
+
+
+/* Nome */
+
+.avaliacao strong {
+  display: block;
+
+  margin-top: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 15px;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  color: #000000;
+}
+
+
+/* Bolinhas */
+
+.indicadores {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.indicador {
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background-color: #AFCFE8;
+}
+
+.indicador.ativo {
+  background-color: #2477B8;
+}
+
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+  .avaliacoes {
+    padding: 20px 15px 60px;
+  }
+
+  .avaliacoes-titulo {
+    font-size: 25px;
+  }
+
+  .avaliacao {
+    padding: 30px 20px;
+
+    min-height: 280px;
+  }
+
+  .avaliacao p {
+    font-size: 15px;
+  }
+
+}
 
     /* =========================
        RODAPÉ
@@ -653,7 +826,98 @@
 
 
     </div>
+<!-- =========================
+     AVALIAÇÕES
+     ========================= -->
 
+<div class="avaliacoes">
+
+  <h2 class="avaliacoes-titulo">
+    O que dizem sobre o POPI
+  </h2>
+
+
+  <div class="carrossel">
+
+
+    <!-- AVALIAÇÃO 1 -->
+
+    <div class="avaliacao">
+
+      <div class="estrelas">
+        ★★★★★
+      </div>
+
+      <p>
+        “O POPI demonstra uma aplicação prática brilhante
+        da tecnologia, transformando conceitos em uma solução
+        real que alia inovação e cuidado.”
+      </p>
+
+      <strong>
+        — Adriano Santos
+      </strong>
+
+    </div>
+
+
+    <!-- AVALIAÇÃO 2 -->
+
+    <div class="avaliacao">
+
+      <div class="estrelas">
+        ★★★★★
+      </div>
+
+      <p>
+        “Com o POPI, o acompanhamento da saúde ganha um
+        aliado confiável, trazendo mais segurança tanto para
+        o paciente quanto para quem cuida.”
+      </p>
+
+      <strong>
+        — Adriana
+      </strong>
+
+    </div>
+
+
+    <!-- AVALIAÇÃO 3 -->
+
+    <div class="avaliacao">
+
+      <div class="estrelas">
+        ★★★★★
+      </div>
+
+      <p>
+        “O POPI me dá tranquilidade no dia a dia, sabendo
+        que existe uma tecnologia cuidando de quem eu amo.”
+      </p>
+
+      <strong>
+        — José
+      </strong>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- INDICADORES -->
+
+  <div class="indicadores">
+
+    <span class="indicador ativo"></span>
+
+    <span class="indicador"></span>
+
+    <span class="indicador"></span>
+
+  </div>
+
+</div>
   </section>
 
 
