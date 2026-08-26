@@ -1,31 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>POPI - Protótipo Observador Para Idosos</title>
 
-
   <!-- FONTES -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- ÍCONES -->
-
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
-
 
   <style>
 
@@ -45,188 +42,136 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-
     /* =========================
        CABEÇALHO
        ========================= */
 
     nav {
       background-color: #2477B8;
-
       padding: 15px 25px;
-
       position: fixed;
-
       top: 0;
       left: 0;
-
       width: 100%;
-
       z-index: 1000;
-
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
-
     nav ul {
       list-style: none;
-
       margin: 0;
       padding: 0;
 
       display: flex;
-
       justify-content: flex-start;
-
       align-items: center;
-
       gap: 28px;
     }
-
 
     nav ul li {
       margin: 0;
     }
 
-
     nav ul li a {
       text-decoration: none;
-
       color: white;
-
       font-size: 15px;
-
       font-weight: 600;
-
       transition: 0.3s;
     }
-
 
     nav ul li a:hover {
       opacity: 0.75;
     }
-
 
     /* =========================
        HERO
        ========================= */
 
     .hero {
-
       background-image: url("iStock_79246287_IdososCaminhandoCostas.jpg");
-
       background-size: cover;
-
       background-position: center;
-
       background-repeat: no-repeat;
 
       height: 500px;
-
       width: 100%;
 
       display: flex;
-
       justify-content: center;
-
       align-items: center;
 
       text-align: center;
-
       position: relative;
 
       margin-top: 52px;
     }
 
-
     .hero-content {
-
       max-width: 900px;
-
       padding: 30px;
     }
 
-
     .hero h1 {
-
       margin: 0;
 
       font-family: 'Pacifico', cursive;
-
       font-size: 64px;
-
       font-weight: 400;
 
       color: #000000;
     }
 
-
     .hero .subtitle {
-
       margin-top: 18px;
 
       font-size: 22px;
-
       font-weight: 600;
 
       color: #000000;
     }
 
-
     .hero .description {
-
       margin-top: 18px;
 
       font-size: 18px;
-
       line-height: 1.6;
 
       color: #000000;
     }
-
 
     /* =========================
        BOTÃO
        ========================= */
 
     .btn {
-
       display: inline-block;
 
       margin-top: 25px;
-
       padding: 13px 30px;
 
       background-color: #2477B8;
-
       color: white;
 
       text-decoration: none;
-
       border-radius: 6px;
 
       font-size: 15px;
-
       font-weight: 600;
 
       transition: 0.3s;
     }
 
-
     .btn:hover {
-
       background-color: #185B8E;
-
       transform: translateY(-2px);
     }
-
 
     /* =========================
        DESTAQUES / POPI
        ========================= */
 
     .destaques {
-
       background-color: #F8F5EE;
 
       padding: 65px 40px 40px;
@@ -234,27 +179,22 @@
       text-align: center;
     }
 
-
     .destaques-frase {
-
       max-width: 900px;
 
       margin: 0 auto 50px;
 
       font-size: 27px;
-
       font-weight: 600;
 
       line-height: 1.5;
     }
-
 
     /* =========================
        4 IMAGENS
        ========================= */
 
     .imagens-container {
-
       max-width: 1200px;
 
       margin: 0 auto;
@@ -266,21 +206,15 @@
       gap: 25px;
     }
 
-
     .imagem-item {
-
       text-align: center;
     }
 
-
     .imagem-item img {
-
       width: 100%;
-
       height: 220px;
 
       object-fit: cover;
-
       display: block;
 
       border-radius: 10px;
@@ -290,31 +224,24 @@
       transition: 0.3s;
     }
 
-
     .imagem-item img:hover {
-
       transform: translateY(-4px);
     }
 
-
     .imagem-item p {
-
       margin-top: 15px;
 
       font-size: 15px;
-
       font-weight: 600;
 
       line-height: 1.5;
     }
-
 
     /* =========================
        AVALIAÇÕES
        ========================= */
 
     .avaliacoes {
-
       background-color: #F8F5EE;
 
       padding: 50px 20px 70px;
@@ -322,19 +249,14 @@
       text-align: center;
     }
 
-
     .avaliacoes-titulo {
-
       font-size: 30px;
-
       font-weight: 700;
 
       margin-bottom: 35px;
     }
 
-
     .carrossel {
-
       max-width: 850px;
 
       margin: 0 auto;
@@ -350,14 +272,11 @@
       -webkit-overflow-scrolling: touch;
     }
 
-
     .carrossel::-webkit-scrollbar {
       display: none;
     }
 
-
     .avaliacao {
-
       min-width: 100%;
 
       scroll-snap-align: center;
@@ -375,15 +294,12 @@
       flex-direction: column;
 
       justify-content: center;
-
       align-items: center;
 
       min-height: 220px;
     }
 
-
     .estrelas {
-
       font-size: 25px;
 
       letter-spacing: 4px;
@@ -393,9 +309,7 @@
       color: #E5A900;
     }
 
-
     .avaliacao p {
-
       max-width: 700px;
 
       margin: 0;
@@ -407,9 +321,7 @@
       font-style: italic;
     }
 
-
     .avaliacao strong {
-
       display: block;
 
       margin-top: 20px;
@@ -417,33 +329,26 @@
       font-size: 15px;
     }
 
-
     /* =========================
        POR QUE DO POPI
        ========================= */
 
     .porque-popi {
-
       padding: 60px 40px 80px;
 
       text-align: center;
     }
 
-
     .porque-popi h2 {
-
       margin-bottom: 45px;
 
       font-size: 32px;
-
       font-weight: 700;
 
       text-transform: uppercase;
     }
 
-
     .porque-container {
-
       max-width: 1150px;
 
       margin: 0 auto;
@@ -455,9 +360,7 @@
       gap: 25px;
     }
 
-
     .porque-item {
-
       background-color: #EAF4FC;
 
       padding: 30px;
@@ -469,9 +372,7 @@
       text-align: left;
     }
 
-
     .porque-item p {
-
       margin: 0;
 
       font-size: 15px;
@@ -479,33 +380,26 @@
       line-height: 1.7;
     }
 
-
     /* =========================
        DISPOSITIVO
        ========================= */
 
     .dispositivo {
-
       padding: 60px 40px 80px;
 
       text-align: center;
     }
 
-
     .dispositivo h2 {
-
       margin-bottom: 50px;
 
       font-size: 32px;
-
       font-weight: 700;
 
       text-transform: uppercase;
     }
 
-
     .dispositivo-container {
-
       max-width: 1150px;
 
       margin: 0 auto;
@@ -521,9 +415,7 @@
       text-align: left;
     }
 
-
     .dispositivo-imagem img {
-
       width: 100%;
 
       max-height: 500px;
@@ -535,41 +427,32 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.12);
     }
 
-
     .dispositivo-texto {
-
       font-size: 17px;
 
       line-height: 1.8;
     }
-
 
     /* =========================
        SOBRE NÓS
        ========================= */
 
     .sobre-nos {
-
       padding: 60px 40px 70px;
 
       text-align: center;
     }
 
-
     .sobre-nos h2 {
-
       margin-bottom: 35px;
 
       font-size: 32px;
-
       font-weight: 700;
 
       text-transform: uppercase;
     }
 
-
     .sobre-nos-texto {
-
       max-width: 1000px;
 
       margin: 0 auto 45px;
@@ -581,13 +464,11 @@
       text-align: justify;
     }
 
-
     /* =========================
        FEIRAS
        ========================= */
 
     .feiras-carrossel {
-
       max-width: 1000px;
 
       margin: 0 auto;
@@ -605,14 +486,11 @@
       padding: 10px 5px 20px;
     }
 
-
     .feiras-carrossel::-webkit-scrollbar {
       display: none;
     }
 
-
     .feira-item {
-
       flex: 0 0 280px;
 
       scroll-snap-align: center;
@@ -626,9 +504,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 
-
     .feira-item img {
-
       width: 100%;
 
       height: 190px;
@@ -638,9 +514,7 @@
       border-radius: 8px;
     }
 
-
     .feira-item p {
-
       margin: 12px 5px 8px;
 
       font-size: 14px;
@@ -650,160 +524,26 @@
       line-height: 1.4;
     }
 
-
-    /* =========================
-       QUEDAS
-       ÁREA PREPARADA PARA
-       FUTURA CONEXÃO
-       ========================= */
-
-    .quedas {
-
-      padding: 70px 30px 80px;
-
-      text-align: center;
-
-      background-color: #EEF7FD;
-    }
-
-
-    .quedas h2 {
-
-      margin: 0 0 15px;
-
-      font-size: 32px;
-
-      font-weight: 700;
-
-      text-transform: uppercase;
-    }
-
-
-    .quedas-subtitulo {
-
-      max-width: 700px;
-
-      margin: 0 auto 35px;
-
-      font-size: 16px;
-
-      line-height: 1.7;
-    }
-
-
-    /* PAINEL DO MONITOR */
-
-    .monitor {
-
-      max-width: 650px;
-
-      margin: 0 auto;
-
-      background-color: white;
-
-      border-radius: 15px;
-
-      padding: 35px;
-
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-    }
-
-
-    .status-indicador {
-
-      width: 18px;
-
-      height: 18px;
-
-      background-color: #999;
-
-      border-radius: 50%;
-
-      display: inline-block;
-
-      margin-right: 8px;
-    }
-
-
-    .status {
-
-      font-size: 18px;
-
-      font-weight: 600;
-
-      margin-bottom: 25px;
-    }
-
-
-    .status-texto {
-
-      font-size: 15px;
-
-      line-height: 1.6;
-
-      margin-bottom: 25px;
-    }
-
-
-    /* BOTÃO QUE FUTURAMENTE
-       PODERÁ TESTAR O ALERTA */
-
-    .botao-teste {
-
-      border: none;
-
-      background-color: #2477B8;
-
-      color: white;
-
-      padding: 13px 25px;
-
-      border-radius: 7px;
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: 14px;
-
-      font-weight: 600;
-
-      cursor: pointer;
-
-      transition: 0.3s;
-    }
-
-
-    .botao-teste:hover {
-
-      background-color: #185B8E;
-    }
-
-
     /* =========================
        CONTATO
        ========================= */
 
     .contato {
-
       padding: 60px 20px 70px;
 
       text-align: center;
     }
 
-
     .contato h2 {
-
       margin-bottom: 40px;
 
       font-size: 32px;
-
       font-weight: 700;
 
       text-transform: uppercase;
     }
 
-
     .contatos-container {
-
       display: flex;
 
       flex-direction: column;
@@ -815,9 +555,7 @@
       gap: 18px;
     }
 
-
     .contato-item {
-
       display: flex;
 
       align-items: center;
@@ -829,9 +567,7 @@
       font-size: 15px;
     }
 
-
     .contato-item i {
-
       width: 22px;
 
       font-size: 18px;
@@ -841,27 +577,21 @@
       text-align: center;
     }
 
-
     .contato-item a {
-
       color: #000000;
 
       text-decoration: none;
     }
 
-
     .contato-item a:hover {
-
       color: #2477B8;
     }
-
 
     /* =========================
        RODAPÉ
        ========================= */
 
     footer {
-
       background-color: #2477B8;
 
       color: white;
@@ -871,14 +601,11 @@
       padding: 22px;
     }
 
-
     footer p {
-
       margin: 0;
 
       font-size: 13px;
     }
-
 
     /* =========================
        TABLET
@@ -887,34 +614,26 @@
     @media (max-width: 900px) {
 
       .imagens-container {
-
         grid-template-columns: repeat(2, 1fr);
       }
 
-
       .porque-container {
-
         grid-template-columns: 1fr;
 
         max-width: 750px;
       }
 
-
       .dispositivo-container {
-
         grid-template-columns: 0.9fr 1.1fr;
 
         gap: 20px;
       }
 
-
       .dispositivo-imagem img {
-
         max-height: 300px;
       }
 
     }
-
 
     /* =========================
        CELULAR
@@ -923,13 +642,10 @@
     @media (max-width: 600px) {
 
       nav {
-
         padding: 12px 8px;
       }
 
-
       nav ul {
-
         justify-content: center;
 
         flex-wrap: wrap;
@@ -937,115 +653,81 @@
         gap: 8px 13px;
       }
 
-
       nav ul li a {
-
         font-size: 11px;
       }
 
-
       .hero {
-
         height: 450px;
 
         margin-top: 70px;
       }
 
-
       .hero h1 {
-
         font-size: 42px;
       }
 
-
       .hero .subtitle {
-
         font-size: 17px;
       }
 
-
       .hero .description {
-
         font-size: 15px;
       }
 
-
       .destaques {
-
         padding: 50px 20px 40px;
       }
 
-
       .destaques-frase {
-
         font-size: 21px;
 
         margin-bottom: 35px;
       }
 
-
       .imagens-container {
-
         grid-template-columns: 1fr;
 
         gap: 35px;
       }
 
-
       .imagem-item img {
-
         height: 230px;
       }
 
-
       .avaliacoes {
-
         padding: 30px 15px 60px;
       }
 
-
       .avaliacao {
-
         padding: 30px 20px;
 
         min-height: 280px;
       }
 
-
       .avaliacao p {
-
         font-size: 15px;
       }
 
-
       .porque-popi {
-
         padding: 50px 20px 60px;
       }
 
-
       .porque-popi h2 {
-
         font-size: 26px;
       }
 
-
       .dispositivo {
-
         padding: 45px 15px 60px;
       }
 
-
       .dispositivo h2 {
-
         font-size: 26px;
 
         margin-bottom: 30px;
       }
 
-
       .dispositivo-container {
-
         grid-template-columns: 0.85fr 1.15fr;
 
         gap: 12px;
@@ -1053,77 +735,39 @@
         align-items: center;
       }
 
-
       .dispositivo-imagem img {
-
         max-height: 220px;
       }
 
-
       .dispositivo-texto {
-
         font-size: 11px;
 
         line-height: 1.5;
       }
 
-
       .sobre-nos {
-
         padding: 50px 20px 60px;
       }
 
-
       .sobre-nos h2 {
-
         font-size: 26px;
       }
 
-
       .sobre-nos-texto {
-
         font-size: 14px;
 
         text-align: left;
       }
 
-
       .feira-item {
-
         flex: 0 0 230px;
       }
 
-
       .feira-item img {
-
         height: 155px;
       }
 
-
-      /* QUEDAS */
-
-      .quedas {
-
-        padding: 50px 15px 60px;
-      }
-
-
-      .quedas h2 {
-
-        font-size: 26px;
-      }
-
-
-      .monitor {
-
-        padding: 25px 18px;
-      }
-
-
-      /* CONTATO */
-
       .contato h2 {
-
         font-size: 26px;
       }
 
@@ -1141,40 +785,37 @@
        CABEÇALHO
        ========================= -->
 
-<nav>
+  <nav>
 
-  <ul>
+    <ul>
 
-    <li>
-      <a href="#inicio">Início</a>
-    </li>
+      <li>
+        <a href="index.html#inicio">Início</a>
+      </li>
 
-    <li>
-      <a href="#popi">POPI</a>
-    </li>
+      <li>
+        <a href="index.html#popi">POPI</a>
+      </li>
 
-    <li>
-      <a href="#dispositivo">Dispositivo</a>
-    </li>
+      <li>
+        <a href="index.html#dispositivo">Dispositivo</a>
+      </li>
 
-    <li>
-       <a href="quedas.html">Quedas</a>
-    
-    </li>
+      <li>
+        <a href="quedas.html">Quedas</a>
+      </li>
 
-    <li>
- 
-      <a href="#sobre">Sobre nós</a>
-    </li>
+      <li>
+        <a href="index.html#sobre">Sobre nós</a>
+      </li>
 
-    <li>
-      <a href="#contato">Contato</a>
-    </li>
+      <li>
+        <a href="index.html#contato">Contato</a>
+      </li>
 
-  </ul>
+    </ul>
 
-</nav>
-
+  </nav>
 
 
   <!-- =========================
@@ -1204,7 +845,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -1284,7 +924,6 @@
   </section>
 
 
-
   <!-- =========================
        AVALIAÇÕES
        ========================= -->
@@ -1360,7 +999,6 @@
   </section>
 
 
-
   <!-- =========================
        POR QUE DO POPI?
        ========================= -->
@@ -1419,7 +1057,6 @@
   </section>
 
 
-
   <!-- =========================
        DISPOSITIVO
        ========================= -->
@@ -1471,7 +1108,6 @@
   </section>
 
 
-
   <!-- =========================
        SOBRE NÓS
        ========================= -->
@@ -1502,7 +1138,6 @@
       </p>
 
     </div>
-
 
 
     <!-- CARROSSEL DAS FEIRAS -->
@@ -1640,7 +1275,6 @@
   </section>
 
 
-
   <!-- =========================
        RODAPÉ
        ========================= -->
@@ -1654,43 +1288,7 @@
   </footer>
 
 
-
-  <!-- =========================
-       JAVASCRIPT
-       ========================= -->
-
-  <script>
-
-    function testarAlerta() {
-
-      const status =
-        document.querySelector(".status");
-
-      const indicador =
-        document.querySelector(".status-indicador");
-
-      status.innerHTML =
-        '<span class="status-indicador"></span> ALERTA DE TESTE';
-
-      indicador.style.backgroundColor = "#D9534F";
-
-      setTimeout(function() {
-
-        status.innerHTML =
-          '<span class="status-indicador"></span> Sistema aguardando conexão';
-
-        const novoIndicador =
-          document.querySelector(".status-indicador");
-
-        novoIndicador.style.backgroundColor = "#999";
-
-      }, 3000);
-
-    }
-
-  </script>
-
-
 </body>
 
 </html>
+```
