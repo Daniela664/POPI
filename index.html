@@ -652,7 +652,151 @@
 
     font-size: 14px;
   }
+/* =========================
+   DISPOSITIVO
+   ========================= */
 
+.dispositivo {
+  background-color: #F8F5EE;
+
+  padding: 60px 40px 80px;
+
+  text-align: center;
+}
+
+
+/* TÍTULO */
+
+.dispositivo h2 {
+  margin: 0 auto 50px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #000000;
+
+  text-transform: uppercase;
+}
+
+
+/* CONTEÚDO */
+
+.dispositivo-container {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  text-align: left;
+}
+
+
+/* IMAGEM */
+
+.dispositivo-imagem img {
+  width: 100%;
+
+  max-height: 500px;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TEXTO */
+
+.dispositivo-texto {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #000000;
+}
+
+
+/* DESTAQUE NO TEXTO */
+
+.dispositivo-texto strong {
+
+  color: #2477B8;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .dispositivo-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    text-align: center;
+  }
+
+
+  .dispositivo-imagem img {
+
+    max-height: 400px;
+  }
+
+
+  .dispositivo-texto {
+
+    text-align: left;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .dispositivo {
+
+    padding: 50px 20px 60px;
+  }
+
+
+  .dispositivo h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .dispositivo-texto {
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+}
 }
     /* =========================
        RODAPÉ
@@ -1103,7 +1247,71 @@
 </div>
   </section>
 
+<!-- =========================
+     DISPOSITIVO
+     ========================= -->
 
+<section class="dispositivo">
+
+  <h2>
+    DISPOSITIVO
+  </h2>
+
+
+  <div class="dispositivo-container">
+
+
+    <!-- IMAGEM DO PROTÓTIPO -->
+
+    <div class="dispositivo-imagem">
+
+      <img
+        src="POPI - Protótipo Observador para Idosos .jpg"
+        alt="Protótipo do dispositivo POPI"
+      >
+
+    </div>
+
+
+    <!-- TEXTO -->
+
+    <div class="dispositivo-texto">
+
+      <p>
+
+        O <strong>POPI</strong> é um bracelete que fica localizado
+        na região da axila. Quando acontece uma queda, um alerta
+        visual e sonoro é enviado imediatamente para o celular
+        do familiar, que poderá tomar as providências necessárias.
+
+      </p>
+
+
+      <p>
+
+        O dispositivo foi desenvolvido para ser
+        <strong>confortável, antialérgico e à prova d'água</strong>,
+        proporcionando segurança sem comprometer o bem-estar
+        do usuário.
+
+      </p>
+
+
+      <p>
+
+        O dispositivo também conta com um
+        <strong>botão de emergência</strong>. Assim, caso o idoso
+        não sofra uma queda, mas passe mal ou precise de ajuda,
+        poderá acionar o botão para solicitar assistência.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
   <!-- =========================
        RODAPÉ
        ========================= -->
