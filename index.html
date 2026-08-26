@@ -2,126 +2,61 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
 
-  <title>POPI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fontes -->
+  <title>POPI - Protótipo Observador Para Idosos</title>
+
+
+  <!-- =========================
+       FONTES
+       ========================= -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-  /* =========================
-   SEÇÃO DE DESTAQUES
-   ========================= */
 
-.destaques {
-  background-color: #F8F5EE;
-  padding: 70px 40px 80px;
-  text-align: center;
-}
-
-.destaques-frase {
-  max-width: 900px;
-  margin: 0 auto 50px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 1.5;
-
-  color: #000000;
-}
-
-autonomia.idoso {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 25px;
-}
-
-segurança.familiar {
-  text-align: center;
-}
-
-tecnologia.qualidade {
-  width: 100%;
-  height: 220px;
-
-  object-fit: cover;
-
-  border-radius: 10px;
-
-  display: block;
-
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-segurança.conforto {
-  margin-top: 15px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-
-  color: #000000;
-}
-
-
-/* =========================
-   CELULAR
-   ========================= */
-
-@media (max-width: 800px) {
-
-  .imagens-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 500px) {
-
-  .imagens-container {
-    grid-template-columns: 1fr;
-  }
-
-  .destaques-frase {
-    font-size: 21px;
-  }
-
-}
   <style>
 
     /* =========================
        CONFIGURAÇÕES GERAIS
        ========================= */
 
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
     body {
       margin: 0;
 
       background-color: #F8F5EE;
 
-      color: #111111;
+      color: #000000;
 
       font-family: 'Montserrat', sans-serif;
     }
 
 
     /* =========================
-       MENU
+       CABEÇALHO / MENU
        ========================= */
 
     nav {
+
       background-color: #2477B8;
 
-      padding: 14px 20px;
+      padding: 15px 25px;
 
       position: fixed;
 
@@ -132,11 +67,13 @@ segurança.conforto {
 
       z-index: 1000;
 
-      box-sizing: border-box;
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
 
     nav ul {
+
       list-style: none;
 
       margin: 0;
@@ -145,39 +82,46 @@ segurança.conforto {
       display: flex;
 
       justify-content: flex-start;
+
+      align-items: center;
     }
 
 
     nav ul li {
-      margin-right: 25px;
+
+      margin-right: 28px;
     }
 
 
     nav ul li a {
+
       text-decoration: none;
 
       color: white;
 
       font-family: 'Montserrat', sans-serif;
 
+      font-size: 15px;
+
       font-weight: 600;
 
-      font-size: 15px;
+      transition: 0.3s;
     }
 
 
     nav ul li a:hover {
-      text-decoration: underline;
+
+      opacity: 0.75;
     }
 
 
     /* =========================
-       ÁREA PRINCIPAL
+       HERO
        ========================= */
 
     .hero {
 
-      background-image: url("iStock_79246287_IdososCaminhandoCostas.jpg");
+      background-image: url("fundo.jpg");
 
       background-size: cover;
 
@@ -185,7 +129,9 @@ segurança.conforto {
 
       background-repeat: no-repeat;
 
-     height: 60vh;
+      height: 500px;
+
+      width: 100%;
 
       display: flex;
 
@@ -195,21 +141,21 @@ segurança.conforto {
 
       text-align: center;
 
-      color: white;
-
       position: relative;
+
+      margin-top: 52px;
     }
 
 
     /* =========================
-       TEXTO PRINCIPAL
+       CONTEÚDO DO HERO
        ========================= */
 
     .hero-content {
 
-      max-width: 800px;
+      max-width: 900px;
 
-      padding: 20px;
+      padding: 30px;
 
       position: relative;
 
@@ -217,23 +163,25 @@ segurança.conforto {
     }
 
 
-    /* APENAS O BEM-VINDO É CURSIVO */
+    /* =========================
+       BEM-VINDO
+       ÚNICA FONTE CURSIVA
+       ========================= */
 
     .hero h1 {
-  margin: 0;
 
-  font-family: 'Pacifico', cursive;
+      margin: 0;
 
-  font-size: 62px;
+      font-family: 'Pacifico', cursive;
 
-  font-weight: 400;
+      font-size: 62px;
 
-  line-height: 1.2;
+      font-weight: 400;
 
-  color: #000000;
+      line-height: 1.2;
 
-  text-shadow: none;
-}
+      color: #000000;
+    }
 
 
     /* =========================
@@ -241,41 +189,39 @@ segurança.conforto {
        ========================= */
 
     .hero .subtitle {
-  margin-top: 15px;
 
-  font-family: 'Montserrat', sans-serif;
+      margin-top: 18px;
 
-  font-size: 22px;
+      font-family: 'Montserrat', sans-serif;
 
-  font-weight: 600;
+      font-size: 22px;
 
-  letter-spacing: 1px;
+      font-weight: 600;
 
-  color: #000000;
+      letter-spacing: 1px;
 
-  text-shadow: none;
-}
+      color: #000000;
+    }
 
 
     /* =========================
        DESCRIÇÃO
        ========================= */
 
-   .hero .description {
-  margin-top: 20px;
+    .hero .description {
 
-  font-family: 'Montserrat', sans-serif;
+      margin-top: 18px;
 
-  font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
 
-  font-weight: 400;
+      font-size: 18px;
 
-  line-height: 1.6;
+      font-weight: 400;
 
-  color: #000000;
+      line-height: 1.6;
 
-  text-shadow: none;
-}
+      color: #000000;
+    }
 
 
     /* =========================
@@ -288,7 +234,7 @@ segurança.conforto {
 
       margin-top: 25px;
 
-      padding: 13px 28px;
+      padding: 13px 30px;
 
       background-color: #2477B8;
 
@@ -300,14 +246,14 @@ segurança.conforto {
 
       font-family: 'Montserrat', sans-serif;
 
-      font-weight: 600;
-
       font-size: 15px;
+
+      font-weight: 600;
 
       transition: 0.3s;
 
       box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.3);
+        0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
 
@@ -320,42 +266,116 @@ segurança.conforto {
 
 
     /* =========================
-       SEÇÕES
+       SEÇÃO DE DESTAQUES
        ========================= */
 
-    section {
+    .destaques {
 
-      padding: 70px 20px;
+      background-color: #F8F5EE;
+
+      padding: 65px 40px 80px;
 
       text-align: center;
     }
 
 
-    h2 {
+    /* =========================
+       FRASE
+       ========================= */
+
+    .destaques-frase {
+
+      max-width: 900px;
+
+      margin: 0 auto 50px;
 
       font-family: 'Montserrat', sans-serif;
 
-      font-size: 34px;
+      font-size: 27px;
 
-      font-weight: 700;
+      font-weight: 600;
 
-      color: #111111;
+      line-height: 1.5;
+
+      color: #000000;
     }
 
 
-    section p {
+    /* =========================
+       CONTAINER DAS IMAGENS
+       ========================= */
+
+    .imagens-container {
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 25px;
+    }
+
+
+    /* =========================
+       CADA IMAGEM
+       ========================= */
+
+    .imagem-item {
+
+      text-align: center;
+    }
+
+
+    .imagem-item img {
+
+      width: 100%;
+
+      height: 220px;
+
+      object-fit: cover;
+
+      display: block;
+
+      border-radius: 10px;
+
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+
+      transition: 0.3s;
+    }
+
+
+    .imagem-item img:hover {
+
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.20);
+    }
+
+
+    /* =========================
+       LEGENDAS
+       ========================= */
+
+    .imagem-item p {
+
+      margin-top: 15px;
+
+      margin-bottom: 0;
 
       font-family: 'Montserrat', sans-serif;
 
-      font-size: 17px;
+      font-size: 15px;
 
-      line-height: 1.7;
+      font-weight: 600;
 
-      max-width: 800px;
+      line-height: 1.5;
 
-      margin: auto;
-
-      color: #111111;
+      color: #000000;
     }
 
 
@@ -371,7 +391,7 @@ segurança.conforto {
 
       text-align: center;
 
-      padding: 20px;
+      padding: 22px;
 
       font-family: 'Montserrat', sans-serif;
     }
@@ -379,7 +399,28 @@ segurança.conforto {
 
     footer p {
 
+      margin: 0;
+
       font-size: 13px;
+    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .imagens-container {
+
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+
+        font-size: 52px;
+      }
+
     }
 
 
@@ -389,28 +430,91 @@ segurança.conforto {
 
     @media (max-width: 600px) {
 
+      nav {
+
+        padding: 13px 12px;
+      }
+
+
+      nav ul {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+      }
+
+
       nav ul li {
-        margin-right: 12px;
+
+        margin-right: 5px;
       }
 
 
       nav ul li a {
+
         font-size: 12px;
       }
 
 
+      .hero {
+
+        height: 450px;
+
+        margin-top: 48px;
+      }
+
+
+      .hero-content {
+
+        padding: 20px;
+      }
+
+
       .hero h1 {
-        font-size: 45px;
+
+        font-size: 42px;
       }
 
 
       .hero .subtitle {
+
         font-size: 17px;
       }
 
 
       .hero .description {
+
         font-size: 15px;
+      }
+
+
+      .destaques {
+
+        padding: 50px 20px 60px;
+      }
+
+
+      .destaques-frase {
+
+        font-size: 21px;
+
+        margin-bottom: 35px;
+      }
+
+
+      .imagens-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .imagem-item img {
+
+        height: 230px;
       }
 
     }
@@ -424,7 +528,7 @@ segurança.conforto {
 
 
   <!-- =========================
-       MENU
+       CABEÇALHO
        ========================= -->
 
   <nav>
@@ -453,7 +557,7 @@ segurança.conforto {
 
 
   <!-- =========================
-       PÁGINA INICIAL
+       HERO
        ========================= -->
 
   <section class="hero">
@@ -485,19 +589,88 @@ segurança.conforto {
 
 
   <!-- =========================
-       SOBRE O POPI
+       FRASE + 4 IMAGENS
        ========================= -->
 
-  <section>
+  <section class="destaques">
 
-    <h2>
-      Sobre o POPI
-    </h2>
 
-    <p>
-      O POPI é um dispositivo inteligente que ajuda a detectar quedas
-      e enviar alertas, trazendo mais segurança e tranquilidade.
-    </p>
+    <div class="destaques-frase">
+
+      Tecnologia que protege, cuidado que transforma,
+      segurança em tranquilidade.
+
+    </div>
+
+
+    <div class="imagens-container">
+
+
+      <!-- IMAGEM 1 -->
+
+      <div class="imagem-item">
+
+        <img
+          src="imagem1.jpg"
+          alt="Autonomia para o idoso"
+        >
+
+        <p>
+          Autonomia para o idoso.
+        </p>
+
+      </div>
+
+
+      <!-- IMAGEM 2 -->
+
+      <div class="imagem-item">
+
+        <img
+          src="imagem2.jpg"
+          alt="Segurança para o familiar"
+        >
+
+        <p>
+          Segurança para o familiar.
+        </p>
+
+      </div>
+
+
+      <!-- IMAGEM 3 -->
+
+      <div class="imagem-item">
+
+        <img
+          src="imagem3.jpg"
+          alt="Tecnologia de qualidade"
+        >
+
+        <p>
+          Tecnologia de qualidade.
+        </p>
+
+      </div>
+
+
+      <!-- IMAGEM 4 -->
+
+      <div class="imagem-item">
+
+        <img
+          src="imagem4.jpg"
+          alt="Segurança e conforto"
+        >
+
+        <p>
+          Segurança e conforto.
+        </p>
+
+      </div>
+
+
+    </div>
 
   </section>
 
