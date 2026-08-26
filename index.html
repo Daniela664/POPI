@@ -12,6 +12,91 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
+  /* =========================
+   SEÇÃO DE DESTAQUES
+   ========================= */
+
+.destaques {
+  background-color: #F8F5EE;
+  padding: 70px 40px 80px;
+  text-align: center;
+}
+
+.destaques-frase {
+  max-width: 900px;
+  margin: 0 auto 50px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: #000000;
+}
+
+autonomia.idoso {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+segurança.familiar {
+  text-align: center;
+}
+
+tecnologia.qualidade {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  display: block;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+segurança.conforto {
+  margin-top: 15px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: #000000;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .imagens-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .imagens-container {
+    grid-template-columns: 1fr;
+  }
+
+  .destaques-frase {
+    font-size: 21px;
+  }
+
+}
   <style>
 
     /* =========================
