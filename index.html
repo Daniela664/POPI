@@ -532,7 +532,128 @@
   }
 
 }
+/* =========================
+   POR QUE DO POPI
+   ========================= */
 
+.porque-popi {
+  background-color: #F8F5EE;
+
+  padding: 60px 40px 80px;
+
+  text-align: center;
+}
+
+
+/* TÍTULO */
+
+.porque-popi h2 {
+  margin: 0 auto 45px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #000000;
+
+  text-transform: uppercase;
+}
+
+
+/* CONTAINER DOS TEXTOS */
+
+.porque-container {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* CADA TEXTO */
+
+.porque-item {
+
+  background-color: #EAF4FC;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  text-align: left;
+}
+
+
+/* TEXTO */
+
+.porque-item p {
+
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #000000;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .porque-container {
+
+    grid-template-columns: 1fr;
+
+    max-width: 750px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .porque-popi {
+
+    padding: 50px 20px 60px;
+  }
+
+
+  .porque-popi h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .porque-item {
+
+    padding: 25px;
+  }
+
+
+  .porque-item p {
+
+    font-size: 14px;
+  }
+
+}
     /* =========================
        RODAPÉ
        ========================= */
@@ -914,6 +1035,68 @@
     <span class="indicador"></span>
 
     <span class="indicador"></span>
+
+  </div>
+
+</div>
+    <!-- =========================
+     POR QUE DO POPI
+     ========================= -->
+
+<div class="porque-popi">
+
+  <h2>
+    POR QUE DO POPI?
+  </h2>
+
+
+  <div class="porque-container">
+
+
+    <!-- TEXTO 1 -->
+
+    <div class="porque-item">
+
+      <p>
+        As quedas são uma das principais causas de acidentes
+        domésticos. Elas podem resultar em fraturas, perda de
+        mobilidade e complicações sérias, afetando diretamente
+        a qualidade de vida. Reconhecer esse risco é o primeiro
+        passo para preveni-lo.
+      </p>
+
+    </div>
+
+
+    <!-- TEXTO 2 -->
+
+    <div class="porque-item">
+
+      <p>
+        Cada minuto conta quando ocorre uma queda. A demora
+        no atendimento aumenta as chances de sequelas graves
+        e pode colocar a vida em risco. Além disso, gera
+        preocupação e ansiedade para familiares que não
+        conseguem agir rapidamente.
+      </p>
+
+    </div>
+
+
+    <!-- TEXTO 3 -->
+
+    <div class="porque-item">
+
+      <p>
+        O POPI é um dispositivo inteligente que detecta
+        automaticamente quedas e envia alertas imediatos.
+        Assim, garante resposta rápida, reduz riscos e oferece
+        mais segurança e tranquilidade tanto para quem usa
+        quanto para quem acompanha.
+      </p>
+
+    </div>
+
 
   </div>
 
