@@ -136,10 +136,6 @@
     }
 
 
-    /* =========================
-       CONTEÚDO DO HERO
-       ========================= */
-
     .hero-content {
 
       max-width: 900px;
@@ -358,446 +354,348 @@
 
       color: #000000;
     }
-/* =========================
-   AVALIAÇÕES
-   ========================= */
 
-.avaliacoes {
-  background-color: #F8F5EE;
-  padding: 30px 20px 80px;
-  text-align: center;
-}
 
-.avaliacoes-titulo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 35px;
-}
+    /* =========================
+       AVALIAÇÕES
+       ========================= */
 
+    .avaliacoes {
 
-/* Área que permite deslizar */
+      background-color: #F8F5EE;
 
-.carrossel {
-  max-width: 850px;
-  margin: 0 auto;
+      padding: 30px 20px 80px;
 
-  display: flex;
+      text-align: center;
+    }
 
-  overflow-x: auto;
 
-  scroll-snap-type: x mandatory;
+    .avaliacoes-titulo {
 
-  scroll-behavior: smooth;
+      font-family: 'Montserrat', sans-serif;
 
-  scrollbar-width: none;
+      font-size: 30px;
 
-  cursor: grab;
-}
+      font-weight: 700;
 
-.carrossel::-webkit-scrollbar {
-  display: none;
-}
+      color: #000000;
 
+      margin-bottom: 35px;
+    }
 
-/* Cada avaliação */
 
-.avaliacao {
-  min-width: 100%;
+    /* CARROSSEL */
 
-  scroll-snap-align: center;
+    .carrossel {
 
-  padding: 40px;
+      max-width: 850px;
 
-  background-color: #DCEEFF;
+      margin: 0 auto;
 
-  border-radius: 15px;
+      display: flex;
 
-  box-shadow:
-    0 5px 15px rgba(0, 0, 0, 0.10);
+      overflow-x: auto;
 
-  display: flex;
+      scroll-snap-type: x mandatory;
 
-  flex-direction: column;
+      scroll-behavior: smooth;
 
-  justify-content: center;
+      scrollbar-width: none;
 
-  align-items: center;
+      -webkit-overflow-scrolling: touch;
 
-  min-height: 220px;
+      cursor: grab;
+    }
 
-  margin: 0;
-}
 
+    .carrossel::-webkit-scrollbar {
 
-/* Estrelas */
+      display: none;
+    }
 
-.estrelas {
-  font-size: 25px;
 
-  letter-spacing: 4px;
+    /* CADA AVALIAÇÃO */
 
-  margin-bottom: 20px;
+    .avaliacao {
 
-  color: #E5A900;
-}
+      min-width: 100%;
 
+      scroll-snap-align: center;
 
-/* Texto */
+      padding: 40px;
 
-.avaliacao p {
-  max-width: 700px;
+      background-color: #DCEEFF;
 
-  margin: 0;
+      border-radius: 15px;
 
-  font-family: 'Montserrat', sans-serif;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
 
-  font-size: 17px;
+      display: flex;
 
-  line-height: 1.7;
+      flex-direction: column;
 
-  font-style: italic;
+      justify-content: center;
 
-  color: #000000;
-}
+      align-items: center;
 
+      min-height: 220px;
+    }
 
-/* Nome */
 
-.avaliacao strong {
-  display: block;
+    /* ESTRELAS */
 
-  margin-top: 20px;
+    .estrelas {
 
-  font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
 
-  font-size: 15px;
+      letter-spacing: 4px;
 
-  font-style: normal;
+      margin-bottom: 20px;
 
-  font-weight: 700;
+      color: #E5A900;
+    }
 
-  color: #000000;
-}
 
+    /* TEXTO */
 
-/* Bolinhas */
+    .avaliacao p {
 
-.indicadores {
-  display: flex;
+      max-width: 700px;
 
-  justify-content: center;
+      margin: 0;
 
-  gap: 10px;
+      font-family: 'Montserrat', sans-serif;
 
-  margin-top: 25px;
-}
+      font-size: 17px;
 
-.indicador {
-  width: 10px;
+      line-height: 1.7;
 
-  height: 10px;
+      font-style: italic;
 
-  border-radius: 50%;
+      color: #000000;
+    }
 
-  background-color: #AFCFE8;
-}
 
-.indicador.ativo {
-  background-color: #2477B8;
-}
+    /* NOME */
 
+    .avaliacao strong {
 
-/* Celular */
+      display: block;
 
-@media (max-width: 600px) {
+      margin-top: 20px;
 
-  .avaliacoes {
-    padding: 20px 15px 60px;
-  }
+      font-family: 'Montserrat', sans-serif;
 
-  .avaliacoes-titulo {
-    font-size: 25px;
-  }
+      font-size: 15px;
 
-  .avaliacao {
-    padding: 30px 20px;
+      font-style: normal;
 
-    min-height: 280px;
-  }
+      font-weight: 700;
 
-  .avaliacao p {
-    font-size: 15px;
-  }
+      color: #000000;
+    }
 
-}
-/* =========================
-   POR QUE DO POPI
-   ========================= */
 
-.porque-popi {
-  background-color: #F8F5EE;
+    /* INDICADORES */
 
-  padding: 60px 40px 80px;
+    .indicadores {
 
-  text-align: center;
-}
+      display: flex;
 
+      justify-content: center;
 
-/* TÍTULO */
+      gap: 10px;
 
-.porque-popi h2 {
-  margin: 0 auto 45px;
+      margin-top: 25px;
+    }
 
-  font-family: 'Montserrat', sans-serif;
 
-  font-size: 32px;
+    .indicador {
 
-  font-weight: 700;
+      width: 10px;
 
-  color: #000000;
+      height: 10px;
 
-  text-transform: uppercase;
-}
+      border-radius: 50%;
 
+      background-color: #AFCFE8;
+    }
 
-/* CONTAINER DOS TEXTOS */
 
-.porque-container {
-  max-width: 1150px;
+    .indicador.ativo {
 
-  margin: 0 auto;
+      background-color: #2477B8;
+    }
 
-  display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+    /* =========================
+       POR QUE DO POPI
+       ========================= */
 
-  gap: 25px;
-}
+    .porque-popi {
 
+      background-color: #F8F5EE;
 
-/* CADA TEXTO */
+      padding: 60px 40px 80px;
 
-.porque-item {
+      text-align: center;
+    }
 
-  background-color: #EAF4FC;
 
-  padding: 30px;
+    .porque-popi h2 {
 
-  border-radius: 12px;
+      margin: 0 auto 45px;
 
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.08);
+      font-family: 'Montserrat', sans-serif;
 
-  text-align: left;
-}
+      font-size: 32px;
 
+      font-weight: 700;
 
-/* TEXTO */
+      color: #000000;
 
-.porque-item p {
+      text-transform: uppercase;
+    }
 
-  margin: 0;
 
-  font-family: 'Montserrat', sans-serif;
+    .porque-container {
 
-  font-size: 15px;
+      max-width: 1150px;
 
-  line-height: 1.7;
+      margin: 0 auto;
 
-  color: #000000;
-}
+      display: grid;
 
+      grid-template-columns: repeat(3, 1fr);
 
-/* =========================
-   RESPONSIVIDADE
-   ========================= */
+      gap: 25px;
+    }
 
-@media (max-width: 900px) {
 
-  .porque-container {
+    .porque-item {
 
-    grid-template-columns: 1fr;
+      background-color: #EAF4FC;
 
-    max-width: 750px;
-  }
+      padding: 30px;
 
-}
+      border-radius: 12px;
 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-@media (max-width: 600px) {
+      text-align: left;
+    }
 
-  .porque-popi {
 
-    padding: 50px 20px 60px;
-  }
+    .porque-item p {
 
+      margin: 0;
 
-  .porque-popi h2 {
+      font-family: 'Montserrat', sans-serif;
 
-    font-size: 26px;
+      font-size: 15px;
 
-    margin-bottom: 30px;
-  }
+      line-height: 1.7;
 
+      color: #000000;
+    }
 
-  .porque-item {
 
-    padding: 25px;
-  }
+    /* =========================
+       DISPOSITIVO
+       ========================= */
 
+    .dispositivo {
 
-  .porque-item p {
+      background-color: #F8F5EE;
 
-    font-size: 14px;
-  }
-/* =========================
-   DISPOSITIVO
-   ========================= */
+      padding: 60px 40px 80px;
 
-.dispositivo {
-  background-color: #F8F5EE;
+      text-align: center;
+    }
 
-  padding: 60px 40px 80px;
 
-  text-align: center;
-}
+    .dispositivo h2 {
 
+      margin: 0 auto 50px;
 
-/* TÍTULO */
+      font-family: 'Montserrat', sans-serif;
 
-.dispositivo h2 {
-  margin: 0 auto 50px;
+      font-size: 32px;
 
-  font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
 
-  font-size: 32px;
+      color: #000000;
 
-  font-weight: 700;
+      text-transform: uppercase;
+    }
 
-  color: #000000;
 
-  text-transform: uppercase;
-}
+    .dispositivo-container {
 
+      max-width: 1150px;
 
-/* CONTEÚDO */
+      margin: 0 auto;
 
-.dispositivo-container {
-  max-width: 1150px;
+      display: grid;
 
-  margin: 0 auto;
+      grid-template-columns: 1.1fr 1fr;
 
-  display: grid;
+      gap: 50px;
 
-  grid-template-columns: 1.1fr 1fr;
+      align-items: center;
 
-  gap: 50px;
+      text-align: left;
+    }
 
-  align-items: center;
 
-  text-align: left;
-}
+    /* IMAGEM DO PROTÓTIPO */
 
+    .dispositivo-imagem img {
 
-/* IMAGEM */
+      width: 100%;
 
-.dispositivo-imagem img {
-  width: 100%;
+      max-height: 500px;
 
-  max-height: 500px;
+      object-fit: contain;
 
-  object-fit: contain;
+      display: block;
 
-  display: block;
+      border-radius: 12px;
 
-  border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    }
 
-  box-shadow:
-    0 5px 15px rgba(0, 0, 0, 0.12);
-}
 
+    /* TEXTO DO DISPOSITIVO */
 
-/* TEXTO */
+    .dispositivo-texto {
 
-.dispositivo-texto {
+      font-family: 'Montserrat', sans-serif;
 
-  font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
 
-  font-size: 17px;
+      line-height: 1.8;
 
-  line-height: 1.8;
+      color: #000000;
+    }
 
-  color: #000000;
-}
 
+    .dispositivo-texto p {
 
-/* DESTAQUE NO TEXTO */
+      margin-top: 0;
 
-.dispositivo-texto strong {
+      margin-bottom: 20px;
+    }
 
-  color: #2477B8;
 
-  font-weight: 700;
-}
+    .dispositivo-texto strong {
 
+      color: #2477B8;
 
-/* =========================
-   CELULAR
-   ========================= */
+      font-weight: 700;
+    }
 
-@media (max-width: 900px) {
 
-  .dispositivo-container {
-
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    text-align: center;
-  }
-
-
-  .dispositivo-imagem img {
-
-    max-height: 400px;
-  }
-
-
-  .dispositivo-texto {
-
-    text-align: left;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .dispositivo {
-
-    padding: 50px 20px 60px;
-  }
-
-
-  .dispositivo h2 {
-
-    font-size: 26px;
-
-    margin-bottom: 35px;
-  }
-
-
-  .dispositivo-texto {
-
-    font-size: 15px;
-
-    line-height: 1.7;
-  }
-
-}
-}
     /* =========================
        RODAPÉ
        ========================= */
@@ -841,6 +739,46 @@
         font-size: 52px;
       }
 
+
+      .porque-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 750px;
+      }
+
+
+      /* DISPOSITIVO CONTINUA LADO A LADO */
+
+      .dispositivo-container {
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 20px;
+
+        align-items: center;
+      }
+
+
+      .dispositivo-imagem img {
+
+        width: 100%;
+
+        max-height: 300px;
+
+        object-fit: contain;
+      }
+
+
+      .dispositivo-texto {
+
+        text-align: left;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+      }
+
     }
 
 
@@ -878,6 +816,8 @@
       }
 
 
+      /* HERO */
+
       .hero {
 
         height: 450px;
@@ -910,6 +850,8 @@
       }
 
 
+      /* DESTAQUES */
+
       .destaques {
 
         padding: 50px 20px 60px;
@@ -935,6 +877,116 @@
       .imagem-item img {
 
         height: 230px;
+      }
+
+
+      /* AVALIAÇÕES */
+
+      .avaliacoes {
+
+        padding: 20px 15px 60px;
+      }
+
+
+      .avaliacoes-titulo {
+
+        font-size: 25px;
+      }
+
+
+      .avaliacao {
+
+        padding: 30px 20px;
+
+        min-height: 280px;
+      }
+
+
+      .avaliacao p {
+
+        font-size: 15px;
+      }
+
+
+      /* POR QUE DO POPI */
+
+      .porque-popi {
+
+        padding: 50px 20px 60px;
+      }
+
+
+      .porque-popi h2 {
+
+        font-size: 26px;
+
+        margin-bottom: 30px;
+      }
+
+
+      .porque-item {
+
+        padding: 25px;
+      }
+
+
+      .porque-item p {
+
+        font-size: 14px;
+      }
+
+
+      /* =========================
+         DISPOSITIVO NO CELULAR
+         ========================= */
+
+      .dispositivo {
+
+        padding: 45px 12px 60px;
+      }
+
+
+      .dispositivo h2 {
+
+        font-size: 25px;
+
+        margin-bottom: 30px;
+      }
+
+
+      .dispositivo-container {
+
+        grid-template-columns: 0.85fr 1.15fr;
+
+        gap: 12px;
+
+        align-items: center;
+      }
+
+
+      .dispositivo-imagem img {
+
+        width: 100%;
+
+        max-height: 220px;
+
+        object-fit: contain;
+      }
+
+
+      .dispositivo-texto {
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+        text-align: left;
+      }
+
+
+      .dispositivo-texto p {
+
+        margin-bottom: 12px;
       }
 
     }
@@ -1091,227 +1143,228 @@
 
 
     </div>
-<!-- =========================
-     AVALIAÇÕES
-     ========================= -->
-
-<div class="avaliacoes">
-
-  <h2 class="avaliacoes-titulo">
-    O que dizem sobre o POPI
-  </h2>
 
 
-  <div class="carrossel">
-
-
-    <!-- AVALIAÇÃO 1 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “O POPI demonstra uma aplicação prática brilhante
-        da tecnologia, transformando conceitos em uma solução
-        real que alia inovação e cuidado.”
-      </p>
-
-      <strong>
-        — Adriano Santos
-      </strong>
-
-    </div>
-
-
-    <!-- AVALIAÇÃO 2 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “Com o POPI, o acompanhamento da saúde ganha um
-        aliado confiável, trazendo mais segurança tanto para
-        o paciente quanto para quem cuida.”
-      </p>
-
-      <strong>
-        — Adriana
-      </strong>
-
-    </div>
-
-
-    <!-- AVALIAÇÃO 3 -->
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “O POPI me dá tranquilidade no dia a dia, sabendo
-        que existe uma tecnologia cuidando de quem eu amo.”
-      </p>
-
-      <strong>
-        — José
-      </strong>
-
-    </div>
-
-
-  </div>
-
-
-  <!-- INDICADORES -->
-
-  <div class="indicadores">
-
-    <span class="indicador ativo"></span>
-
-    <span class="indicador"></span>
-
-    <span class="indicador"></span>
-
-  </div>
-
-</div>
     <!-- =========================
-     POR QUE DO POPI
-     ========================= -->
+         AVALIAÇÕES
+         ========================= -->
 
-<div class="porque-popi">
+    <div class="avaliacoes">
 
-  <h2>
-    POR QUE DO POPI?
-  </h2>
-
-
-  <div class="porque-container">
+      <h2 class="avaliacoes-titulo">
+        O que dizem sobre o POPI
+      </h2>
 
 
-    <!-- TEXTO 1 -->
+      <div class="carrossel">
 
-    <div class="porque-item">
 
-      <p>
-        As quedas são uma das principais causas de acidentes
-        domésticos. Elas podem resultar em fraturas, perda de
-        mobilidade e complicações sérias, afetando diretamente
-        a qualidade de vida. Reconhecer esse risco é o primeiro
-        passo para preveni-lo.
-      </p>
+        <!-- AVALIAÇÃO 1 -->
+
+        <div class="avaliacao">
+
+          <div class="estrelas">
+            ★★★★★
+          </div>
+
+          <p>
+            “O POPI demonstra uma aplicação prática brilhante
+            da tecnologia, transformando conceitos em uma solução
+            real que alia inovação e cuidado.”
+          </p>
+
+          <strong>
+            — Adriano Santos
+          </strong>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 2 -->
+
+        <div class="avaliacao">
+
+          <div class="estrelas">
+            ★★★★★
+          </div>
+
+          <p>
+            “Com o POPI, o acompanhamento da saúde ganha um
+            aliado confiável, trazendo mais segurança tanto para
+            o paciente quanto para quem cuida.”
+          </p>
+
+          <strong>
+            — Adriana
+          </strong>
+
+        </div>
+
+
+        <!-- AVALIAÇÃO 3 -->
+
+        <div class="avaliacao">
+
+          <div class="estrelas">
+            ★★★★★
+          </div>
+
+          <p>
+            “O POPI me dá tranquilidade no dia a dia, sabendo
+            que existe uma tecnologia cuidando de quem eu amo.”
+          </p>
+
+          <strong>
+            — José
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="indicadores">
+
+        <span class="indicador ativo"></span>
+
+        <span class="indicador"></span>
+
+        <span class="indicador"></span>
+
+      </div>
 
     </div>
 
 
-    <!-- TEXTO 2 -->
-
-    <div class="porque-item">
-
-      <p>
-        Cada minuto conta quando ocorre uma queda. A demora
-        no atendimento aumenta as chances de sequelas graves
-        e pode colocar a vida em risco. Além disso, gera
-        preocupação e ansiedade para familiares que não
-        conseguem agir rapidamente.
-      </p>
-
-    </div>
-
-
-    <!-- TEXTO 3 -->
-
-    <div class="porque-item">
-
-      <p>
-        O POPI é um dispositivo inteligente que detecta
-        automaticamente quedas e envia alertas imediatos.
-        Assim, garante resposta rápida, reduz riscos e oferece
-        mais segurança e tranquilidade tanto para quem usa
-        quanto para quem acompanha.
-      </p>
-
-    </div>
-
-
-  </div>
-
-</div>
   </section>
 
-<!-- =========================
-     DISPOSITIVO
-     ========================= -->
 
-<section class="dispositivo">
+  <!-- =========================
+       POR QUE DO POPI
+       ========================= -->
 
-  <h2>
-    DISPOSITIVO
-  </h2>
+  <section class="porque-popi">
 
-
-  <div class="dispositivo-container">
+    <h2>
+      POR QUE DO POPI?
+    </h2>
 
 
-    <!-- IMAGEM DO PROTÓTIPO -->
+    <div class="porque-container">
 
-    <div class="dispositivo-imagem">
 
-      <img
-        src="POPI - Protótipo Observador para Idosos .jpg"
-        alt="Protótipo do dispositivo POPI"
-      >
+      <!-- TEXTO 1 -->
+
+      <div class="porque-item">
+
+        <p>
+          As quedas são uma das principais causas de acidentes
+          domésticos. Elas podem resultar em fraturas, perda de
+          mobilidade e complicações sérias, afetando diretamente
+          a qualidade de vida. Reconhecer esse risco é o primeiro
+          passo para preveni-lo.
+        </p>
+
+      </div>
+
+
+      <!-- TEXTO 2 -->
+
+      <div class="porque-item">
+
+        <p>
+          Cada minuto conta quando ocorre uma queda. A demora
+          no atendimento aumenta as chances de sequelas graves
+          e pode colocar a vida em risco. Além disso, gera
+          preocupação e ansiedade para familiares que não
+          conseguem agir rapidamente.
+        </p>
+
+      </div>
+
+
+      <!-- TEXTO 3 -->
+
+      <div class="porque-item">
+
+        <p>
+          O POPI é um dispositivo inteligente que detecta
+          automaticamente quedas e envia alertas imediatos.
+          Assim, garante resposta rápida, reduz riscos e oferece
+          mais segurança e tranquilidade tanto para quem usa
+          quanto para quem acompanha.
+        </p>
+
+      </div>
+
 
     </div>
 
-
-    <!-- TEXTO -->
-
-    <div class="dispositivo-texto">
-
-      <p>
-
-        O <strong>POPI</strong> é um bracelete que fica localizado
-        na região da axila. Quando acontece uma queda, um alerta
-        visual e sonoro é enviado imediatamente para o celular
-        do familiar, que poderá tomar as providências necessárias.
-
-      </p>
+  </section>
 
 
-      <p>
+  <!-- =========================
+       DISPOSITIVO
+       ========================= -->
 
-        O dispositivo foi desenvolvido para ser
-        <strong>confortável, antialérgico e à prova d'água</strong>,
-        proporcionando segurança sem comprometer o bem-estar
-        do usuário.
+  <section class="dispositivo">
 
-      </p>
+    <h2>
+      DISPOSITIVO
+    </h2>
 
 
-      <p>
+    <div class="dispositivo-container">
 
-        O dispositivo também conta com um
-        <strong>botão de emergência</strong>. Assim, caso o idoso
-        não sofra uma queda, mas passe mal ou precise de ajuda,
-        poderá acionar o botão para solicitar assistência.
 
-      </p>
+      <!-- IMAGEM DO PROTÓTIPO -->
+
+      <div class="dispositivo-imagem">
+
+        <img
+          src="POPI - Protótipo Observador para Idosos .jpg"
+          alt="Protótipo do dispositivo POPI"
+        >
+
+      </div>
+
+
+      <!-- TEXTO -->
+
+      <div class="dispositivo-texto">
+
+        <p>
+          O <strong>POPI</strong> é um bracelete que fica localizado
+          na região da axila. Quando acontece uma queda, um alerta
+          visual e sonoro é enviado imediatamente para o celular
+          do familiar, que poderá tomar as providências necessárias.
+        </p>
+
+
+        <p>
+          O dispositivo foi desenvolvido para ser
+          <strong>confortável, antialérgico e à prova d'água</strong>,
+          proporcionando segurança sem comprometer o bem-estar
+          do usuário.
+        </p>
+
+
+        <p>
+          O dispositivo também conta com um
+          <strong>botão de emergência</strong>. Assim, caso o idoso
+          não sofra uma queda, mas passe mal ou precise de ajuda,
+          poderá acionar o botão para solicitar assistência.
+        </p>
+
+      </div>
+
 
     </div>
 
+  </section>
 
-  </div>
 
-</section>
   <!-- =========================
        RODAPÉ
        ========================= -->
