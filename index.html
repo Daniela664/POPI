@@ -328,7 +328,46 @@
 
       font-size: 15px;
     }
+/* =========================
+   BOLINHAS DO CARROSSEL
+   ========================= */
 
+.indicadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.indicador {
+  width: 10px;
+  height: 10px;
+
+  padding: 0;
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: #B8D3E8;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.indicador.ativo {
+  width: 12px;
+  height: 12px;
+
+  background-color: #2477B8;
+}
+
+.indicador:hover {
+  background-color: #185B8E;
+}
     /* =========================
        POR QUE DO POPI
        ========================= */
@@ -838,9 +877,9 @@
         Monitor de quedas para mais segurança.
       </div>
 
-      <a href="#popi" class="btn">
-        Saiba mais
-      </a>
+     <a href="quedas.html" class="btn">
+  Saiba mais
+</a>
 
     </div>
 
