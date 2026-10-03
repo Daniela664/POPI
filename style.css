@@ -1,100 +1,1178 @@
-/* Menu no canto superior esquerdo */
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  background-color: #e6f2ff;
+
+  color: #333;
+
+  text-align: center;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
 nav {
   background-color: #439ffa;
+
   padding: 10px;
-  position: fixed; /* Fixa no topo */
+
+  position: fixed;
+
   top: 0;
   left: 0;
-  width: 100%; /* ocupa toda a largura */
+
+  width: 100%;
+
+  z-index: 1000;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
 
 nav ul {
   list-style: none;
+
   margin: 0;
   padding: 0;
+
   display: flex;
-  justify-content: flex-start; /* alinha à esquerda */
+
+  justify-content: flex-start;
+
+  align-items: center;
 }
+
 
 nav ul li {
   margin-right: 20px;
 }
 
+
 nav ul li a {
   text-decoration: none;
-  font-weight: bold;
+
+  font-weight: 600;
+
   color: #ffffff;
+
+  font-family: 'Montserrat', sans-serif;
+
+  transition: 0.3s;
 }
+
 
 nav ul li a:hover {
   text-decoration: underline;
+
+  opacity: 0.85;
 }
 
-/* Centralizar o conteúdo principal */
-body {
-  font-family: Serif, sans-serif;
-  background-color: #e6f2ff; /* azul bem clarinho */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* centraliza o texto */
+
+/* =========================
+   TÍTULOS E TEXTOS
+   ========================= */
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Espaço para não ficar escondido atrás do menu fixo */
-h1, p {
-  margin-top: 80px; /* dá espaço abaixo do menu */
+
+p {
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
 }
+
+
+/* =========================
+   ESPAÇO DO MENU FIXO
+   ========================= */
 
 .container {
   background: white;
+
   border-radius: 10px;
+
   padding: 30px;
+
   margin: 120px auto;
+
   width: 80%;
+
   max-width: 600px;
+
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1 {
-  color: #0066cc;
-  margin-bottom: 20px;
+
+/* =========================
+   HERO / PÁGINA INICIAL
+   ========================= */
+
+.hero {
+
+  background-image: url("https://www.cartacapital.com.br/wp-content/uploads/2012/06/saude-1.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  height: 100vh;
+
+  min-height: 600px;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+
+  position: relative;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-.hero {
- .hero {
-  background-image: url("https://www.cartacapital.com.br/wp-content/uploads/2012/06/saude-1.jpg");
-  background-size: cover;       /* cobre toda a área */
-  background-position: center;  /* centraliza a imagem */
-  height: 100vh; /* ocupa a tela inteira */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-}
+
+/* Conteúdo do HERO */
+/* Sem quadrado transparente */
 
 .hero-content {
-  background-color: rgba(0,0,0,0.4); /* camada transparente */
-  padding: 20px;
-  border-radius: 10px;
+
+  max-width: 900px;
+
+  padding: 30px;
 }
+
+
+/* Título "Bem-vindos" */
+
+.hero h1 {
+
+  margin: 0;
+
+  font-family: 'Pacifico', cursive;
+
+  font-size: 64px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: white;
+
+  text-shadow: 0 3px 8px rgba(0,0,0,0.75);
+}
+
+
+/* Nome completo do projeto */
+
+.hero .subtitle {
+
+  margin-top: 18px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  color: white;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+
+/* Frase */
+
+.hero .description {
+
+  margin-top: 18px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: white;
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+
+/* =========================
+   BOTÃO
+   ========================= */
 
 .btn {
+
   display: inline-block;
-  margin-top: 20px;
+
+  margin-top: 25px;
+
   padding: 12px 24px;
+
   background-color: #0066cc;
+
   color: white;
+
   text-decoration: none;
+
   border-radius: 8px;
-  font-weight: bold;
-}
-.btn:hover {
-  background-color: #004c99;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
+
+.btn:hover {
+
+  background-color: #004c99;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SEÇÕES
+   ========================= */
+
+section {
+
+  padding: 60px 20px;
+
+}
+
+
+/* =========================
+   DESTAQUES / POPI
+   ========================= */
+
+.destaques {
+
+  background-color: #F8F5EE;
+
+  padding: 65px 40px 40px;
+
+  text-align: center;
+}
+
+
+.destaques-frase {
+
+  max-width: 900px;
+
+  margin: 0 auto 50px;
+
+  font-size: 27px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   IMAGENS
+   ========================= */
+
+.imagens-container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+
+.imagem-item {
+
+  text-align: center;
+}
+
+
+.imagem-item img {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+
+.imagem-item img:hover {
+
+  transform: translateY(-4px);
+}
+
+
+.imagem-item p {
+
+  margin-top: 15px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   AVALIAÇÕES
+   ========================= */
+
+.avaliacoes {
+
+  background-color: #F8F5EE;
+
+  padding: 50px 20px 70px;
+
+  text-align: center;
+}
+
+
+.avaliacoes-titulo {
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================
+   CARROSSEL
+   ========================= */
+
+.carrossel {
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.carrossel::-webkit-scrollbar {
+
+  display: none;
+}
+
+
+/* =========================
+   COMENTÁRIOS
+   ========================= */
+
+.avaliacao {
+
+  min-width: 100%;
+
+  scroll-snap-align: center;
+
+  padding: 40px;
+
+  background-color: #DCEEFF;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 220px;
+}
+
+
+/* Estrelas */
+
+.estrelas {
+
+  font-size: 25px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+
+  color: #E5A900;
+}
+
+
+/* Texto do comentário */
+
+.avaliacao p {
+
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  font-style: italic;
+}
+
+
+/* Nome */
+
+.avaliacao strong {
+
+  display: block;
+
+  margin-top: 20px;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   BOLINHAS DO CARROSSEL
+   ========================= */
+
+.indicadores {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+
+/* Cada bolinha */
+
+.indicador {
+
+  width: 10px;
+
+  height: 10px;
+
+  padding: 0;
+
+  margin: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: #B8D3E8;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Bolinha ativa */
+
+.indicador.ativo {
+
+  width: 12px;
+
+  height: 12px;
+
+  background-color: #2477B8;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.indicador:hover {
+
+  background-color: #185B8E;
+}
+
+
+/* =========================
+   POR QUE DO POPI
+   ========================= */
+
+.porque-popi {
+
+  padding: 60px 40px 80px;
+
+  text-align: center;
+}
+
+
+.porque-popi h2 {
+
+  margin-bottom: 45px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.porque-container {
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.porque-item {
+
+  background-color: #EAF4FC;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  text-align: left;
+}
+
+
+.porque-item p {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   DISPOSITIVO
+   ========================= */
+
+.dispositivo {
+
+  padding: 60px 40px 80px;
+
+  text-align: center;
+}
+
+
+.dispositivo h2 {
+
+  margin-bottom: 50px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.dispositivo-container {
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  text-align: left;
+}
+
+
+.dispositivo-imagem img {
+
+  width: 100%;
+
+  max-height: 500px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+
+.dispositivo-texto {
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   SOBRE NÓS
+   ========================= */
+
+.sobre-nos {
+
+  padding: 60px 40px 70px;
+
+  text-align: center;
+}
+
+
+.sobre-nos h2 {
+
+  margin-bottom: 35px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.sobre-nos-texto {
+
+  max-width: 1000px;
+
+  margin: 0 auto 45px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+
+/* =========================
+   FEIRAS
+   ========================= */
+
+.feiras-carrossel {
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  padding: 10px 5px 20px;
+}
+
+
+.feiras-carrossel::-webkit-scrollbar {
+
+  display: none;
+}
+
+
+.feira-item {
+
+  flex: 0 0 280px;
+
+  scroll-snap-align: center;
+
+  background-color: #EAF4FC;
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+.feira-item img {
+
+  width: 100%;
+
+  height: 190px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+.feira-item p {
+
+  margin: 12px 5px 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   CONTATO
+   ========================= */
+
+.contato {
+
+  padding: 60px 20px 70px;
+
+  text-align: center;
+}
+
+
+.contato h2 {
+
+  margin-bottom: 40px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.contatos-container {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+.contato-item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 15px;
+}
+
+
+.contato-item i {
+
+  width: 22px;
+
+  font-size: 18px;
+
+  color: #2477B8;
+
+  text-align: center;
+}
+
+
+.contato-item a {
+
+  color: #000000;
+
+  text-decoration: none;
+}
+
+
+.contato-item a:hover {
+
+  color: #2477B8;
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+footer {
+
+  background-color: #439ffa;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 22px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+footer p {
+
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .imagens-container {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .porque-container {
+
+    grid-template-columns: 1fr;
+
+    max-width: 750px;
+
+  }
+
+
+  .dispositivo-container {
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 20px;
+
+  }
+
+
+  .dispositivo-imagem img {
+
+    max-height: 300px;
+
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+  nav {
+
+    padding: 12px 8px;
+
+  }
+
+
+  nav ul {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px 13px;
+
+  }
+
+
+  nav ul li {
+
+    margin-right: 0;
+
+  }
+
+
+  nav ul li a {
+
+    font-size: 11px;
+
+  }
+
+
+  .hero {
+
+    height: 450px;
+
+    min-height: 450px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .hero .subtitle {
+
+    font-size: 17px;
+
+  }
+
+
+  .hero .description {
+
+    font-size: 15px;
+
+  }
+
+
+  .destaques {
+
+    padding: 50px 20px 40px;
+
+  }
+
+
+  .destaques-frase {
+
+    font-size: 21px;
+
+    margin-bottom: 35px;
+
+  }
+
+
+  .imagens-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+
+  .imagem-item img {
+
+    height: 230px;
+
+  }
+
+
+  .avaliacoes {
+
+    padding: 30px 15px 60px;
+
+  }
+
+
+  .avaliacoes-titulo {
+
+    font-size: 24px;
+
+  }
+
+
+  .avaliacao {
+
+    padding: 30px 20px;
+
+    min-height: 280px;
+
+  }
+
+
+  .avaliacao p {
+
+    font-size: 15px;
+
+  }
+
+
+  .indicadores {
+
+    margin-top: 18px;
+
+  }
+
+
+  .porque-popi {
+
+    padding: 50px 20px 60px;
+
+  }
+
+
+  .porque-popi h2 {
+
+    font-size: 26px;
+
+  }
+
+
+  .dispositivo {
+
+    padding: 45px 15px 60px;
+
+  }
+
+
+  .dispositivo h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 30px;
+
+  }
+
+
+  .dispositivo-container {
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+  }
+
+
+  .dispositivo-imagem img {
+
+    max-height: 220px;
+
+  }
+
+
+  .dispositivo-texto {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+  }
+
+
+  .sobre-nos {
+
+    padding: 50px 20px 60px;
+
+  }
+
+
+  .sobre-nos h2 {
+
+    font-size: 26px;
+
+  }
+
+
+  .sobre-nos-texto {
+
+    font-size: 14px;
+
+    text-align: left;
+
+  }
+
+
+  .feira-item {
+
+    flex: 0 0 230px;
+
+  }
+
+
+  .feira-item img {
+
+    height: 155px;
+
+  }
+
+
+  .contato h2 {
+
+    font-size: 26px;
+
+  }
+
+}
+
+</style>
