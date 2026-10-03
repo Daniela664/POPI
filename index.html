@@ -1344,7 +1344,63 @@
     </p>
 
   </footer>
+<script>
 
+const carrossel = document.getElementById("carrosselAvaliacoes");
+
+const indicadores = document.querySelectorAll(".indicador");
+
+
+// ========================================
+// QUANDO CLICAR NAS BOLINHAS
+// ========================================
+
+indicadores.forEach((indicador) => {
+
+  indicador.addEventListener("click", () => {
+
+    const numeroSlide = Number(indicador.dataset.slide);
+
+    const larguraSlide = carrossel.clientWidth;
+
+    carrossel.scrollTo({
+
+      left: numeroSlide * larguraSlide,
+
+      behavior: "smooth"
+
+    });
+
+  });
+
+});
+
+
+// ========================================
+// QUANDO ARRASTAR O CARROSSEL
+// ========================================
+
+carrossel.addEventListener("scroll", () => {
+
+  const larguraSlide = carrossel.clientWidth;
+
+  const slideAtual = Math.round(
+    carrossel.scrollLeft / larguraSlide
+  );
+
+
+  indicadores.forEach((indicador, index) => {
+
+    indicador.classList.toggle(
+      "ativo",
+      index === slideAtual
+    );
+
+  });
+
+});
+
+</script>
 
 </body>
 
