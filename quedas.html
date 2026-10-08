@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,126 +9,233 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      background-color: #F8F5EE;
-      color: #000000;
+      background: #F8F5EE;
+      color: #263238;
       font-family: 'Montserrat', sans-serif;
     }
 
     nav {
-      background-color: #2477B8;
-      padding: 15px 25px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      background: #2477B8;
+      padding: 17px 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
-
       display: flex;
-      justify-content: flex-start;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 28px;
+      gap: 20px 28px;
     }
 
-    nav ul li {
-      margin: 0;
-    }
-
-    nav ul li a {
+    nav a {
       text-decoration: none;
       color: white;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
     }
 
-    nav ul li a:hover {
-      opacity: 0.75;
+    nav a:hover {
+      opacity: .75;
     }
 
     .quedas {
-      min-height: calc(100vh - 60px);
-      padding: 100px 30px 80px;
+      min-height: calc(100vh - 110px);
+      padding: 70px 20px;
+      background: #EEF7FD;
+    }
+
+    .conteudo {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      margin: 0 0 12px;
       text-align: center;
-      background-color: #EEF7FD;
+      font-size: clamp(30px, 5vw, 40px);
     }
 
-    .quedas h1 {
-      margin: 0 0 15px;
-      font-size: 38px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .quedas-subtitulo {
+    .subtitulo {
       max-width: 700px;
       margin: 0 auto 35px;
-      font-size: 16px;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .painel {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.09);
+      margin-bottom: 22px;
+    }
+
+    .cabecalho-painel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .cabecalho-painel h2 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 20px;
+      background: #EEEEEE;
+      color: #555;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .indicador {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #999;
+      flex-shrink: 0;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .cartao {
+      border: 1px solid #E0E8ED;
+      border-radius: 12px;
+      padding: 20px;
+      min-width: 0;
+    }
+
+    .cartao h3 {
+      margin: 0 0 12px;
+      color: #536875;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .valor {
+      font-size: 19px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .descricao {
+      margin: 10px 0 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #657780;
+    }
+
+    .mensagem {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 9px;
+      background: #F1F5F7;
+      font-size: 13px;
       line-height: 1.7;
     }
 
-    .monitor {
-      max-width: 650px;
-      margin: 0 auto;
-      background-color: white;
-      border-radius: 15px;
-      padding: 35px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    .mensagem.erro {
+      background: #FFF0EF;
+      color: #9B302B;
     }
 
-    .status-indicador {
-      width: 18px;
-      height: 18px;
-      background-color: #999;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 8px;
+    .mensagem.alerta {
+      background: #FFF3E0;
+      color: #8A4B08;
     }
 
-    .status {
+    .sensores {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .sensor {
+      background: #F5F9FC;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .sensor span {
+      display: block;
+      color: #536875;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .sensor strong {
       font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 25px;
+      overflow-wrap: anywhere;
     }
 
-    .status-texto {
-      font-size: 15px;
+    .historico {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .historico li {
+      padding: 13px 0;
+      border-bottom: 1px solid #E7EDF0;
+      font-size: 13px;
       line-height: 1.6;
-      margin-bottom: 25px;
+      overflow-wrap: anywhere;
     }
 
-    .botao-teste {
+    .historico li:last-child {
+      border-bottom: none;
+    }
+
+    .botao {
       border: none;
-      background-color: #2477B8;
+      background: #2477B8;
       color: white;
-      padding: 13px 25px;
-      border-radius: 7px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
+      padding: 13px 20px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
       cursor: pointer;
     }
 
-    .botao-teste:hover {
-      background-color: #185B8E;
+    .botao:hover {
+      background: #185B8E;
+    }
+
+    .nota {
+      color: #657780;
+      font-size: 12px;
+      line-height: 1.7;
     }
 
     footer {
-      background-color: #2477B8;
+      background: #2477B8;
       color: white;
       text-align: center;
       padding: 22px;
@@ -136,137 +243,364 @@
 
     footer p {
       margin: 0;
-      font-size: 13px;
+      font-size: 12px;
     }
 
+    @media (max-width: 600px) {
+      .quedas {
+        padding: 45px 14px;
+      }
+
+      .painel {
+        padding: 20px;
+      }
+
+      .grade {
+        grid-template-columns: 1fr;
+      }
+
+      .sensores {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
-
   <nav>
-
     <ul>
-
-      <li>
-        <a href="index.html">Início</a>
-      </li>
-
-      <li>
-        <a href="index.html#popi">POPI</a>
-      </li>
-
-      <li>
-        <a href="index.html#dispositivo">Dispositivo</a>
-      </li>
-
-      <li>
-        <a href="quedas.html">Quedas</a>
-      </li>
-
-      <li>
-        <a href="index.html#sobre">Sobre nós</a>
-      </li>
-
-      <li>
-        <a href="index.html#contato">Contato</a>
-      </li>
-
+      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html#popi">POPI</a></li>
+      <li><a href="index.html#dispositivo">Dispositivo</a></li>
+      <li><a href="quedas.html">Quedas</a></li>
+      <li><a href="index.html#sobre">Sobre nós</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
     </ul>
-
   </nav>
 
+  <main class="quedas">
+    <div class="conteudo">
 
-  <section class="quedas">
+      <h1>Monitoramento de quedas</h1>
 
-    <h1>
-      QUEDAS
-    </h1>
-
-    <p class="quedas-subtitulo">
-      Área destinada ao monitoramento do dispositivo POPI.
-      Quando o sistema estiver conectado ao protótipo,
-      esta área poderá apresentar os alertas enviados
-      pelo dispositivo em tempo real.
-    </p>
-
-
-    <div class="monitor">
-
-      <div class="status">
-
-        <span class="status-indicador"></span>
-
-        Sistema aguardando conexão
-
-      </div>
-
-
-      <p class="status-texto">
-
-        O detector de quedas ainda não está conectado.
-        Quando a comunicação com o dispositivo estiver
-        implementada, este painel poderá informar se uma
-        queda foi detectada e apresentar o alerta ao familiar.
-
+      <p class="subtitulo">
+        Acompanhe o estado do detector POPI, as medições
+        disponíveis e os eventos registrados pelo sistema.
       </p>
 
+      <section class="painel">
+        <div class="cabecalho-painel">
+          <h2>Estado do dispositivo</h2>
 
-      <button
-        class="botao-teste"
-        onclick="testarAlerta()"
-      >
+          <span class="badge">
+            <span class="indicador" id="indicadorConexao"></span>
+            <span id="textoConexao">Aguardando conexão</span>
+          </span>
+        </div>
 
-        TESTAR ALERTA
+        <div class="grade">
+          <div class="cartao">
+            <h3>Estado do detector</h3>
+            <div class="valor" id="estadoQueda">
+              Aguardando dados
+            </div>
+            <p class="descricao" id="descricaoQueda">
+              O estado será apresentado quando os dados reais
+              forem recebidos.
+            </p>
+          </div>
 
-      </button>
+          <div class="cartao">
+            <h3>Última atualização</h3>
+            <div class="valor" id="ultimaAtualizacao">—</div>
+            <p class="descricao">
+              Horário informado pelo serviço de monitoramento.
+            </p>
+          </div>
+        </div>
+
+        <div class="mensagem" id="mensagemSistema" role="status" aria-live="polite">
+          Painel ainda não conectado ao serviço de dados.
+        </div>
+      </section>
+
+      <section class="painel">
+        <div class="cabecalho-painel">
+          <h2>Medições dos sensores</h2>
+        </div>
+
+        <div class="sensores">
+          <div class="sensor">
+            <span>Aceleração X</span>
+            <strong id="sensorX">—</strong>
+          </div>
+
+          <div class="sensor">
+            <span>Aceleração Y</span>
+            <strong id="sensorY">—</strong>
+          </div>
+
+          <div class="sensor">
+            <span>Aceleração Z</span>
+            <strong id="sensorZ">—</strong>
+          </div>
+        </div>
+
+        <p class="nota">
+          Os campos dependem das variáveis que realmente existem
+          na programação do seu detector. Unidades e nomes serão
+          ajustados após verificarmos o código do ESP8266.
+        </p>
+      </section>
+
+      <section class="painel">
+        <div class="cabecalho-painel">
+          <h2>Histórico de eventos</h2>
+        </div>
+
+        <ul class="historico" id="historico">
+          <li>
+            Nenhum evento recebido nesta sessão.
+          </li>
+        </ul>
+
+        <p class="nota">
+          Este histórico inicial existe apenas enquanto a página
+          está aberta. Para manter os registros após fechar o site,
+          será necessário configurar um armazenamento persistente.
+        </p>
+      </section>
+
+      <section class="painel">
+        <h2>Teste visual</h2>
+
+        <p class="nota">
+          O botão abaixo simula um alerta na tela. Ele não provoca
+          uma queda, não aciona o ESP8266 e não envia notificações.
+        </p>
+
+        <button class="botao" id="botaoTeste" type="button">
+          Testar alerta visual
+        </button>
+      </section>
 
     </div>
-
-  </section>
-
+  </main>
 
   <footer>
-
-    <p>
-      &copy; 2026 POPI - Todos os direitos reservados
-    </p>
-
+    <p>&copy; 2026 POPI - Todos os direitos reservados</p>
   </footer>
 
-
   <script>
+    /*
+      INTEGRAÇÃO COM O ARDUINO CLOUD
 
-    function testarAlerta() {
+      Depois de criar o serviço intermediário, substitua
+      o valor abaixo pelo endereço HTTPS desse serviço.
 
-      const status =
-        document.querySelector(".status");
+      Não coloque Client Secret, tokens ou senhas aqui.
+    */
 
-      const indicador =
-        document.querySelector(".status-indicador");
+    const API_URL = "";
 
-      status.innerHTML =
-        '<span class="status-indicador"></span> ALERTA DE TESTE';
+    const INTERVALO_ATUALIZACAO = 5000;
+    let ultimoEvento = "";
+    let ultimoEstadoQueda = null;
+    let alertaTesteAtivo = false;
 
-      indicador.style.backgroundColor = "#D9534F";
+    const elemento = (id) => document.getElementById(id);
 
-
-      setTimeout(function() {
-
-        status.innerHTML =
-          '<span class="status-indicador"></span> Sistema aguardando conexão';
-
-        const novoIndicador =
-          document.querySelector(".status-indicador");
-
-        novoIndicador.style.backgroundColor = "#999";
-
-      }, 3000);
-
+    function mostrarMensagem(texto, tipo = "") {
+      const caixa = elemento("mensagemSistema");
+      caixa.textContent = texto;
+      caixa.className = "mensagem" + (tipo ? " " + tipo : "");
     }
 
+    function atualizarConexao(conectado) {
+      elemento("indicadorConexao").style.backgroundColor =
+        conectado ? "#258653" : "#999999";
+
+      elemento("textoConexao").textContent =
+        conectado ? "Dados recebidos" : "Sem conexão confirmada";
+    }
+
+    function formatarData(valor) {
+      if (!valor) return "Não informada";
+
+      const data = new Date(valor);
+
+      if (Number.isNaN(data.getTime())) {
+        return String(valor);
+      }
+
+      return data.toLocaleString("pt-BR");
+    }
+
+    function registrarEvento(texto, data) {
+      const lista = elemento("historico");
+
+      if (lista.children.length === 1 &&
+          lista.textContent.includes("Nenhum evento")) {
+        lista.replaceChildren();
+      }
+
+      const item = document.createElement("li");
+      item.textContent = formatarData(data) + " — " + texto;
+
+      lista.prepend(item);
+
+      while (lista.children.length > 20) {
+        lista.lastElementChild.remove();
+      }
+    }
+
+    function mostrarDados(dados) {
+      /*
+        Formato esperado do serviço intermediário:
+
+        {
+          "connected": true,
+          "fallDetected": false,
+          "updatedAt": "2026-10-08T19:30:00Z",
+          "accelerationX": 0.1,
+          "accelerationY": 0.2,
+          "accelerationZ": 9.7
+        }
+
+        Esses nomes são um formato de exemplo.
+        O serviço deverá convertê-los para as variáveis
+        reais do Arduino Cloud.
+      */
+
+      if (typeof dados.connected !== "boolean") {
+        throw new Error("O serviço não informou o estado da conexão.");
+      }
+
+      atualizarConexao(dados.connected);
+
+      if (!dados.connected) {
+        elemento("estadoQueda").textContent = "Sem dados atuais";
+        elemento("descricaoQueda").textContent =
+          "Não foi possível confirmar o estado do detector.";
+        mostrarMensagem(
+          "O serviço não confirmou uma conexão ativa com o dispositivo.",
+          "erro"
+        );
+        return;
+      }
+
+      if (typeof dados.fallDetected !== "boolean") {
+        throw new Error("O serviço não informou o estado da queda.");
+      }
+
+      const queda = dados.fallDetected;
+      const estado = queda ? "QUEDA DETECTADA" : "Nenhuma queda indicada";
+
+      elemento("estadoQueda").textContent = estado;
+
+      elemento("descricaoQueda").textContent = queda
+        ? "O detector informou uma possível queda. Verifique a situação da pessoa."
+        : "O detector não está indicando uma queda neste momento.";
+
+      mostrarMensagem(
+        queda
+          ? "Atenção: o dispositivo informou uma possível queda. Verifique a situação da pessoa."
+          : "Dados recebidos. O detector não está indicando uma queda.",
+        queda ? "alerta" : ""
+      );
+
+      elemento("ultimaAtualizacao").textContent =
+        formatarData(dados.updatedAt);
+
+      elemento("sensorX").textContent =
+        dados.accelerationX ?? "—";
+
+      elemento("sensorY").textContent =
+        dados.accelerationY ?? "—";
+
+      elemento("sensorZ").textContent =
+        dados.accelerationZ ?? "—";
+
+      if (ultimoEstadoQueda !== null && queda !== ultimoEstadoQueda) {
+        registrarEvento(
+          queda ? "Possível queda indicada pelo detector" :
+                  "O detector deixou de indicar uma queda",
+          dados.updatedAt || new Date().toISOString()
+        );
+      } else if (ultimoEstadoQueda === null && queda) {
+        registrarEvento(
+          "O primeiro estado recebido indica uma possível queda",
+          dados.updatedAt || new Date().toISOString()
+        );
+      }
+
+      ultimoEstadoQueda = queda;
+    }
+
+    async function buscarDados() {
+      if (!API_URL) {
+        atualizarConexao(false);
+        mostrarMensagem(
+          "Integração pendente: falta configurar o endereço do serviço que consulta o Arduino Cloud."
+        );
+        return;
+      }
+
+      try {
+        const resposta = await fetch(API_URL, {
+          method: "GET",
+          headers: {
+            "Accept": "application/json"
+          },
+          cache: "no-store"
+        });
+
+        if (!resposta.ok) {
+          throw new Error("O serviço retornou HTTP " + resposta.status);
+        }
+
+        const dados = await resposta.json();
+        mostrarDados(dados);
+
+      } catch (erro) {
+        atualizarConexao(false);
+        mostrarMensagem(
+          "Não foi possível obter dados atuais. Verifique o serviço de integração e a conexão.",
+          "erro"
+        );
+
+        console.error("Falha ao consultar o POPI:", erro);
+      }
+    }
+
+    elemento("botaoTeste").addEventListener("click", () => {
+      if (alertaTesteAtivo) return;
+
+      alertaTesteAtivo = true;
+
+      const caixa = elemento("mensagemSistema");
+      const mensagemAnterior = caixa.textContent;
+      const classeAnterior = caixa.className;
+
+      mostrarMensagem(
+        "TESTE VISUAL: este alerta é uma simulação e não representa uma queda real.",
+        "alerta"
+      );
+
+      elemento("estadoQueda").textContent = "Teste visual";
+      elemento("descricaoQueda").textContent =
+        "Nenhum alerta foi enviado ao dispositivo.";
+
+      setTimeout(() => {
+        alertaTesteAtivo = false;
+        caixa.textContent = mensagemAnterior;
+        caixa.className = classeAnterior;
+        buscarDados();
+      }, 3000);
+    });
+
+    buscarDados();
+    setInterval(buscarDados, INTERVALO_ATUALIZACAO);
   </script>
-
 </body>
-
 </html>
