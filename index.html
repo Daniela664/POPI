@@ -237,240 +237,191 @@
       line-height: 1.5;
     }
 
-    /* =========================
-       AVALIAÇÕES
-       ========================= */
+    
+/* =========================
+   AVALIAÇÕES
+   ========================= */
 
-    .avaliacoes {
-      background-color: #F8F5EE;
+.avaliacoes {
+  background-color: #F8F5EE;
+  padding: 50px 20px 70px;
+  text-align: center;
+}
 
-      padding: 50px 20px 70px;
+.avaliacoes-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
 
-      text-align: center;
-    }
+/* CONTAINER DO CARROSSEL E DAS SETAS */
+.carrossel-container {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
 
-    .avaliacoes-titulo {
-      font-size: 30px;
-      font-weight: 700;
+/* CARROSSEL */
+.carrossel {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
 
-      margin-bottom: 35px;
-    }
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
 
-    .carrossel {
-      max-width: 850px;
+/* CADA AVALIAÇÃO */
+.avaliacao {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  scroll-snap-align: start;
 
-      margin: 0 auto;
+  padding: 40px;
+  background-color: #DCEEFF;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
 
-      display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
 
-      overflow-x: auto;
+.estrelas {
+  font-size: 25px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  color: #E5A900;
+}
 
-      scroll-snap-type: x mandatory;
+.avaliacao p {
+  max-width: 700px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  font-style: italic;
+}
 
-      scrollbar-width: none;
+.avaliacao strong {
+  display: block;
+  margin-top: 20px;
+  font-size: 15px;
+}
 
-      -webkit-overflow-scrolling: touch;
-    }
+/* =========================
+   SETAS DO CARROSSEL
+   ========================= */
 
-    .carrossel::-webkit-scrollbar {
-      display: none;
-    }
+.seta-carrossel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 
-    .avaliacao {
-      min-width: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
 
-      scroll-snap-align: center;
+  background-color: #2477B8;
+  color: #FFFFFF;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
 
-      padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      background-color: #DCEEFF;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+}
 
-      border-radius: 15px;
+.seta-carrossel:hover {
+  background-color: #185B8F;
+}
 
-      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+.seta-esquerda {
+  left: 0;
+}
 
-      display: flex;
+.seta-direita {
+  right: 0;
+}
 
-      flex-direction: column;
-
-      justify-content: center;
-      align-items: center;
-
-      min-height: 220px;
-    }
-
-    .estrelas {
-      font-size: 25px;
-
-      letter-spacing: 4px;
-
-      margin-bottom: 20px;
-
-      color: #E5A900;
-    }
-
-    .avaliacao p {
-      max-width: 700px;
-
-      margin: 0;
-
-      font-size: 17px;
-
-      line-height: 1.7;
-
-      font-style: italic;
-    }
-
-    .avaliacao strong {
-      display: block;
-
-      margin-top: 20px;
-
-      font-size: 15px;
-    }
 /* =========================
    BOLINHAS DO CARROSSEL
    ========================= */
 
-.indicadores {
+.bolinhas-carrossel {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 10px;
-
-  margin-top: 22px;
+  margin-top: 25px;
 }
 
-.indicador {
+.bolinha-carrossel {
   width: 10px;
   height: 10px;
-
   padding: 0;
   border: none;
-
   border-radius: 50%;
-
-  background-color: #B8D3E8;
-
+  background-color: #B8C7D6;
   cursor: pointer;
-
-  transition: 0.3s;
 }
 
-.indicador.ativo {
-  width: 12px;
-  height: 12px;
-
+.bolinha-carrossel.ativa {
   background-color: #2477B8;
+  transform: scale(1.2);
 }
 
-.indicador:hover {
-  background-color: #185B8E;
+/* =========================
+   CELULARES
+   ========================= */
+
+@media (max-width: 600px) {
+  .avaliacoes {
+    padding: 35px 12px 50px;
+  }
+
+  .avaliacoes-titulo {
+    font-size: 24px;
+  }
+
+  .carrossel-container {
+    padding: 0 35px;
+  }
+
+  .avaliacao {
+    padding: 25px 15px;
+    min-height: 220px;
+  }
+
+  .avaliacao p {
+    font-size: 15px;
+  }
+
+  .seta-carrossel {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
 }
-    /* =========================
-       POR QUE DO POPI
-       ========================= */
-
-    .porque-popi {
-      padding: 60px 40px 80px;
-
-      text-align: center;
-    }
-
-    .porque-popi h2 {
-      margin-bottom: 45px;
-
-      font-size: 32px;
-      font-weight: 700;
-
-      text-transform: uppercase;
-    }
-
-    .porque-container {
-      max-width: 1150px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 25px;
-    }
-
-    .porque-item {
-      background-color: #EAF4FC;
-
-      padding: 30px;
-
-      border-radius: 12px;
-
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-      text-align: left;
-    }
-
-    .porque-item p {
-      margin: 0;
-
-      font-size: 15px;
-
-      line-height: 1.7;
-    }
-
-    /* =========================
-       DISPOSITIVO
-       ========================= */
-
-    .dispositivo {
-      padding: 60px 40px 80px;
-
-      text-align: center;
-    }
-
-    .dispositivo h2 {
-      margin-bottom: 50px;
-
-      font-size: 32px;
-      font-weight: 700;
-
-      text-transform: uppercase;
-    }
-
-    .dispositivo-container {
-      max-width: 1150px;
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: 1.1fr 1fr;
-
-      gap: 50px;
-
-      align-items: center;
-
-      text-align: left;
-    }
-
-    .dispositivo-imagem img {
-      width: 100%;
-
-      max-height: 500px;
-
-      object-fit: contain;
-
-      border-radius: 12px;
-
-      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-    }
-
-    .dispositivo-texto {
-      font-size: 17px;
-
-      line-height: 1.8;
-    }
 
     /* =========================
        SOBRE NÓS
