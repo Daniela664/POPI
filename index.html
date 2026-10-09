@@ -263,24 +263,43 @@
   box-sizing: border-box;
 }
 
-/* CARROSSEL */
-.carrossel {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
 
-.carrossel::-webkit-scrollbar {
-  display: none;
-}
+<div class="carrossel-container">
 
+  <button
+    class="seta-carrossel seta-esquerda"
+    type="button"
+    onclick="moverCarrossel('carrosselAvaliacoes', -1)"
+    aria-label="Avaliação anterior">
+    &#10094;
+  </button>
+
+  <div class="carrossel" id="carrosselAvaliacoes">
+
+    <div class="avaliacao">
+      <!-- Conteúdo da primeira avaliação -->
+    </div>
+
+    <div class="avaliacao">
+      <!-- Conteúdo da segunda avaliação -->
+    </div>
+
+    <div class="avaliacao">
+      <!-- Conteúdo da terceira avaliação -->
+    </div>
+
+  </div>
+
+  <button
+    class="seta-carrossel seta-direita"
+    type="button"
+    onclick="moverCarrossel('carrosselAvaliacoes', 1)"
+    aria-label="Próxima avaliação">
+    &#10095;
+  </button>
+
+</div>
+    
 /* CADA AVALIAÇÃO */
 .avaliacao {
   flex: 0 0 100%;
