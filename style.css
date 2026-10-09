@@ -1175,4 +1175,78 @@ footer p {
 
 }
 
+/* Botões de seta dos carrosséis */
+.carrossel-container,
+.feiras-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Aparência das setas */
+.seta-carrossel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+
+  background-color: #2477B8;
+  color: white;
+
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.seta-carrossel:hover {
+  background-color: #185b8f;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.seta-esquerda {
+  left: 8px;
+}
+
+.seta-direita {
+  right: 8px;
+}
+
+/* Espaço para as setas nas avaliações */
+.carrossel-container .carrossel {
+  scroll-behavior: smooth;
+}
+
+/* Espaço para as setas nas fotos */
+.feiras-container .feiras-carrossel {
+  scroll-behavior: smooth;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  .seta-carrossel {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+  }
+
+  .seta-esquerda {
+    left: 3px;
+  }
+
+  .seta-direita {
+    right: 3px;
+  }
+}
+
 </style>
