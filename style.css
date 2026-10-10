@@ -577,7 +577,7 @@ section {
   background-color: #185B8E;
 }
 
-```css
+
 /* =========================
    POR QUE DO POPI
    ========================= */
@@ -623,13 +623,10 @@ section {
 .porque-item p {
   width: 100%;
   margin: 0;
-
   font-size: 17px;
   line-height: 1.8;
   text-align: center;
 }
-
-/* TABLET E CELULAR */
 
 @media (max-width: 900px) {
   .porque-container {
@@ -638,20 +635,6 @@ section {
   }
 }
 
-@media (max-width: 600px) {
-  .porque-popi {
-    padding: 50px 20px 60px;
-  }
-
-  .porque-titulo {
-    font-size: 26px;
-  }
-
-  .porque-item {
-    padding: 20px;
-  }
-}
-```
 /* =========================
    DISPOSITIVO
    ========================= */
