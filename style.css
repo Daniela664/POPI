@@ -374,58 +374,38 @@ section {
    AVALIAÇÕES
 ===================== */
 
-.avaliacoes {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.avaliacoes-titulo {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-
-.carrossel-wrapper {
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden;
-}
-
 .carrossel {
-    display: flex;
+  max-width: 850px;
+  margin: 0 auto;
 
-    overflow-x: auto;
-    overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
 
-    scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  overflow-y: hidden;
 
-    scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .carrossel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .avaliacao {
-    flex: 0 0 100%;
+  flex: 0 0 100%;
+  min-width: 100%;
 
-    min-width: 100%;
+  scroll-snap-align: start;
 
-    scroll-snap-align: center;
+  padding: 40px;
 
-    background: #DCEEFF;
+  background-color: #DCEEFF;
+  border-radius: 15px;
 
-    border-radius: 15px;
-
-    padding: 40px;
-
-    box-sizing: border-box;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,.10);
+  box-sizing: border-box;
 }
 
 .estrelas {
