@@ -1237,12 +1237,6 @@
     </p>
 
   </footer>
-<script>
-
-const carrossel = document.getElementById("carrosselAvaliacoes");
-
-const indicadores = document.querySelectorAll(".indicador");
-
 
 // ========================================
 // QUANDO CLICAR NAS BOLINHAS
@@ -1279,38 +1273,35 @@ document.querySelectorAll(".indicador");
 
 indicadores.forEach((indicador) => {
 
-    indicador.addEventListener("click", () => {
+  indicador.addEventListener("click", () => {
 
-        const slide =
-        Number(indicador.dataset.slide);
+    const slide =
+    Number(indicador.dataset.slide);
 
-        carrossel.scrollTo({
-
-            left: slide * carrossel.clientWidth,
-
-            behavior: "smooth"
-
-        });
-
+    carrossel.scrollTo({
+      left: slide * carrossel.clientWidth,
+      behavior: "smooth"
     });
+
+  });
 
 });
 
 carrossel.addEventListener("scroll", () => {
 
-    const atual = Math.round(
-        carrossel.scrollLeft /
-        carrossel.clientWidth
+  const slideAtual = Math.round(
+    carrossel.scrollLeft /
+    carrossel.clientWidth
+  );
+
+  indicadores.forEach((indicador, index) => {
+
+    indicador.classList.toggle(
+      "ativo",
+      index === slideAtual
     );
 
-    indicadores.forEach((indicador, index) => {
-
-        indicador.classList.toggle(
-            "ativo",
-            atual === index
-        );
-
-    });
+  });
 
 });
 
