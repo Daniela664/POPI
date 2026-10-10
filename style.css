@@ -695,14 +695,13 @@ section {
 }
 
 .porque-popi h2 {
-* text-align: center;
-  font-size: *2px;
+  text-align: center;
+  font-size: 32px;
   margin-bottom: 40px;
 }
 
-.po*que-container {
-  max-width: 1000p*;
-  margin: 0 auto;
+.porque-titulo {
+  text-align: center;
 }
 
 .porque-ite* {
