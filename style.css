@@ -592,23 +592,30 @@ section {
   font-weight: 700;
   margin-bottom: 40px;
   text-align: center;
+  width: 100%;
+
 }
 
 .porque-container {
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .porque-item {
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
+  width: 100%;
+  text-align: center;
 }
 
 .porque-item p {
   text-align: center;
   font-size: 17px;
   line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 /* =========================
    DISPOSITIVO
