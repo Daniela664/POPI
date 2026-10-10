@@ -1274,33 +1274,49 @@ indicadores.forEach((indicador) => {
 });
 
 
-// ========================================
-// QUANDO ARRASTAR O CARROSSEL
-// ========================================
+<script>
+
+const carrossel =
+document.getElementById("carrosselAvaliacoes");
+
+const indicadores =
+document.querySelectorAll(".indicador");
+
+indicadores.forEach((indicador) => {
+
+    indicador.addEventListener("click", () => {
+
+        const slide =
+        Number(indicador.dataset.slide);
+
+        carrossel.scrollTo({
+
+            left: slide * carrossel.clientWidth,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
 
 carrossel.addEventListener("scroll", () => {
 
-  const larguraSlide = carrossel.clientWidth;
-
-  const slideAtual = Math.round(
-    carrossel.scrollLeft / larguraSlide
-  );
-
-
-  indicadores.forEach((indicador, index) => {
-
-    indicador.classList.toggle(
-      "ativo",
-      index === slideAtual
+    const atual = Math.round(
+        carrossel.scrollLeft /
+        carrossel.clientWidth
     );
 
-  });
+    indicadores.forEach((indicador, index) => {
+
+        indicador.classList.toggle(
+            "ativo",
+            atual === index
+        );
+
+    });
 
 });
 
 </script>
-
-</body>
-
-</html>
-```
