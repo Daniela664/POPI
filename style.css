@@ -577,44 +577,50 @@ section {
   background-color: #185B8E;
 }
 
-
 /* =========================
-   POR QUE DO POPI
+   POR QUE DO POPI?
    ========================= */
 
 .porque-popi {
+  background-color: #F8F5EE;
   padding: 60px 40px;
   text-align: center;
 }
 
 .porque-titulo {
+  margin: 0 0 35px;
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 40px;
   text-align: center;
-  width: 100%;
-
 }
 
 .porque-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  width: 100%;
-  text-align: center;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  align-items: stretch;
 }
 
 .porque-item {
-  margin: 0 auto 25px;
-  width: 100%;
-  text-align: center;
+  padding: 25px;
+  background-color: #DCEEFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .porque-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
   text-align: center;
-  font-size: 17px;
-  line-height: 1.8;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* =========================
