@@ -645,62 +645,45 @@ section {
    ========================= */
 
 .dispositivo {
-
-  padding: 60px 40px 80px;
-
-  text-align: center;
+    padding: 60px 40px;
 }
-
 
 .dispositivo h2 {
-
-  margin-bottom: 50px;
-
-  font-size: 32px;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
 }
-
 
 .dispositivo-container {
+    display: flex;
 
-  max-width: 1150px;
+    align-items: center;
+    justify-content: center;
 
-  margin: 0 auto;
+    gap: 40px;
 
-  display: grid;
-
-  grid-template-columns: 1.1fr 1fr;
-
-  gap: 50px;
-
-  align-items: center;
-
-  text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+.dispositivo-imagem {
+    flex: 1;
+}
 
 .dispositivo-imagem img {
-
-  width: 100%;
-
-  max-height: 500px;
-
-  object-fit: contain;
-
-  border-radius: 12px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
 }
 
-
 .dispositivo-texto {
+    flex: 1;
 
-  font-size: 17px;
+    font-size: 17px;
+    line-height: 1.8;
 
-  line-height: 1.8;
+    text-align: justify;
 }
 
 
