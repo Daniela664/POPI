@@ -577,6 +577,7 @@ section {
   background-color: #185B8E;
 }
 
+```css
 /* =========================
    POR QUE DO POPI
    ========================= */
@@ -650,7 +651,7 @@ section {
     padding: 20px;
   }
 }
-
+```
 /* =========================
    DISPOSITIVO
    ========================= */
@@ -1236,42 +1237,3 @@ footer p {
   align-items: center;
   min-height: 220px;
 }
-
-/* TESTE DE CENTRALIZAÇÃO DO POPI */
-.porque-popi {
-  display: block !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-.porque-popi .porque-titulo {
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-}
-
-.porque-popi .porque-container {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  width: 100% !important;
-  max-width: 1100px !important;
-  margin: 0 auto !important;
-}
-
-.porque-popi .porque-item {
-  width: 100% !important;
-  margin: 0 !important;
-  text-align: center !important;
-}
-
-.porque-popi .porque-item p {
-  text-align: center !important;
-}
-
-@media (max-width: 900px) {
-  .porque-popi .porque-container {
-    grid-template-columns: 1fr !important;
-  }
-}
-
