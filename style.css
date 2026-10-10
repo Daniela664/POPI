@@ -370,71 +370,99 @@ section {
 }
 
 
-/* =========================
+/* =====================
    AVALIAÇÕES
-   ========================= */
+===================== */
 
 .avaliacoes {
-
-  background-color: #F8F5EE;
-
-  padding: 50px 20px 70px;
-
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
-
 
 .avaliacoes-titulo {
-
-  font-family: 'Montserrat', sans-serif;
-
-  font-size: 30px;
-
-  font-weight: 700;
-
-  margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
 }
 
+.carrossel-wrapper {
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
 
-/* CARROSSEL */
 .carrossel {
-  max-width: 850px;
-  margin: 0 auto;
+    display: flex;
 
-  display: flex;
-  flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 
-  overflow-x: auto;
-  overflow-y: hidden;
+    scroll-snap-type: x mandatory;
 
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
-  scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
 }
 
 .carrossel::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-/* CADA CARD */
 .avaliacao {
-  flex: 0 0 100%;
+    flex: 0 0 100%;
 
-  width: 100%;
-  min-width: 100%;
+    min-width: 100%;
 
-  scroll-snap-align: center;
+    scroll-snap-align: center;
 
-  padding: 40px;
+    background: #DCEEFF;
 
-  background: #DCEEFF;
+    border-radius: 15px;
 
-  border-radius: 15px;
+    padding: 40px;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.10);
 }
 
+.estrelas {
+    font-size: 28px;
+    color: #E5A900;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.avaliacao p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.avaliacao strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* INDICADORES */
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+
+    border: none;
+}
 
 /* =========================
    COMENTÁRIOS
