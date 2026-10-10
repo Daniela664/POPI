@@ -396,31 +396,43 @@ section {
 }
 
 
-/* =========================
-   CARROSSEL
-   ========================= */
-
+/* CARROSSEL */
 .carrossel {
-
   max-width: 850px;
-
   margin: 0 auto;
 
   display: flex;
+  flex-wrap: nowrap;
 
   overflow-x: auto;
+  overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 
   scrollbar-width: none;
-
-  -webkit-overflow-scrolling: touch;
 }
 
-
 .carrossel::-webkit-scrollbar {
-
   display: none;
+}
+
+/* CADA CARD */
+.avaliacao {
+  flex: 0 0 100%;
+
+  width: 100%;
+  min-width: 100%;
+
+  scroll-snap-align: center;
+
+  padding: 40px;
+
+  background: #DCEEFF;
+
+  border-radius: 15px;
+
+  box-sizing: border-box;
 }
 
 
