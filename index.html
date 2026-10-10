@@ -254,7 +254,7 @@
   margin-bottom: 35px;
 }
 
-/* CONTAINER DO CARROSSEL E DAS SETAS */
+/* CONTAINER DO CARROSSEL */
 .carrossel-container {
   position: relative;
   max-width: 850px;
@@ -265,14 +265,6 @@
 
 
 <div class="carrossel-container">
-
-  <button
-    class="seta-carrossel seta-esquerda"
-    type="button"
-    onclick="moverCarrossel('carrosselAvaliacoes', -1)"
-    aria-label="Avaliação anterior">
-    &#10094;
-  </button>
 
   <div class="carrossel" id="carrosselAvaliacoes">
 
@@ -289,14 +281,6 @@
     </div>
 
   </div>
-
-  <button
-    class="seta-carrossel seta-direita"
-    type="button"
-    onclick="moverCarrossel('carrosselAvaliacoes', 1)"
-    aria-label="Próxima avaliação">
-    &#10095;
-  </button>
 
 </div>
     
@@ -341,46 +325,6 @@
   font-size: 15px;
 }
 
-/* =========================
-   SETAS DO CARROSSEL
-   ========================= */
-
-.seta-carrossel {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-
-  background-color: #2477B8;
-  color: #FFFFFF;
-  font-size: 25px;
-  line-height: 1;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
-}
-
-.seta-carrossel:hover {
-  background-color: #185B8F;
-}
-
-.seta-esquerda {
-  left: 0;
-}
-
-.seta-direita {
-  right: 0;
-}
 
 /* =========================
    BOLINHAS DO CARROSSEL
@@ -435,11 +379,6 @@
     font-size: 15px;
   }
 
-  .seta-carrossel {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-  }
 }
 
     /* =========================
@@ -947,13 +886,6 @@
     
 <div class="carrossel-container">
 
-  <button
-    class="seta-carrossel seta-esquerda"
-    type="button"
-    aria-label="Avaliação anterior"
-    onclick="moverCarrossel('carrosselAvaliacoes', -1)">
-    &#8249;
-  </button>
 
     <!-- COMENTÁRIO 1 -->
 
@@ -1019,13 +951,6 @@
 
   </div>
     
-    <button
-    class="seta-carrossel seta-direita"
-    type="button"
-    aria-label="Próxima avaliação"
-    onclick="moverCarrossel('carrosselAvaliacoes', 1)">
-    &#8250;
-  </button>
 
 </div>
 
