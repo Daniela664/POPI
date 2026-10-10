@@ -254,65 +254,52 @@
   margin-bottom: 35px;
 }
 
-/* CONTAINER DO CARROSSEL */
-.carrossel-container {
-  position: relative;
+/* CARROSSEL */
+
+.carrossel {
   max-width: 850px;
   margin: 0 auto;
-  padding: 0 50px;
-  box-sizing: border-box;
-}
-
-
-<div class="carrossel-container">
-
-  <div class="carrossel" id="carrosselAvaliacoes">
-
-    <div class="avaliacao">
-      <!-- Conteúdo da primeira avaliação -->
-    </div>
-
-    <div class="avaliacao">
-      <!-- Conteúdo da segunda avaliação -->
-    </div>
-
-    <div class="avaliacao">
-      <!-- Conteúdo da terceira avaliação -->
-    </div>
-
-  </div>
-
-</div>
-    
-/* CADA AVALIAÇÃO */
-.avaliacao {
-  flex: 0 0 100%;
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-  scroll-snap-align: start;
-
-  padding: 40px;
-  background-color: #DCEEFF;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 220px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+
+.avaliacao {
+  flex: 0 0 100%;
+  min-width: 100%;
+
+  scroll-snap-align: center;
+
+  padding: 40px;
+
+  background-color: #DCEEFF;
+  border-radius: 15px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+
+  box-sizing: border-box;
 }
 
 .estrelas {
   font-size: 25px;
+  color: #E5A900;
   letter-spacing: 4px;
   margin-bottom: 20px;
-  color: #E5A900;
 }
 
 .avaliacao p {
-  max-width: 700px;
   margin: 0;
   font-size: 17px;
   line-height: 1.7;
@@ -325,34 +312,31 @@
   font-size: 15px;
 }
 
+/* BOLINHAS */
 
-/* =========================
-   BOLINHAS DO CARROSSEL
-   ========================= */
-
-.bolinhas-carrossel {
+.indicadores {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 10px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
-.bolinha-carrossel {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: none;
+.indicador {
+  width: 12px;
+  height: 12px;
+
+  border: 0;
   border-radius: 50%;
-  background-color: #B8C7D6;
+
+  background: #B8C7D6;
+
   cursor: pointer;
 }
 
-.bolinha-carrossel.ativa {
-  background-color: #2477B8;
-  transform: scale(1.2);
+.indicador.ativo {
+  background: #2477B8;
 }
-
+    
 /* =========================
    CELULARES
    ========================= */
