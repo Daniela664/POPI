@@ -686,6 +686,34 @@ section {
     text-align: justify;
 }
 
+/* =========================
+   POR QUE DO POPI?
+   ========================= */
+
+.porque-popi {
+  paddin*: 60px 40px;
+}
+
+.porque-popi h2 {
+* text-align: center;
+  font-size: *2px;
+  margin-bottom: 40px;
+}
+
+.po*que-container {
+  max-width: 1000p*;
+  margin: 0 auto;
+}
+
+.porque-ite* {
+  margin-bottom: 25px;
+}
+
+.porq*e-item p {
+  text-align: justify;
+* font-size: 17px;
+  line-height: 1*8;
+}
 
 /* =========================
    SOBRE NÓS
