@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -61,7 +60,6 @@
       list-style: none;
       margin: 0;
       padding: 0;
-
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -88,23 +86,18 @@
        HERO
        ========================= */
 
-    
-.hero {
-    background-color: #8bcffc;
-    background-image: none;
-
-    height: 500px;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    position: relative;
-
-    margin-top: 52px;
-}
+    .hero {
+      background-color: #8bcffc;
+      background-image: none;
+      height: 500px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      margin-top: 52px;
+    }
 
     .hero-content {
       max-width: 900px;
@@ -113,32 +106,25 @@
 
     .hero h1 {
       margin: 0;
-
       font-family: 'Pacifico', cursive;
       font-size: 64px;
       font-weight: 400;
-
       color: #000000;
     }
 
     .hero .subtitle {
       margin-top: 18px;
-
       font-size: 22px;
       font-weight: 600;
-
       color: #000000;
     }
 
     .hero .description {
       margin-top: 18px;
-
       font-size: 18px;
       line-height: 1.6;
-
       color: #000000;
     }
-    
 
     /* =========================
        BOTÃO
@@ -146,19 +132,14 @@
 
     .btn {
       display: inline-block;
-
       margin-top: 25px;
       padding: 13px 30px;
-
       background-color: #2477B8;
       color: white;
-
       text-decoration: none;
       border-radius: 6px;
-
       font-size: 15px;
       font-weight: 600;
-
       transition: 0.3s;
     }
 
@@ -173,20 +154,15 @@
 
     .destaques {
       background-color: #F8F5EE;
-
       padding: 65px 40px 40px;
-
       text-align: center;
     }
 
     .destaques-frase {
       max-width: 900px;
-
       margin: 0 auto 50px;
-
       font-size: 27px;
       font-weight: 600;
-
       line-height: 1.5;
     }
 
@@ -196,13 +172,9 @@
 
     .imagens-container {
       max-width: 1200px;
-
       margin: 0 auto;
-
       display: grid;
-
       grid-template-columns: repeat(4, 1fr);
-
       gap: 25px;
     }
 
@@ -213,14 +185,10 @@
     .imagem-item img {
       width: 100%;
       height: 220px;
-
       object-fit: cover;
       display: block;
-
       border-radius: 10px;
-
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
       transition: 0.3s;
     }
 
@@ -230,140 +198,182 @@
 
     .imagem-item p {
       margin-top: 15px;
-
       font-size: 15px;
       font-weight: 600;
-
       line-height: 1.5;
     }
 
-    
-/* =========================
-   AVALIAÇÕES
-   ========================= */
+    /* =========================
+       AVALIAÇÕES
+       ========================= */
 
-.avaliacoes {
-  background-color: #F8F5EE;
-  padding: 50px 20px 70px;
-  text-align: center;
-}
+    .avaliacoes {
+      background-color: #F8F5EE;
+      padding: 50px 20px 70px;
+      text-align: center;
+    }
 
-.avaliacoes-titulo {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 35px;
-}
+    .avaliacoes-titulo {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
 
-/* CARROSSEL */
+    /* CARROSSEL */
 
-.carrossel {
-  max-width: 850px;
-  margin: 0 auto;
+    .carrossel {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
 
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
+    .carrossel::-webkit-scrollbar {
+      display: none;
+    }
 
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+    /* CARD */
 
-  scrollbar-width: none;
-}
+    .avaliacao {
+      flex: 0 0 100%;
+      min-width: 100%;
+      scroll-snap-align: center;
+      padding: 40px;
+      background-color: #DCEEFF;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+      box-sizing: border-box;
+    }
 
-.carrossel::-webkit-scrollbar {
-  display: none;
-}
+    .estrelas {
+      font-size: 25px;
+      color: #E5A900;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
 
-/* CARD */
+    .avaliacao p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.7;
+      font-style: italic;
+    }
 
-.avaliacao {
-  flex: 0 0 100%;
-  min-width: 100%;
+    .avaliacao strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 15px;
+    }
 
-  scroll-snap-align: center;
+    /* BOLINHAS */
 
-  padding: 40px;
+    .indicadores {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
 
-  background-color: #DCEEFF;
-  border-radius: 15px;
+    .indicador {
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 50%;
+      background: #B8C7D6;
+      cursor: pointer;
+    }
 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    .indicador.ativo {
+      background: #2477B8;
+    }
 
-  box-sizing: border-box;
-}
+    /* =========================
+       POR QUE DO POPI?
+       ========================= */
 
-.estrelas {
-  font-size: 25px;
-  color: #E5A900;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-}
+    .porque-popi {
+      display: block;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-.avaliacao p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.7;
-  font-style: italic;
-}
+    .porque-popi .porque-titulo {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto 35px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
 
-.avaliacao strong {
-  display: block;
-  margin-top: 20px;
-  font-size: 15px;
-}
+    .porque-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      justify-content: center;
+      gap: 25px;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-/* BOLINHAS */
+    .porque-item {
+      min-width: 0;
+      text-align: center;
+    }
 
-.indicadores {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
+    .porque-item p {
+      margin: 0;
+      text-align: center;
+      line-height: 1.7;
+    }
 
-.indicador {
-  width: 12px;
-  height: 12px;
+    /* =========================
+       DISPOSITIVO
+       ========================= */
 
-  border: 0;
-  border-radius: 50%;
+    .dispositivo {
+      padding: 60px 40px 70px;
+      text-align: center;
+    }
 
-  background: #B8C7D6;
+    .dispositivo h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
 
-  cursor: pointer;
-}
+    .dispositivo-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-.indicador.ativo {
-  background: #2477B8;
-}
-    
-/* =========================
-   CELULARES
-   ========================= */
+    .dispositivo-imagem img {
+      display: block;
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
 
-@media (max-width: 600px) {
-  .avaliacoes {
-    padding: 35px 12px 50px;
-  }
-
-  .avaliacoes-titulo {
-    font-size: 24px;
-  }
-
-  .carrossel-container {
-    padding: 0 35px;
-  }
-
-  .avaliacao {
-    padding: 25px 15px;
-    min-height: 220px;
-  }
-
-  .avaliacao p {
-    font-size: 15px;
-  }
-
-}
+    .dispositivo-texto {
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+    }
 
     /* =========================
        SOBRE NÓS
@@ -371,28 +381,21 @@
 
     .sobre-nos {
       padding: 60px 40px 70px;
-
       text-align: center;
     }
 
     .sobre-nos h2 {
       margin-bottom: 35px;
-
       font-size: 32px;
       font-weight: 700;
-
       text-transform: uppercase;
     }
 
     .sobre-nos-texto {
       max-width: 1000px;
-
       margin: 0 auto 45px;
-
       font-size: 17px;
-
       line-height: 1.8;
-
       text-align: justify;
     }
 
@@ -402,19 +405,12 @@
 
     .feiras-carrossel {
       max-width: 1000px;
-
       margin: 0 auto;
-
       display: flex;
-
       gap: 20px;
-
       overflow-x: auto;
-
       scroll-snap-type: x mandatory;
-
       scrollbar-width: none;
-
       padding: 10px 5px 20px;
     }
 
@@ -424,35 +420,24 @@
 
     .feira-item {
       flex: 0 0 280px;
-
       scroll-snap-align: center;
-
       background-color: #EAF4FC;
-
       border-radius: 12px;
-
       padding: 8px;
-
       box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 
     .feira-item img {
       width: 100%;
-
       height: 190px;
-
       object-fit: cover;
-
       border-radius: 8px;
     }
 
     .feira-item p {
       margin: 12px 5px 8px;
-
       font-size: 14px;
-
       font-weight: 600;
-
       line-height: 1.4;
     }
 
@@ -462,56 +447,41 @@
 
     .contato {
       padding: 60px 20px 70px;
-
       text-align: center;
     }
 
     .contato h2 {
       margin-bottom: 40px;
-
       font-size: 32px;
       font-weight: 700;
-
       text-transform: uppercase;
     }
 
     .contatos-container {
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 18px;
     }
 
     .contato-item {
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 10px;
-
       font-size: 15px;
     }
 
     .contato-item i {
       width: 22px;
-
       font-size: 18px;
-
       color: #2477B8;
-
       text-align: center;
     }
 
     .contato-item a {
       color: #000000;
-
       text-decoration: none;
     }
 
@@ -525,17 +495,13 @@
 
     footer {
       background-color: #2477B8;
-
       color: white;
-
       text-align: center;
-
       padding: 22px;
     }
 
     footer p {
       margin: 0;
-
       font-size: 13px;
     }
 
@@ -551,13 +517,12 @@
 
       .porque-container {
         grid-template-columns: 1fr;
-
         max-width: 750px;
+        gap: 25px;
       }
 
       .dispositivo-container {
         grid-template-columns: 0.9fr 1.1fr;
-
         gap: 20px;
       }
 
@@ -579,9 +544,7 @@
 
       nav ul {
         justify-content: center;
-
         flex-wrap: wrap;
-
         gap: 8px 13px;
       }
 
@@ -591,7 +554,6 @@
 
       .hero {
         height: 450px;
-
         margin-top: 70px;
       }
 
@@ -613,13 +575,11 @@
 
       .destaques-frase {
         font-size: 21px;
-
         margin-bottom: 35px;
       }
 
       .imagens-container {
         grid-template-columns: 1fr;
-
         gap: 35px;
       }
 
@@ -631,9 +591,12 @@
         padding: 30px 15px 60px;
       }
 
+      .avaliacoes-titulo {
+        font-size: 24px;
+      }
+
       .avaliacao {
         padding: 30px 20px;
-
         min-height: 280px;
       }
 
@@ -641,12 +604,38 @@
         font-size: 15px;
       }
 
+      /* POR QUE DO POPI: CENTRALIZADO NO CELULAR */
+
       .porque-popi {
+        width: 100%;
         padding: 50px 20px 60px;
+        text-align: center;
       }
 
-      .porque-popi h2 {
+      .porque-popi .porque-titulo {
+        width: 100%;
+        margin: 0 auto 30px;
         font-size: 26px;
+        text-align: center;
+      }
+
+      .porque-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        gap: 25px;
+        justify-items: center;
+      }
+
+      .porque-item {
+        width: 100%;
+        text-align: center;
+      }
+
+      .porque-item p {
+        text-align: center;
       }
 
       .dispositivo {
@@ -655,15 +644,12 @@
 
       .dispositivo h2 {
         font-size: 26px;
-
         margin-bottom: 30px;
       }
 
       .dispositivo-container {
         grid-template-columns: 0.85fr 1.15fr;
-
         gap: 12px;
-
         align-items: center;
       }
 
@@ -673,7 +659,6 @@
 
       .dispositivo-texto {
         font-size: 11px;
-
         line-height: 1.5;
       }
 
@@ -687,7 +672,6 @@
 
       .sobre-nos-texto {
         font-size: 14px;
-
         text-align: left;
       }
 
@@ -709,16 +693,13 @@
 
 </head>
 
-
 <body>
-
 
   <!-- =========================
        CABEÇALHO
        ========================= -->
 
   <nav>
-
     <ul>
 
       <li>
@@ -746,9 +727,7 @@
       </li>
 
     </ul>
-
   </nav>
-
 
   <!-- =========================
        INÍCIO
@@ -758,9 +737,7 @@
 
     <div class="hero-content">
 
-      <h1>
-        Bem-vindos
-      </h1>
+      <h1>Bem-vindos</h1>
 
       <div class="subtitle">
         POPI — Protótipo Observador Para Idosos
@@ -770,14 +747,13 @@
         Monitor de quedas para mais segurança.
       </div>
 
-     <a href="quedas.html" class="btn">
-  Saiba mais
-</a>
+      <a href="quedas.html" class="btn">
+        Saiba mais
+      </a>
 
     </div>
 
   </section>
-
 
   <!-- =========================
        POPI
@@ -786,15 +762,11 @@
   <section class="destaques" id="popi">
 
     <div class="destaques-frase">
-
       Tecnologia que protege, cuidado que transforma,
       segurança em tranquilidade.
-
     </div>
 
-
     <div class="imagens-container">
-
 
       <div class="imagem-item">
 
@@ -803,12 +775,9 @@
           alt="Autonomia para o idoso"
         >
 
-        <p>
-          Autonomia para o idoso.
-        </p>
+        <p>Autonomia para o idoso.</p>
 
       </div>
-
 
       <div class="imagem-item">
 
@@ -817,12 +786,9 @@
           alt="Segurança para o familiar"
         >
 
-        <p>
-          Segurança para o familiar.
-        </p>
+        <p>Segurança para o familiar.</p>
 
       </div>
-
 
       <div class="imagem-item">
 
@@ -831,12 +797,9 @@
           alt="Tecnologia de qualidade"
         >
 
-        <p>
-          Tecnologia de qualidade.
-        </p>
+        <p>Tecnologia de qualidade.</p>
 
       </div>
-
 
       <div class="imagem-item">
 
@@ -845,9 +808,7 @@
           alt="Segurança e conforto"
         >
 
-        <p>
-          Segurança e conforto.
-        </p>
+        <p>Segurança e conforto.</p>
 
       </div>
 
@@ -856,94 +817,93 @@
   </section>
 
   <!-- =========================
-     AVALIAÇÕES
-     ========================= -->
+       AVALIAÇÕES
+       ========================= -->
 
-<section class="avaliacoes">
+  <section class="avaliacoes">
 
-  <h2 class="avaliacoes-titulo">
-    O QUE DIZEM SOBRE O POPI
-  </h2>
+    <h2 class="avaliacoes-titulo">
+      O QUE DIZEM SOBRE O POPI
+    </h2>
 
-  <div class="carrossel" id="carrosselAvaliacoes">
+    <div class="carrossel" id="carrosselAvaliacoes">
 
-    <div class="avaliacao">
+      <div class="avaliacao">
 
-      <div class="estrelas">
-        ★★★★★
+        <div class="estrelas">★★★★★</div>
+
+        <p>
+          “O POPI demonstra uma aplicação prática brilhante
+          da tecnologia, transformando conceitos em uma solução
+          real que alia inovação e cuidado.”
+        </p>
+
+        <strong>— Adriano Santos</strong>
+
       </div>
 
-      <p>
-        “O POPI demonstra uma aplicação prática brilhante
-        da tecnologia, transformando conceitos em uma solução
-        real que alia inovação e cuidado.”
-      </p>
+      <div class="avaliacao">
 
-      <strong>
-        — Adriano Santos
-      </strong>
+        <div class="estrelas">★★★★★</div>
+
+        <p>
+          “Com o POPI, o acompanhamento da saúde ganha um
+          aliado confiável, trazendo mais segurança tanto para
+          o paciente quanto para quem cuida.”
+        </p>
+
+        <strong>— Adriana</strong>
+
+      </div>
+
+      <div class="avaliacao">
+
+        <div class="estrelas">★★★★★</div>
+
+        <p>
+          “O POPI me dá tranquilidade no dia a dia, sabendo
+          que existe uma tecnologia cuidando de quem eu amo.”
+        </p>
+
+        <strong>— José</strong>
+
+      </div>
 
     </div>
 
-    <div class="avaliacao">
+    <div class="indicadores">
 
-      <div class="estrelas">
-        ★★★★★
-      </div>
+      <button
+        class="indicador ativo"
+        data-slide="0"
+        aria-label="Ver primeira avaliação"
+      ></button>
 
-      <p>
-        “Com o POPI, o acompanhamento da saúde ganha um
-        aliado confiável, trazendo mais segurança tanto para
-        o paciente quanto para quem cuida.”
-      </p>
+      <button
+        class="indicador"
+        data-slide="1"
+        aria-label="Ver segunda avaliação"
+      ></button>
 
-      <strong>
-        — Adriana
-      </strong>
-
-    </div>
-
-    <div class="avaliacao">
-
-      <div class="estrelas">
-        ★★★★★
-      </div>
-
-      <p>
-        “O POPI me dá tranquilidade no dia a dia, sabendo
-        que existe uma tecnologia cuidando de quem eu amo.”
-      </p>
-
-      <strong>
-        — José
-      </strong>
+      <button
+        class="indicador"
+        data-slide="2"
+        aria-label="Ver terceira avaliação"
+      ></button>
 
     </div>
 
-  </div>
-
-  <div class="indicadores">
-
-    <button class="indicador ativo" data-slide="0"></button>
-
-    <button class="indicador" data-slide="1"></button>
-
-    <button class="indicador" data-slide="2"></button>
-
-  </div>
-
-</section>
-
+  </section>
 
   <!-- =========================
        POR QUE DO POPI?
        ========================= -->
 
- <section class="porque-popi">
+  <section class="porque-popi" id="porque-popi">
 
-  <h2 class="porque-titulo">
-    POR QUE DO POPI?
-  </h2>
+    <h2 class="porque-titulo">
+      POR QUE DO POPI?
+    </h2>
 
     <div class="porque-container">
 
@@ -987,20 +947,15 @@
 
   </section>
 
-
   <!-- =========================
        DISPOSITIVO
        ========================= -->
 
   <section class="dispositivo" id="dispositivo">
 
-    <h2>
-      DISPOSITIVO
-    </h2>
-
+    <h2>DISPOSITIVO</h2>
 
     <div class="dispositivo-container">
-
 
       <div class="dispositivo-imagem">
 
@@ -1010,7 +965,6 @@
         >
 
       </div>
-
 
       <div class="dispositivo-texto">
 
@@ -1038,17 +992,13 @@
 
   </section>
 
-
   <!-- =========================
        SOBRE NÓS
        ========================= -->
 
   <section class="sobre-nos" id="sobre">
 
-    <h2>
-      SOBRE NÓS
-    </h2>
-
+    <h2>SOBRE NÓS</h2>
 
     <div class="sobre-nos-texto">
 
@@ -1062,7 +1012,6 @@
         o protótipo.
       </p>
 
-
       <p>
         Ele detecta a queda instantaneamente através do bracelete
         e envia o sinal para o celular do familiar.
@@ -1070,11 +1019,9 @@
 
     </div>
 
-
     <!-- CARROSSEL DAS FEIRAS -->
 
     <div class="feiras-carrossel">
-
 
       <div class="feira-item">
 
@@ -1083,12 +1030,9 @@
           alt="MOTIC 2025 São Leopoldo"
         >
 
-        <p>
-          MOTIC 2025 — São Leopoldo
-        </p>
+        <p>MOTIC 2025 — São Leopoldo</p>
 
       </div>
-
 
       <div class="feira-item">
 
@@ -1097,12 +1041,9 @@
           alt="Exposchmidt 2025"
         >
 
-        <p>
-          Exposchmidt 2025
-        </p>
+        <p>Exposchmidt 2025</p>
 
       </div>
-
 
       <div class="feira-item">
 
@@ -1111,12 +1052,9 @@
           alt="Expomilset Fortaleza 2026"
         >
 
-        <p>
-          Expomilset — Fortaleza 2026
-        </p>
+        <p>Expomilset — Fortaleza 2026</p>
 
       </div>
-
 
       <div class="feira-item">
 
@@ -1125,12 +1063,9 @@
           alt="IBTEC"
         >
 
-        <p>
-          IBTEC
-        </p>
+        <p>IBTEC</p>
 
       </div>
-
 
       <div class="feira-item">
 
@@ -1139,17 +1074,13 @@
           alt="Pré-incubação Liberato 2026"
         >
 
-        <p>
-          Pré-incubação Liberato 2026
-        </p>
+        <p>Pré-incubação Liberato 2026</p>
 
       </div>
-
 
     </div>
 
   </section>
-
 
   <!-- =========================
        CONTATO
@@ -1157,13 +1088,9 @@
 
   <section class="contato" id="contato">
 
-    <h2>
-      CONTATO
-    </h2>
-
+    <h2>CONTATO</h2>
 
     <div class="contatos-container">
-
 
       <div class="contato-item">
 
@@ -1175,7 +1102,6 @@
 
       </div>
 
-
       <div class="contato-item">
 
         <i class="fa-solid fa-envelope"></i>
@@ -1186,7 +1112,6 @@
 
       </div>
 
-
       <div class="contato-item">
 
         <i class="fa-brands fa-instagram"></i>
@@ -1194,17 +1119,16 @@
         <a
           href="https://www.instagram.com/projeto_popi/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           @projeto_popi
         </a>
 
       </div>
 
-
     </div>
 
   </section>
-
 
   <!-- =========================
        RODAPÉ
@@ -1218,71 +1142,55 @@
 
   </footer>
 
-// ========================================
-// QUANDO CLICAR NAS BOLINHAS
-// ========================================
+  <!-- =========================
+       JAVASCRIPT DO CARROSSEL
+       DE AVALIAÇÕES
+       ========================= -->
 
-indicadores.forEach((indicador) => {
+  <script>
 
-  indicador.addEventListener("click", () => {
+    const carrossel =
+      document.getElementById("carrosselAvaliacoes");
 
-    const numeroSlide = Number(indicador.dataset.slide);
+    const indicadores =
+      document.querySelectorAll(".indicador");
 
-    const larguraSlide = carrossel.clientWidth;
+    indicadores.forEach((indicador) => {
 
-    carrossel.scrollTo({
+      indicador.addEventListener("click", () => {
 
-      left: numeroSlide * larguraSlide,
+        const slide =
+          Number(indicador.dataset.slide);
 
-      behavior: "smooth"
+        carrossel.scrollTo({
+          left: slide * carrossel.clientWidth,
+          behavior: "smooth"
+        });
+
+      });
 
     });
 
-  });
+    carrossel.addEventListener("scroll", () => {
 
-});
+      const slideAtual = Math.round(
+        carrossel.scrollLeft /
+        carrossel.clientWidth
+      );
 
+      indicadores.forEach((indicador, index) => {
 
-<script>
+        indicador.classList.toggle(
+          "ativo",
+          index === slideAtual
+        );
 
-const carrossel =
-document.getElementById("carrosselAvaliacoes");
+      });
 
-const indicadores =
-document.querySelectorAll(".indicador");
-
-indicadores.forEach((indicador) => {
-
-  indicador.addEventListener("click", () => {
-
-    const slide =
-    Number(indicador.dataset.slide);
-
-    carrossel.scrollTo({
-      left: slide * carrossel.clientWidth,
-      behavior: "smooth"
     });
 
-  });
+  </script>
 
-});
+</body>
 
-carrossel.addEventListener("scroll", () => {
-
-  const slideAtual = Math.round(
-    carrossel.scrollLeft /
-    carrossel.clientWidth
-  );
-
-  indicadores.forEach((indicador, index) => {
-
-    indicador.classList.toggle(
-      "ativo",
-      index === slideAtual
-    );
-
-  });
-
-});
-
-</script>
+</html>
