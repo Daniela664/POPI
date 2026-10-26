@@ -1,0 +1,23 @@
+{
+  "modo": "demonstracao",
+  "eventos": [
+    {
+      "data": "2026-10-24",
+      "hora": "14:32",
+      "tipo": "Queda Detectada",
+      "status": "Alerta"
+    },
+    {
+      "data": "2026-10-22",
+      "hora": "09:17",
+      "tipo": "Queda Detectada",
+      "status": "Alerta"
+    },
+    {
+      "data": "2026-10-19",
+      "hora": "16:48",
+      "tipo": "Queda Detectada",
+      "status": "Alerta"
+    }
+  ]
+}
