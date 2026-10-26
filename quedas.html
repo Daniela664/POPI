@@ -298,94 +298,69 @@
           </span>
         </div>
 
-        <div class="grade">
-          <div class="cartao">
-            <h3>Estado do detector</h3>
-            <div class="valor" id="estadoQueda">
-              Aguardando dados
-            </div>
-            <p class="descricao" id="descricaoQueda">
-              O estado será apresentado quando os dados reais
-              forem recebidos.
-            </p>
-          </div>
+        <section class="historico-popi">
+  <h2>Histórico de quedas</h2>
 
-          <div class="cartao">
-            <h3>Última atualização</h3>
-            <div class="valor" id="ultimaAtualizacao">—</div>
-            <p class="descricao">
-              Horário informado pelo serviço de monitoramento.
-            </p>
-          </div>
-        </div>
+  <p id="aviso-demonstracao" class="aviso-demonstracao" hidden>
+    Dados fictícios para demonstração do protótipo.
+  </p>
 
-        <div class="mensagem" id="mensagemSistema" role="status" aria-live="polite">
-          Painel ainda não conectado ao serviço de dados.
-        </div>
-      </section>
+  <p id="estado-historico">Carregando histórico...</p>
 
-      <section class="painel">
-        <div class="cabecalho-painel">
-          <h2>Medições dos sensores</h2>
-        </div>
+  <div id="lista-quedas"></div>
+</section>
 
-        <div class="sensores">
-          <div class="sensor">
-            <span>Aceleração X</span>
-            <strong id="sensorX">—</strong>
-          </div>
+<script>
+async function carregarHistorico() {
+  const estado = document.getElementById("estado-historico");
+  const lista = document.getElementById("lista-quedas");
+  const aviso = document.getElementById("aviso-demonstracao");
 
-          <div class="sensor">
-            <span>Aceleração Y</span>
-            <strong id="sensorY">—</strong>
-          </div>
+  try {
+    const resposta = await fetch("./quedas.json");
 
-          <div class="sensor">
-            <span>Aceleração Z</span>
-            <strong id="sensorZ">—</strong>
-          </div>
-        </div>
+    if (!resposta.ok) {
+      throw new Error("Não foi possível carregar os dados.");
+    }
 
-        <p class="nota">
-          Os campos dependem das variáveis que realmente existem
-          na programação do seu detector. Unidades e nomes serão
-          ajustados após verificarmos o código do ESP8266.
-        </p>
-      </section>
+    const dados = await resposta.json();
 
-      <section class="painel">
-        <div class="cabecalho-painel">
-          <h2>Histórico de eventos</h2>
-        </div>
+    aviso.hidden = dados.modo !== "demonstracao";
 
-        <ul class="historico" id="historico">
-          <li>
-            Nenhum evento recebido nesta sessão.
-          </li>
-        </ul>
+    lista.replaceChildren();
 
-        <p class="nota">
-          Este histórico inicial existe apenas enquanto a página
-          está aberta. Para manter os registros após fechar o site,
-          será necessário configurar um armazenamento persistente.
-        </p>
-      </section>
+    if (!dados.eventos || dados.eventos.length === 0) {
+      estado.textContent = "Nenhum registro encontrado.";
+      return;
+    }
 
-      <section class="painel">
-        <h2>Teste visual</h2>
+    dados.eventos.forEach(evento => {
+      const cartao = document.createElement("article");
+      cartao.className = "registro-queda";
 
-        <p class="nota">
-          O botão abaixo simula um alerta na tela. Ele não provoca
-          uma queda, não aciona o ESP8266 e não envia notificações.
-        </p>
+      const titulo = document.createElement("h3");
+      titulo.textContent = evento.tipo;
 
-        <button class="botao" id="botaoTeste" type="button">
-          Testar alerta visual
-        </button>
-      </section>
+      const dataHora = document.createElement("p");
+      dataHora.textContent =
+        `${evento.data.split("-").reverse().join("/")} às ${evento.hora}`;
 
-    </div>
-  </main>
+      const status = document.createElement("p");
+      status.textContent = evento.status;
+
+      cartao.append(titulo, dataHora, status);
+      lista.appendChild(cartao);
+    });
+
+    estado.textContent = "";
+  } catch (erro) {
+    estado.textContent =
+      "Não foi possível carregar o histórico. Tente novamente mais tarde.";
+  }
+}
+
+carregarHistorico();
+</script>
 
   <footer>
     <p>&copy; 2026 POPI - Todos os direitos reservados</p>
