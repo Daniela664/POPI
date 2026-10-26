@@ -1228,3 +1228,27 @@ footer p {
   align-items: center;
   min-height: 220px;
 }
+
+.registro-queda{
+  background:#F5F9FC;
+  border:1px solid #DCE6EC;
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:12px;
+}
+
+.registro-queda h3{
+  margin:0 0 8px;
+  color:#2477B8;
+}
+
+.registro-queda p{
+  margin:4px 0;
+}
+
+.aviso-demonstracao{
+  background:#FFF3E0;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:15px;
+}
