@@ -317,13 +317,13 @@ async function carregarHistorico() {
   const aviso = document.getElementById("aviso-demonstracao");
 
   try {
-    const resposta = await fetch("./quedas.json");
+    const resposta = await fetch("./quedas.j son");
 
     if (!resposta.ok) {
       throw new Error("Não foi possível carregar os dados.");
     }
 
-    const dados = await resposta.json();
+    const dados = await resposta.j son();
 
     aviso.hidden = dados.modo !== "demonstracao";
 
