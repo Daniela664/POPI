@@ -10,273 +10,360 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
-    background:#F8F5EE;
-    color:#263746;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+  font-family:'Montserrat',sans-serif;
+  background:#F8F5EE;
+  color:#263746;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
 }
 
-/* HEADER */
+/* CABEÇALHO */
+
 header{
-    width:100%;
-    background:#2477B8;
-    padding:18px 5%;
+  width:100%;
+  background:#2477B8;
+  padding:18px 5%;
 }
 
 nav{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  display:flex;
+  justify-content:center;
 }
 
 nav ul{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:40px;
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-nav li{
-    list-style:none;
+  display:flex;
+  gap:40px;
+  list-style:none;
+  flex-wrap:wrap;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-size:1rem;
-    font-weight:600;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
 }
 
 nav a:hover{
-    text-decoration:underline;
+  text-decoration:underline;
 }
 
 /* CONTEÚDO */
+
 main{
-    width:min(1000px,92%);
-    margin:45px auto;
-    flex:1;
+  width:min(1000px,92%);
+  margin:45px auto;
+  flex:1;
 }
 
 .titulo{
-    text-align:center;
-    margin-bottom:30px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
 .titulo h1{
-    color:#2477B8;
-    font-size:clamp(1.8rem,4vw,2.6rem);
-    margin-bottom:12px;
+  color:#2477B8;
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  margin-bottom:12px;
 }
 
 .titulo p{
-    color:#5e6d78;
-    line-height:1.6;
+  color:#687782;
 }
 
 .painel{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 4px 18px rgba(36,119,184,.08);
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  margin-bottom:25px;
+  box-shadow:0 4px 18px rgba(36,119,184,.08);
 }
 
 .status{
-    display:flex;
-    align-items:center;
-    gap:9px;
-    margin-bottom:22px;
-    color:#267546;
-    font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#267546;
+  font-weight:600;
+  margin-bottom:20px;
 }
 
 .indicador{
-    width:10px;
-    height:10px;
-    background:#28a745;
-    border-radius:50%;
+  width:10px;
+  height:10px;
+  background:#28a745;
+  border-radius:50%;
 }
 
 .painel h2{
-    margin-bottom:18px;
-    font-size:1.2rem;
+  margin-bottom:20px;
 }
 
 .registro{
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:center;
-    gap:12px;
-    padding:18px 0;
-    border-bottom:1px solid #e8edf0;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid #e9edf2;
 }
 
 .registro:last-child{
-    border-bottom:none;
+  border-bottom:none;
 }
 
 .data{
-    font-weight:600;
-    margin-bottom:6px;
+  font-weight:600;
+  margin-bottom:5px;
 }
 
 .descricao{
-    color:#687782;
+  color:#687782;
 }
 
 .etiqueta{
-    background:#fde9e7;
-    color:#b42318;
-    padding:7px 12px;
-    border-radius:20px;
-    font-size:.8rem;
-    font-weight:600;
+  background:#fde9e7;
+  color:#b42318;
+  border-radius:20px;
+  padding:8px 14px;
+  font-size:.8rem;
+  font-weight:600;
 }
 
-/* FOOTER */
+/* ALARME */
+
+.alarme{
+  background:#ffffff;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 4px 18px rgba(36,119,184,.08);
+}
+
+.alarme h2{
+  color:#d92d20;
+  margin-bottom:15px;
+}
+
+#statusAlarme{
+  font-weight:600;
+  color:#267546;
+  margin-bottom:20px;
+}
+
+.botoes-alarme{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.botao-alarme{
+  background:#d92d20;
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding:12px 25px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.botao-alarme:hover{
+  background:#b42318;
+}
+
+.botao-reset{
+  background:#2477B8;
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding:12px 25px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.botao-reset:hover{
+  background:#1f649b;
+}
+
+.alarme-ativo{
+  background:#fff1f1;
+  border:2px solid #d92d20;
+}
+
+/* RODAPÉ */
+
 footer{
-    background:#2477B8;
-    color:white;
-    text-align:center;
-    padding:22px 5%;
-    line-height:1.8;
+  background:#2477B8;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
 }
 
 /* RESPONSIVO */
-@media(max-width:768px){
-
-    nav ul{
-        gap:20px;
-        flex-wrap:wrap;
-    }
-
-    nav a{
-        font-size:.95rem;
-    }
-}
 
 @media(max-width:600px){
 
-    nav ul{
-        gap:14px;
-        justify-content:center;
-        flex-wrap:wrap;
-    }
+  nav ul{
+    gap:15px;
+    justify-content:center;
+  }
 
-    nav a{
-        font-size:.85rem;
-    }
+  .registro{
+    grid-template-columns:1fr;
+  }
 
-    main{
-        margin:30px auto;
-    }
+  .etiqueta{
+    justify-self:start;
+  }
 
-    .painel{
-        padding:18px;
-    }
-
-    .registro{
-        grid-template-columns:1fr;
-    }
-
-    .etiqueta{
-        justify-self:start;
-    }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <ul>
-            <li><a href="index.html#inicio">Início</a></li>
-            <li><a href="index.html#popi">POPI</a></li>
-            <li><a href="index.html#dispositivo">Dispositivo</a></li>
-            <li><a href="quedas.html">Quedas</a></li>
-            <li><a href="index.html#sobre">Sobre nós</a></li>
-            <li><a href="index.html#contato">Contato</a></li>
-        </ul>
-    </nav>
+
+  <nav>
+    <ul>
+      <li><a href="index.html#inicio">Início</a></li>
+      <li><a href="index.html#popi">POPI</a></li>
+      <li><a href="index.html#dispositivo">Dispositivo</a></li>
+      <li><a href="quedas.html">Quedas</a></li>
+      <li><a href="index.html#sobre">Sobre nós</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+  </nav>
+
 </header>
 
 <main>
 
-    <section class="titulo">
-        <h1>Histórico de Quedas</h1>
-        <p>Registro de eventos detectados pelo sistema POPI.</p>
-    </section>
+  <section class="titulo">
+    <h1>Histórico de Quedas</h1>
+    <p>Registro de eventos detectados pelo sistema POPI.</p>
+  </section>
 
-    <section class="painel">
+  <section class="painel">
 
-        <div class="status">
-            <span class="indicador"></span>
-            <span>Online</span>
-        </div>
+    <div class="status">
+      <span class="indicador"></span>
+      <span>Online</span>
+    </div>
 
-        <h2>Registros de eventos</h2>
+    <h2>Registros de eventos</h2>
 
-        <div class="registro">
-            <div>
-                <p class="data">20/10/2026 — 14:34:28</p>
-                <p class="descricao">Queda detectada</p>
-            </div>
-            <span class="etiqueta">Queda</span>
-        </div>
+    <div class="registro">
+      <div>
+        <p class="data">20/10/2026 — 14:34:28</p>
+        <p class="descricao">Queda detectada</p>
+      </div>
+      <span class="etiqueta">Queda</span>
+    </div>
 
-        <div class="registro">
-            <div>
-                <p class="data">20/10/2026 — 17:47:14</p>
-                <p class="descricao">Queda detectada</p>
-            </div>
-            <span class="etiqueta">Queda</span>
-        </div>
+    <div class="registro">
+      <div>
+        <p class="data">20/10/2026 — 17:47:14</p>
+        <p class="descricao">Queda detectada</p>
+      </div>
+      <span class="etiqueta">Queda</span>
+    </div>
 
-        <div class="registro">
-            <div>
-                <p class="data">21/10/2026 — 17:18:36</p>
-                <p class="descricao">Queda detectada</p>
-            </div>
-            <span class="etiqueta">Queda</span>
-        </div>
+    <div class="registro">
+      <div>
+        <p class="data">21/10/2026 — 17:18:36</p>
+        <p class="descricao">Queda detectada</p>
+      </div>
+      <span class="etiqueta">Queda</span>
+    </div>
 
-        <div class="registro">
-            <div>
-                <p class="data">22/10/2026 — 16:07:47</p>
-                <p class="descricao">Queda detectada</p>
-            </div>
-            <span class="etiqueta">Queda</span>
-        </div>
+    <div class="registro">
+      <div>
+        <p class="data">22/10/2026 — 16:07:47</p>
+        <p class="descricao">Queda detectada</p>
+      </div>
+      <span class="etiqueta">Queda</span>
+    </div>
 
-        <div class="registro">
-            <div>
-                <p class="data">22/10/2026 — 16:46:26</p>
-                <p class="descricao">Queda detectada</p>
-            </div>
-            <span class="etiqueta">Queda</span>
-        </div>
+    <div class="registro">
+      <div>
+        <p class="data">22/10/2026 — 16:46:26</p>
+        <p class="descricao">Queda detectada</p>
+      </div>
+      <span class="etiqueta">Queda</span>
+    </div>
 
-    </section>
+  </section>
+
+  <section class="alarme">
+
+    <h2>🚨 Alarme de Queda</h2>
+
+    <p id="statusAlarme">
+      Nenhum alerta ativo no momento.
+    </p>
+
+    <div class="botoes-alarme">
+
+      <button class="botao-alarme" onclick="acionarAlarme()">
+        Acionar Alarme
+      </button>
+
+      <button class="botao-reset" onclick="resetarAlarme()">
+        Resetar
+      </button>
+
+    </div>
+
+  </section>
 
 </main>
 
 <footer>
-    <p>POPI — Protótipo Observador Para Idosos</p>
-    <p>Tecnologia assistiva para mais segurança e cuidado.</p>
+  <p>POPI — Protótipo Observador Para Idosos</p>
+  <p>Tecnologia assistiva para mais segurança e cuidado.</p>
 </footer>
+
+<script>
+
+function acionarAlarme(){
+
+  const alarme = document.querySelector(".alarme");
+  const status = document.getElementById("statusAlarme");
+
+  alarme.classList.add("alarme-ativo");
+
+  status.innerHTML =
+  "🚨 EMERGÊNCIA! Queda detectada. Responsável notificado.";
+
+  status.style.color = "#d92d20";
+}
+
+function resetarAlarme(){
+
+  const alarme = document.querySelector(".alarme");
+  const status = document.getElementById("statusAlarme");
+
+  alarme.classList.remove("alarme-ativo");
+
+  status.innerHTML =
+  "Nenhum alerta ativo no momento.";
+
+  status.style.color = "#267546";
+}
+
+</script>
 
 </body>
 </html>
