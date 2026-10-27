@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Histórico de Quedas | POPI</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,45 +26,31 @@
       flex-direction: column;
     }
 
-    /* CABEÇALHO */
     header {
       width: 100%;
       background: #2477B8;
-      padding: 15px 25px;
+      padding: 22px 5%;
     }
 
     nav {
-      width: 100%;
-    }
-
-    nav ul {
-      list-style: none;
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
       align-items: center;
-      gap: 28px;
+      gap: 22px;
       flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
     }
 
-    nav ul li {
-      list-style: none;
-    }
-
-    nav ul li a {
+    nav a {
       color: white;
       text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-      transition: opacity 0.3s;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
-    nav ul li a:hover {
-      opacity: 0.75;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    /* CONTEÚDO */
     main {
       width: min(1000px, 92%);
       margin: 45px auto;
@@ -88,7 +73,6 @@
       line-height: 1.7;
     }
 
-    /* PAINEL DE HISTÓRICO */
     .painel {
       background: white;
       border-radius: 16px;
@@ -112,7 +96,6 @@
       height: 10px;
       background: #28a745;
       border-radius: 50%;
-      flex-shrink: 0;
     }
 
     .painel h2 {
@@ -155,7 +138,6 @@
       white-space: nowrap;
     }
 
-    /* RODAPÉ */
     footer {
       background: #2477B8;
       color: white;
@@ -165,19 +147,18 @@
       line-height: 1.8;
     }
 
-    /* CELULARES */
     @media (max-width: 600px) {
       header {
-        padding: 12px 8px;
+        padding: 18px 5%;
       }
 
-      nav ul {
-        justify-content: flex-start;
-        gap: 8px 13px;
+      nav {
+        justify-content: center;
+        gap: 14px;
       }
 
-      nav ul li a {
-        font-size: 11px;
+      nav a {
+        font-size: 0.82rem;
       }
 
       main {
@@ -202,21 +183,43 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html#inicio">Início</a></li>
-        <li><a href="index.html#popi">POPI</a></li>
-        <li><a href="index.html#dispositivo">Dispositivo</a></li>
-        <li><a href="quedas.html">Quedas</a></li>
-        <li><a href="index.html#sobre">Sobre nós</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <!-- =========================
+       CABEÇALHO
+       ========================= -->
+
+  <nav>
+    <ul>
+
+      <li>
+        <a href="index.html#inicio">Início</a>
+      </li>
+
+      <li>
+        <a href="index.html#popi">POPI</a>
+      </li>
+
+      <li>
+        <a href="index.html#dispositivo">Dispositivo</a>
+      </li>
+
+      <li>
+        <a href="quedas.html">Quedas</a>
+      </li>
+
+      <li>
+        <a href="index.html#sobre">Sobre nós</a>
+      </li>
+
+      <li>
+        <a href="index.html#contato">Contato</a>
+      </li>
+
+    </ul>
+  </nav>
+
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <section class="titulo">
       <h1>Histórico de Quedas</h1>
@@ -273,7 +276,6 @@
     </section>
   </main>
 
-  <!-- RODAPÉ -->
   <footer>
     <p>POPI — Protótipo Observador Para Idosos</p>
     <p>Tecnologia assistiva para mais segurança e cuidado.</p>
