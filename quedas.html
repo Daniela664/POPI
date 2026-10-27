@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>POPI - Monitoramento de Quedas</title>
+  <title>Histórico de Quedas | POPI</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,381 +14,322 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      background: #F8F5EE;
-      color: #263238;
       font-family: 'Montserrat', sans-serif;
+      background: #F8F5EE;
+      color: #263746;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #2477B8;
+      color: white;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
     }
 
     nav {
-      background: #2477B8;
-      padding: 17px 25px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.15);
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 20px 28px;
+      gap: 20px;
     }
 
     nav a {
-      text-decoration: none;
       color: white;
-      font-size: 14px;
-      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     nav a:hover {
-      opacity: .75;
+      text-decoration: underline;
     }
 
-    .quedas {
-      min-height: calc(100vh - 110px);
-      padding: 70px 20px;
-      background: #EEF7FD;
+    main {
+      width: min(1000px, 92%);
+      margin: 45px auto;
+      flex: 1;
     }
 
-    .conteudo {
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1 {
-      margin: 0 0 12px;
+    .titulo {
       text-align: center;
-      font-size: clamp(30px, 5vw, 40px);
+      margin-bottom: 30px;
     }
 
-    .subtitulo {
-      max-width: 700px;
-      margin: 0 auto 35px;
-      text-align: center;
-      line-height: 1.8;
-      font-size: 15px;
+    .titulo h1 {
+      color: #2477B8;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    .titulo p {
+      color: #5e6d78;
+      line-height: 1.7;
     }
 
     .painel {
       background: white;
-      padding: 28px;
       border-radius: 16px;
-      box-shadow: 0 5px 18px rgba(0,0,0,.09);
-      margin-bottom: 22px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 18px rgba(36, 119, 184, 0.08);
     }
 
-    .cabecalho-painel {
+    .online {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 15px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .cabecalho-painel h2 {
-      margin: 0;
-      font-size: 19px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 20px;
-      background: #EEEEEE;
-      color: #555;
-      font-size: 12px;
-      font-weight: 700;
     }
 
     .indicador {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #999;
+      width: 15px;
+      height: 15px;
       flex-shrink: 0;
+      border-radius: 50%;
+      background: #26a269;
+      box-shadow: 0 0 0 5px #e0f5e8;
     }
 
-    .grade {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+    .online h2 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
     }
 
-    .cartao {
-      border: 1px solid #E0E8ED;
-      border-radius: 12px;
-      padding: 20px;
-      min-width: 0;
-    }
-
-    .cartao h3 {
-      margin: 0 0 12px;
-      color: #536875;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .valor {
-      font-size: 19px;
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
-
-    .descricao {
-      margin: 10px 0 0;
-      font-size: 12px;
+    .online p {
+      color: #60717d;
+      font-size: 0.9rem;
       line-height: 1.6;
-      color: #657780;
     }
 
-    .mensagem {
-      margin-top: 20px;
-      padding: 15px;
-      border-radius: 9px;
-      background: #F1F5F7;
-      font-size: 13px;
-      line-height: 1.7;
+    .status-texto {
+      margin-left: auto;
+      color: #16834a;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-    .mensagem.erro {
-      background: #FFF0EF;
-      color: #9B302B;
-    }
-
-    .mensagem.alerta {
-      background: #FFF3E0;
-      color: #8A4B08;
-    }
-
-    .sensores {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .historico-cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .sensor {
-      background: #F5F9FC;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
+    .historico-cabecalho h2 {
+      color: #2477B8;
+      font-size: 1.25rem;
     }
 
-    .sensor span {
-      display: block;
-      color: #536875;
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    .sensor strong {
-      font-size: 18px;
-      overflow-wrap: anywhere;
-    }
-
-    .historico {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .historico li {
-      padding: 13px 0;
-      border-bottom: 1px solid #E7EDF0;
-      font-size: 13px;
-      line-height: 1.6;
-      overflow-wrap: anywhere;
-    }
-
-    .historico li:last-child {
-      border-bottom: none;
-    }
-
-    .botao {
-      border: none;
-      background: #2477B8;
-      color: white;
-      padding: 13px 20px;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 13px;
+    .contador {
+      background: #e7f3fc;
+      color: #2477B8;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
       font-weight: 700;
-      cursor: pointer;
     }
 
-    .botao:hover {
-      background: #185B8E;
+    .tabela-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 480px;
+    }
+
+    th, td {
+      padding: 16px 14px;
+      text-align: left;
+      border-bottom: 1px solid #e8edf0;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #edf6fc;
+      color: #2477B8;
+      font-weight: 700;
+    }
+
+    tbody tr:hover {
+      background: #f8fbfd;
+    }
+
+    .queda {
+      display: inline-block;
+      background: #fff0e8;
+      color: #b64d20;
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      white-space: nowrap;
     }
 
     .nota {
-      color: #657780;
-      font-size: 12px;
+      color: #687783;
+      font-size: 0.82rem;
       line-height: 1.7;
+      margin-top: 16px;
     }
 
     footer {
       background: #2477B8;
       color: white;
       text-align: center;
-      padding: 22px;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 12px;
+      padding: 22px 15px;
+      font-size: 0.85rem;
+      line-height: 1.7;
     }
 
     @media (max-width: 600px) {
-      .quedas {
-        padding: 45px 14px;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      main {
+        margin: 30px auto;
       }
 
       .painel {
-        padding: 20px;
+        padding: 18px;
       }
 
-      .grade {
-        grid-template-columns: 1fr;
+      .online {
+        flex-wrap: wrap;
       }
 
-      .sensores {
-        grid-template-columns: 1fr;
+      .status-texto {
+        margin-left: 30px;
       }
     }
   </style>
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="index.html#popi">POPI</a></li>
-      <li><a href="index.html#dispositivo">Dispositivo</a></li>
-      <li><a href="quedas.html">Quedas</a></li>
-      <li><a href="index.html#sobre">Sobre nós</a></li>
-      <li><a href="index.html#contato">Contato</a></li>
-    </ul>
-  </nav>
 
-  <main class="quedas">
-    <div class="conteudo">
+  <header>
+    <div class="logo">POPI</div>
 
-      <h1>Monitoramento de quedas</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#popi">POPI</a>
+      <a href="index.html#dispositivo">Dispositivo</a>
+      <a href="quedas.html">Quedas</a>
+      <a href="index.html#sobre">Sobre nós</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
 
-      <p class="subtitulo">
-        Acompanhe o estado do detector POPI, as medições
-        disponíveis e os eventos registrados pelo sistema.
+  <main>
+    <section class="titulo">
+      <h1>Histórico de Quedas</h1>
+      <p>
+        Acompanhe os registros de eventos do dispositivo
+        de monitoramento POPI.
       </p>
+    </section>
 
-      <section class="painel">
-        <div class="cabecalho-painel">
-          <h2>Estado do dispositivo</h2>
+    <section class="painel">
+      <div class="online">
+        <span class="indicador"></span>
 
-          <span class="badge">
-            <span class="indicador" id="indicadorConexao"></span>
-            <span id="textoConexao">Aguardando conexão</span>
-          </span>
+        <div>
+          <h2>Status do dispositivo</h2>
+          <p>O dispositivo POPI está apresentado como online.</p>
         </div>
 
-        <section class="historico-popi">
-  <h2>Histórico de quedas</h2>
+        <span class="status-texto">Online</span>
+      </div>
+    </section>
 
-  <p id="aviso-demonstracao" class="aviso-demonstracao" hidden>
-    Dados fictícios para demonstração do protótipo.
-  </p>
+    <section class="painel">
+      <div class="historico-cabecalho">
+        <h2>Registros anteriores</h2>
+        <span class="contador">5 registros</span>
+      </div>
 
-  <p id="estado-historico">Carregando histórico...</p>
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Status</th>
+            </tr>
+          </thead>
 
-  <div id="lista-quedas"></div>
-</section>
+          <tbody>
+            <tr>
+              <td>20/10/2026</td>
+              <td>14:34:28</td>
+              <td><span class="queda">Queda detectada</span></td>
+            </tr>
 
-<script>
-async function carregarHistorico() {
-  const estado = document.getElementById("estado-historico");
-  const lista = document.getElementById("lista-quedas");
-  const aviso = document.getElementById("aviso-demonstracao");
+            <tr>
+              <td>20/10/2026</td>
+              <td>17:47:14</td>
+              <td><span class="queda">Queda detectada</span></td>
+            </tr>
 
-  try {
-    const resposta = await fetch("./quedas.j son");
+            <tr>
+              <td>21/10/2026</td>
+              <td>17:18:36</td>
+              <td><span class="queda">Queda detectada</span></td>
+            </tr>
 
-    if (!resposta.ok) {
-      throw new Error("Não foi possível carregar os dados.");
-    }
+            <tr>
+              <td>22/10/2026</td>
+              <td>16:07:47</td>
+              <td><span class="queda">Queda detectada</span></td>
+            </tr>
 
-    const dados = await resposta.j son();
+            <tr>
+              <td>22/10/2026</td>
+              <td>16:46:26</td>
+              <td><span class="queda">Queda detectada</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    aviso.hidden = dados.modo !== "demonstracao";
-
-    lista.replaceChildren();
-
-    if (!dados.eventos || dados.eventos.length === 0) {
-      estado.textContent = "Nenhum registro encontrado.";
-      return;
-    }
-
-    dados.eventos.forEach(evento => {
-      const cartao = document.createElement("article");
-      cartao.className = "registro-queda";
-
-      const titulo = document.createElement("h3");
-      titulo.textContent = evento.tipo;
-
-      const dataHora = document.createElement("p");
-      dataHora.textContent =
-        `${evento.data.split("-").reverse().join("/")} às ${evento.hora}`;
-
-      const status = document.createElement("p");
-      status.textContent = evento.status;
-
-      cartao.append(titulo, dataHora, status);
-      lista.appendChild(cartao);
-    });
-
-    estado.textContent = "";
-  } catch (erro) {
-    estado.textContent =
-      "Não foi possível carregar o histórico. Tente novamente mais tarde.";
-  }
-}
-
-carregarHistorico();
-</script>
+      <p class="nota">
+        Os registros apresentados são dados de demonstração.
+        O indicador online é ilustrativo e ainda não verifica
+        a conexão real com o dispositivo.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2026 POPI - Todos os direitos reservados</p>
+    POPI — Protótipo Observador Para Idosos
+    <br>
+    Tecnologia assistiva para mais segurança e cuidado.
   </footer>
 
-  <script>
-    
-.registro-queda{
-  background:#F5F9FC;
-  border:1px solid #DCE6EC;
-  border-radius:12px;
-  padding:16px;
-  margin-bottom:12px;
-}
-
-.registro-queda h3{
-  margin:0 0 8px;
-  color:#2477B8;
-}
-
-.registro-queda p{
-  margin:4px 0;
-}
-
-.aviso-demonstracao{
-  background:#FFF3E0;
-  padding:12px;
-  border-radius:8px;
-  margin-bottom:15px;
-}
-
+</body>
+</html>
