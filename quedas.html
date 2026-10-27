@@ -1,286 +1,282 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Histórico de Quedas | POPI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histórico de Quedas | POPI</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#F8F5EE;
+    color:#263746;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+header{
+    width:100%;
+    background:#2477B8;
+    padding:18px 5%;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav li{
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:600;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* CONTEÚDO */
+main{
+    width:min(1000px,92%);
+    margin:45px auto;
+    flex:1;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo h1{
+    color:#2477B8;
+    font-size:clamp(1.8rem,4vw,2.6rem);
+    margin-bottom:12px;
+}
+
+.titulo p{
+    color:#5e6d78;
+    line-height:1.6;
+}
+
+.painel{
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 4px 18px rgba(36,119,184,.08);
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:22px;
+    color:#267546;
+    font-weight:600;
+}
+
+.indicador{
+    width:10px;
+    height:10px;
+    background:#28a745;
+    border-radius:50%;
+}
+
+.painel h2{
+    margin-bottom:18px;
+    font-size:1.2rem;
+}
+
+.registro{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:12px;
+    padding:18px 0;
+    border-bottom:1px solid #e8edf0;
+}
+
+.registro:last-child{
+    border-bottom:none;
+}
+
+.data{
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.descricao{
+    color:#687782;
+}
+
+.etiqueta{
+    background:#fde9e7;
+    color:#b42318;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    background:#2477B8;
+    color:white;
+    text-align:center;
+    padding:22px 5%;
+    line-height:1.8;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+    nav ul{
+        gap:20px;
+        flex-wrap:wrap;
     }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #F8F5EE;
-      color: #263746;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    nav a{
+        font-size:.95rem;
+    }
+}
+
+@media(max-width:600px){
+
+    nav ul{
+        gap:14px;
+        justify-content:center;
+        flex-wrap:wrap;
     }
 
-    header {
-      width: 100%;
-      background: #2477B8;
-      padding: 22px 5%;
+    nav a{
+        font-size:.85rem;
     }
 
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
+    main{
+        margin:30px auto;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+    .painel{
+        padding:18px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .registro{
+        grid-template-columns:1fr;
     }
 
-    main {
-      width: min(1000px, 92%);
-      margin: 45px auto;
-      flex: 1;
+    .etiqueta{
+        justify-self:start;
     }
-
-    .titulo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .titulo h1 {
-      color: #2477B8;
-      font-size: clamp(1.7rem, 4vw, 2.4rem);
-      margin-bottom: 12px;
-    }
-
-    .titulo p {
-      color: #5e6d78;
-      line-height: 1.7;
-    }
-
-    .painel {
-      background: white;
-      border-radius: 16px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 18px rgba(36, 119, 184, 0.08);
-    }
-
-    .status {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 22px;
-      font-size: 0.9rem;
-      color: #267546;
-      font-weight: 600;
-    }
-
-    .indicador {
-      width: 10px;
-      height: 10px;
-      background: #28a745;
-      border-radius: 50%;
-    }
-
-    .painel h2 {
-      font-size: 1.15rem;
-      margin-bottom: 18px;
-      color: #263746;
-    }
-
-    .registro {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      align-items: center;
-      padding: 18px 0;
-      border-bottom: 1px solid #e8edf0;
-    }
-
-    .registro:last-child {
-      border-bottom: none;
-    }
-
-    .data {
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 6px;
-    }
-
-    .descricao {
-      color: #687782;
-      font-size: 0.88rem;
-    }
-
-    .etiqueta {
-      background: #fde9e7;
-      color: #b42318;
-      padding: 7px 11px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    footer {
-      background: #2477B8;
-      color: white;
-      text-align: center;
-      padding: 22px 5%;
-      font-size: 0.85rem;
-      line-height: 1.8;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 18px 5%;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 0.82rem;
-      }
-
-      main {
-        margin: 30px auto;
-      }
-
-      .painel {
-        padding: 18px;
-      }
-
-      .registro {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .etiqueta {
-        justify-self: start;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <!-- =========================
-       CABEÇALHO
-       ========================= -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#popi">POPI</a></li>
+            <li><a href="index.html#dispositivo">Dispositivo</a></li>
+            <li><a href="quedas.html">Quedas</a></li>
+            <li><a href="index.html#sobre">Sobre nós</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
 
-  <nav>
-    <ul>
+<main>
 
-      <li>
-        <a href="index.html#inicio">Início</a>
-      </li>
-
-      <li>
-        <a href="index.html#popi">POPI</a>
-      </li>
-
-      <li>
-        <a href="index.html#dispositivo">Dispositivo</a>
-      </li>
-
-      <li>
-        <a href="quedas.html">Quedas</a>
-      </li>
-
-      <li>
-        <a href="index.html#sobre">Sobre nós</a>
-      </li>
-
-      <li>
-        <a href="index.html#contato">Contato</a>
-      </li>
-
-    </ul>
-  </nav>
-
-  </header>
-
-  <main>
     <section class="titulo">
-      <h1>Histórico de Quedas</h1>
-      <p>Registro de eventos detectados pelo sistema POPI.</p>
+        <h1>Histórico de Quedas</h1>
+        <p>Registro de eventos detectados pelo sistema POPI.</p>
     </section>
 
     <section class="painel">
-      <div class="status">
-        <span class="indicador"></span>
-        <span>Online</span>
-      </div>
 
-      <h2>Registros de eventos</h2>
-
-      <div class="registro">
-        <div>
-          <p class="data">20/10/2026 — 14:34:28</p>
-          <p class="descricao">Queda detectada</p>
+        <div class="status">
+            <span class="indicador"></span>
+            <span>Online</span>
         </div>
-        <span class="etiqueta">Queda</span>
-      </div>
 
-      <div class="registro">
-        <div>
-          <p class="data">20/10/2026 — 17:47:14</p>
-          <p class="descricao">Queda detectada</p>
-        </div>
-        <span class="etiqueta">Queda</span>
-      </div>
+        <h2>Registros de eventos</h2>
 
-      <div class="registro">
-        <div>
-          <p class="data">21/10/2026 — 17:18:36</p>
-          <p class="descricao">Queda detectada</p>
+        <div class="registro">
+            <div>
+                <p class="data">20/10/2026 — 14:34:28</p>
+                <p class="descricao">Queda detectada</p>
+            </div>
+            <span class="etiqueta">Queda</span>
         </div>
-        <span class="etiqueta">Queda</span>
-      </div>
 
-      <div class="registro">
-        <div>
-          <p class="data">22/10/2026 — 16:07:47</p>
-          <p class="descricao">Queda detectada</p>
+        <div class="registro">
+            <div>
+                <p class="data">20/10/2026 — 17:47:14</p>
+                <p class="descricao">Queda detectada</p>
+            </div>
+            <span class="etiqueta">Queda</span>
         </div>
-        <span class="etiqueta">Queda</span>
-      </div>
 
-      <div class="registro">
-        <div>
-          <p class="data">22/10/2026 — 16:46:26</p>
-          <p class="descricao">Queda detectada</p>
+        <div class="registro">
+            <div>
+                <p class="data">21/10/2026 — 17:18:36</p>
+                <p class="descricao">Queda detectada</p>
+            </div>
+            <span class="etiqueta">Queda</span>
         </div>
-        <span class="etiqueta">Queda</span>
-      </div>
+
+        <div class="registro">
+            <div>
+                <p class="data">22/10/2026 — 16:07:47</p>
+                <p class="descricao">Queda detectada</p>
+            </div>
+            <span class="etiqueta">Queda</span>
+        </div>
+
+        <div class="registro">
+            <div>
+                <p class="data">22/10/2026 — 16:46:26</p>
+                <p class="descricao">Queda detectada</p>
+            </div>
+            <span class="etiqueta">Queda</span>
+        </div>
+
     </section>
-  </main>
 
-  <footer>
+</main>
+
+<footer>
     <p>POPI — Protótipo Observador Para Idosos</p>
     <p>Tecnologia assistiva para mais segurança e cuidado.</p>
-  </footer>
+</footer>
 
 </body>
 </html>
-```
